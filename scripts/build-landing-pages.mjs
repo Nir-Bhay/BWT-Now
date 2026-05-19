@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { renderLandingFooter } from "./landing-footer.mjs";
-import { renderLandingFooter } from "./landing-footer.mjs";
 import {
   AUTH_MODAL_HTML,
   AUTH_HEAD_LINKS,
@@ -548,7 +547,9 @@ function pageShell({ title, metaDesc, active, heroSrc, h1, lead, bodyHtml, extra
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="assets/css/common_style.css" rel="stylesheet" />
   <link href="assets/css/landing.css" rel="stylesheet" />
-  <link href="assets/css/landing-dark.css" rel="stylesheet" />${AUTH_HEAD_LINKS}
+  <link href="assets/css/landing-dark.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/css/landing-footer.css" rel="stylesheet" />${AUTH_HEAD_LINKS}
 </head>
 <body class="landing-page ${extraClass}">
   <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</motion>
