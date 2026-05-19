@@ -8,7 +8,8 @@
   var STORAGE_KEY = "reddybook_demo_session";
   var APK_DISMISSED_KEY = "reddybook_apk_dismissed";
   /** Fixed banner for login + signup (Login - Deposits, Withdrawals, and Verification (3)) */
-  var AUTH_BANNER_SRC = "assets/images/auth/login-signup-banner.webp";
+  var AUTH_BANNER_SRC =
+    "assets/images/reddybook-banners/15-login---deposits-withdrawals-and-verification-3.webp";
 
   function ready(fn) {
     if (document.readyState === "loading") {
