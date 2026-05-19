@@ -1,0 +1,41 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
+  "framework": null,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/home.html" },
+    { "source": "/home", "destination": "/home.html" },
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/register", "destination": "/register.html" },
+    { "source": "/about-us", "destination": "/about-us.html" },
+    { "source": "/customer-care", "destination": "/customer-care.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/terms-and-conditions", "destination": "/terms-and-conditions.html" },
+    { "source": "/responsible-gaming", "destination": "/responsible-gaming.html" },
+    { "source": "/blogs", "destination": "/blogs.html" },
+    { "source": "/categories", "destination": "/categories.html" },
+    { "source": "/bet", "destination": "/index.html" },
+    { "source": "/inplay", "destination": "/index.html" },
+    { "source": "/profile", "destination": "/index.html" },
+    { "source": "/profile/:path*", "destination": "/index.html" },
+    { "source": "/reports/:path*", "destination": "/index.html" },
+    { "source": "/sports/:path*", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    }
+  ]
+}
