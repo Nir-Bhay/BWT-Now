@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="assets/css/common_style.css" rel="stylesheet" />
   <link href="assets/css/landing.css" rel="stylesheet" />
+  <link href="assets/css/landing-dark.css" rel="stylesheet" />
 </head>
 <body class="landing-page ">
   <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</div>
@@ -36,7 +37,13 @@
   </header>
   <nav class="landing-subnav" aria-label="Page sections">
     <div class="container"><ul>
-      <li><a href="index.html">Betting Dashboard</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="about-us.html">About</a></li>
+      <li><a href="customer-care.html">Support</a></li>
+      <li><a href="blogs.html" class="active">Blogs</a></li>
+      <li><a href="categories.html">Categories</a></li>
       <li><a href="privacy-policy.html">Privacy</a></li>
       <li><a href="terms-and-conditions.html">Terms</a></li>
       <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
@@ -56,6 +63,19 @@
       </div>
     </div>
   </section>
+  <div class="winners-ticker-wrap" aria-hidden="true">
+    <div class="winners-ticker-row">
+      <span class="winners-ticker-label">Live Wins</span>
+      <div class="winners-ticker-viewport">
+        <div class="winners-ticker">
+          <span><strong>Rahul M.</strong> won ₹42,500 on IPL</span>
+          <span><strong>Priya S.</strong> won ₹18,200 on Live Casino</span>
+          <span><strong>Amit K.</strong> won ₹95,000 on Cricket</span>
+          <span><strong>Vikram D.</strong> won ₹31,400 on Football</span>
+        </div>
+      </div>
+    </div>
+  </div>
   <main class="landing-main">
     <section class="landing-content-card">
     <p>Read guides on cricket IDs, login, registration, sports betting tips, and platform updates.</p>
@@ -124,5 +144,6 @@
       </div>
     </div>
   </footer>
+  <script src="assets/js/landing-ui.js" defer></script>
 </body>
 </html>

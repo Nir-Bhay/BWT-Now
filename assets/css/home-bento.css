@@ -1,0 +1,10 @@
+/* Home page — uses shared landing bento + legacy class aliases */
+@import url("landing-bento.css");
+
+.home-page .landing-hero {
+  display: none;
+}
+
+.home-page {
+  /* alias */
+}

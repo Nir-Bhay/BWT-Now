@@ -7,6 +7,11 @@ const ROOT = path.join(__dirname, "..");
 const MD_PATH = path.join(ROOT, "ReddyBook.md");
 const IMG_BASE = "assets/images/pages";
 
+/** Fix accidental <motion> placeholder tags in generated HTML */
+function fixHtml(html) {
+  return html.replace(/<motion\b/g, "<div").replace(/<\/motion>/g, "</div>");
+}
+
 const NAV = [
   { href: "home.html", label: "Home" },
   { href: "login.html", label: "Login" },
@@ -422,9 +427,11 @@ function buildDesignSections(md, imageDir, heroFile) {
       : markdownToHtml(chunk.body, { skipFirstH1: true });
     if (chunk.image) {
       const src = `${IMG_BASE}/${imageDir}/${encodeURIComponent(chunk.image)}`;
-      html += `<section class="landing-split${flip ? " reverse" : ""}">
-        <div class="landing-split-img"><img src="${src}" alt="${escapeHtml(chunk.title)}" loading="lazy" /></motion>
-        <div class="landing-split-text">${inner}</div>
+      html += `<section class="landing-section-card${flip ? " is-reverse" : ""}">
+        <div class="landing-section-grid">
+          <figure class="landing-section-media"><img src="${src}" alt="${escapeHtml(chunk.title)}" loading="lazy" width="480" height="520" /></figure>
+          <div class="landing-section-body landing-prose">${inner}</div>
+        </div>
       </section>\n`;
       flip = !flip;
     } else {
@@ -522,7 +529,7 @@ function pageShell({ title, metaDesc, active, heroSrc, h1, lead, bodyHtml, extra
   const fh = footerHtml().replace(/<motion/g, "<div").replace(/<\/motion>/g, "</div>");
   const hd = headerHtml(active).replace(/<motion/g, "<motion");
 
-  return `<!DOCTYPE html>
+  const raw = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -534,6 +541,7 @@ function pageShell({ title, metaDesc, active, heroSrc, h1, lead, bodyHtml, extra
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="assets/css/common_style.css" rel="stylesheet" />
   <link href="assets/css/landing.css" rel="stylesheet" />
+  <link href="assets/css/landing-dark.css" rel="stylesheet" />
 </head>
 <body class="landing-page ${extraClass}">
   <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</motion>
@@ -552,6 +560,19 @@ function pageShell({ title, metaDesc, active, heroSrc, h1, lead, bodyHtml, extra
       </div>
     </div>
   </section>
+  <div class="winners-ticker-wrap" aria-hidden="true">
+    <div class="winners-ticker-row">
+      <span class="winners-ticker-label">Live Wins</span>
+      <div class="winners-ticker-viewport">
+        <motion class="winners-ticker">
+          <span><strong>Rahul M.</strong> won ₹42,500 on IPL</span>
+          <span><strong>Priya S.</strong> won ₹18,200 on Live Casino</span>
+          <span><strong>Amit K.</strong> won ₹95,000 on Cricket</span>
+          <span><strong>Vikram D.</strong> won ₹31,400 on Football</span>
+        </motion>
+      </div>
+    </div>
+  </div>
   <main class="landing-main">
     ${bodyHtml}
     <section class="landing-cta-band">
@@ -564,8 +585,10 @@ function pageShell({ title, metaDesc, active, heroSrc, h1, lead, bodyHtml, extra
     </section>
   </main>
   ${footerHtml()}
+  <script src="assets/js/landing-ui.js" defer></script>
 </body>
-</html>`.replace(/<motion/g, "<div").replace(/<\/motion>/g, "</div>");
+</html>`;
+  return fixHtml(raw);
 }
 
 function extractLead(md) {
@@ -611,6 +634,20 @@ const mdAll = fs.readFileSync(MD_PATH, "utf8");
 const sections = splitMarkdownSections(mdAll);
 
 for (const cfg of PAGE_CONFIG) {
+  const CUSTOM_BENTO = new Set([
+    "home.html",
+    "about-us.html",
+    "login.html",
+    "register.html",
+    "customer-care.html",
+    "privacy-policy.html",
+    "terms-and-conditions.html",
+    "responsible-gaming.html",
+  ]);
+  if (CUSTOM_BENTO.has(cfg.file)) {
+    console.log(`Skip ${cfg.file} (custom bento layout)`);
+    continue;
+  }
   const md = sections[cfg.section];
   if (!md) {
     console.warn("Missing section:", cfg.section);
@@ -637,7 +674,7 @@ for (const cfg of PAGE_CONFIG) {
     if (secondary) {
       const src = `${IMG_BASE}/${cfg.imageDir}/${encodeURIComponent(secondary)}`;
       bodyHtml =
-        `<section class="landing-split"><div class="landing-split-img"><img src="${src}" alt="" loading="lazy" /></div><div class="landing-split-text">${markdownToHtml(md.split("\n").slice(0, 40).join("\n"), { skipFirstH1: true })}</div></section>` +
+        `<section class="landing-split"><div class="landing-section-media"><img src="${src}" alt="" loading="lazy" /></div><div class="landing-section-body landing-prose">${markdownToHtml(md.split("\n").slice(0, 40).join("\n"), { skipFirstH1: true })}</div></section>` +
         `<section class="landing-content-card landing-legal">${markdownToHtml(md.split("\n").slice(40).join("\n"), { skipFirstH1: true })}</section>`;
     }
     bodyHtml += buildFaqSection(md);

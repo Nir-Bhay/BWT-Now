@@ -8,23 +8,27 @@
   <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
   <link href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
   <link href="assets/css/common_style.css" rel="stylesheet" />
   <link href="assets/css/landing.css" rel="stylesheet" />
+  <link href="assets/css/landing-dark.css" rel="stylesheet" />
+  <link href="assets/css/landing-bento.css" rel="stylesheet" />
 </head>
-<body class="landing-page ">
+<body class="landing-page bento-page bento-page--register">
   <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</div>
-    <header class="landing-header">
+
+  <header class="landing-header">
     <div class="container">
       <a href="home.html" class="logo"><img src="https://speedcdn.io/assets/logos/reddybook.live.png" alt="Reddy Book Club" /></a>
       <nav>
         <ul class="landing-nav">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html" class="active">Register</a></li>
-        <li><a href="about-us.html">About</a></li>
-        <li><a href="customer-care.html">Support</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="categories.html">Categories</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html" class="active">Register</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="customer-care.html">Support</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="categories.html">Categories</a></li>
         </ul>
       </nav>
       <div class="landing-header-actions">
@@ -34,211 +38,147 @@
       </div>
     </div>
   </header>
+
   <nav class="landing-subnav" aria-label="Page sections">
     <div class="container"><ul>
-      <li><a href="index.html">Betting Dashboard</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html" class="active">Register</a></li>
+      <li><a href="about-us.html">About</a></li>
+      <li><a href="customer-care.html">Support</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="categories.html">Categories</a></li>
       <li><a href="privacy-policy.html">Privacy</a></li>
       <li><a href="terms-and-conditions.html">Terms</a></li>
       <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
     </ul></div>
   </nav>
-  <section class="landing-hero">
-    <img src="assets/images/pages/register/Register%20Page%20banner.webp" alt="Reddy Book Registration: Get Your Reddy Book Club Cricket ID" />
-    <div class="landing-hero-overlay">
-      <div class="container">
-        <h1>Reddy Book Registration: Get Your Reddy Book Club Cricket ID</h1>
-        <p class="hero-lead"># Reddy Book Registration: Get Your Reddy Book Club Cricket ID</p>
-        <div class="landing-hero-cta">
-          <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
-          <a href="login.html" class="btn-cta btn-cta-secondary">Login</a>
-          <a href="index.html" class="btn-cta btn-cta-secondary">Go to Dashboard</a>
+
+  <section class="page-hero" aria-labelledby="page-hero-title">
+    <div class="page-hero__bg" role="img" aria-label="Reddy Book Registration | Get Your Reddy Book Club Cricket ID"></div>
+    <div class="page-hero__glow" aria-hidden="true"></div>
+    <div class="page-hero__inner">
+      <p class="page-hero__eyebrow"><span class="pulse" aria-hidden="true"></span> New accounts</p>
+      <h1 id="page-hero-title">Get your <em>Cricket ID</em> today</h1>
+      <p class="page-hero__lead">Request a Reddy Book Club account for sports, cricket markets, and casino access — where legally permitted. Simple steps, mobile-friendly, with safety guidance built in.</p>
+      <div class="page-hero__chips">
+        <div class="page-hero__chip"><i class="bi bi-person-plus" aria-hidden="true"></i> <strong>Register</strong> or Get Cricket ID</div>
+        <div class="page-hero__chip"><i class="bi bi-phone" aria-hidden="true"></i> <strong>Mobile</strong> registration</div>
+        <div class="page-hero__chip"><i class="bi bi-shield-check" aria-hidden="true"></i> <strong>18+</strong> eligibility required</div>
+      </div>
+      <div class="page-hero__actions"><a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
+        <a href="login.html" class="btn-cta btn-cta-neon">Already have ID? Login</a>
+        <a href="customer-care.html" class="btn-ghost">Registration help →</a></div>
+    </div>
+  </section>
+
+  <div class="winners-ticker-wrap" aria-hidden="true">
+    <div class="winners-ticker-row">
+      <span class="winners-ticker-label">Live Wins</span>
+      <div class="winners-ticker-viewport">
+        <div class="winners-ticker">
+          <span><strong>Rahul M.</strong> won ₹42,500 on IPL</span>
+          <span><strong>Priya S.</strong> won ₹18,200 on Live Casino</span>
+          <span><strong>Amit K.</strong> won ₹95,000 on Cricket</span>
+          <span><strong>Vikram D.</strong> won ₹31,400 on Football</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+
   <main class="landing-main">
-    <div class="landing-features">
-      <div class="landing-feature-box"><h3>Cricket ID</h3><p>Fast agent-based account access</p></div>
-      <div class="landing-feature-box"><h3>Live Betting</h3><p>Sports &amp; in-play markets</p></div>
-      <div class="landing-feature-box"><h3>24/7 Support</h3><p>Customer care when you need help</p></div>
-      <div class="landing-feature-box"><h3>Secure Login</h3><p>Private cricket ID access</p></div>
-    </div><section class="landing-section-card">
-        <div class="landing-section-grid">
-          <figure class="landing-section-media"><img src="assets/images/pages/register/Register%20-%20What%20About%20the%20Reddy%20Book%20Club%20APK%20(2).webp" alt="Overview" loading="lazy" width="340" height="340" /></figure>
-          <div class="landing-section-body landing-prose"><h2>Overview</h2>
-<p>Ready to create your Reddy Book Club account? This <strong>Reddy Book</strong> registration page helps new users request a cricket ID, understand how account access works, and get ready for sports and casino betting features where available and legally permitted.</p>
-<p>If you are new to Reddy Book Club, the process is simple. You can click the <strong>Register</strong> button or the <strong>Get Cricket ID</strong> button to start your account request. Some users may also be able to fill out a registration form with basic details. After that, account access details may be shared through the official support or account team.</p>
-<p>This page explains how to register, what details you may need, how to use your new cricket ID, what to check before depositing, and how to keep your account safe. It is written for both beginners who are getting their first cricket ID and experienced bettors who want a smooth account setup.</p>
-<p>Reddy Book Club should only be used by adults who meet the required age rules in their location. Availability may depend on local laws, platform rules, and account eligibility.</p>
-</div>
-        </div>
-      </section>
-<section class="landing-section-card is-reverse">
-        <div class="landing-section-grid">
-          <figure class="landing-section-media"><img src="assets/images/pages/register/Register%20-%20Reddy%20Book%20Registration_%20Get%20Your%20Reddy%20Book%20Club%20Cricket%20ID.webp" alt="What Is Reddy Book Club Registration?" loading="lazy" width="340" height="340" /></figure>
-          <div class="landing-section-body landing-prose"><h2>What Is Reddy Book Club Registration?</h2>
-<p>Reddy Book Club registration is the process of requesting a new account or cricket ID from the website. Once your account is created, you can use the login details provided to access your Reddy Book Club dashboard.</p>
-<p>Many users search for terms such as <strong>reddy book club</strong>, <strong>reddybook club</strong>, <strong>reddy anna club</strong>, <strong>reddy anna book club</strong>, <strong>reddyanna</strong>, or <strong>reddy book login</strong> when they are trying to find the right access page. For this page, the goal is simple: help new users get started with a new Reddy Book Club cricket ID.</p>
-<p>A cricket ID is your account access credential. It may allow you to enter sports sections, cricket markets, casino games, live betting-style areas, deposit options, withdrawal support, and customer care tools, depending on what is available for your account.</p>
-<p>This is not the same as searching for a physical <strong>cricket club near me</strong>. Reddy Book Club is an online cricket website and gaming access platform. You are not joining a local sports ground or cricket academy. You are requesting digital account access.</p>
-</div>
-        </div>
-      </section>
-<section class="landing-section-card">
-        <div class="landing-section-grid">
-          <figure class="landing-section-media"><img src="assets/images/pages/register/Register%20-%20How%20to%20Register%20on%20Reddy%20Book%20Club.webp" alt="How to Register on Reddy Book Club" loading="lazy" width="340" height="340" /></figure>
-          <div class="landing-section-body landing-prose"><h2>How to Register on Reddy Book Club</h2>
-<p>The registration process should be easy to follow. Use the official website only and avoid random links shared in public groups or comments.</p>
-<h3>Step 1: Click the Register Button</h3>
-<p>To begin, click the <strong>Register</strong> button on the Reddy Book Club website. This starts the account request process.</p>
-<p>If you see a <strong>Get Cricket ID</strong> button instead, you can use that as well. Both buttons are designed to help new users request account access.</p>
-<h3>Step 2: Fill in the Required Details</h3>
-<p>You may be asked to provide basic information such as your name, mobile number, preferred username, or contact details. Enter your information carefully so the support team can process your request correctly.</p>
-<p>Do not submit fake details. Wrong information may delay your account setup or create problems later when you need support, payment help, or account recovery.</p>
-<h3>Step 3: Confirm Eligibility</h3>
-<p>Before your account is created, make sure you are legally allowed to use gaming or betting-related services in your location. You should also meet the required age limit, which may be 18+ or 21+ depending on the rules that apply to you.</p>
-<p>Do not register if you are underage, using someone else’s identity, or accessing from a restricted location.</p>
-<h3>Step 4: Receive Your Cricket ID</h3>
-<p>Once your registration request is accepted, you may receive a username, password, login link, or account access details. Keep these details private.</p>
-<p>Your cricket ID is important. Do not share it with friends, public groups, or anyone claiming they can place bets for you.</p>
-<h3>Step 5: Login and Check Your Account</h3>
-<p>After receiving your details, go to the <strong>Reddy Book login</strong> page and sign in. Check your dashboard, account details, balance section, support options, and available features before adding funds or using any market.</p>
-</div>
-        </div>
-      </section>
-<section class="landing-section-card is-reverse">
-        <div class="landing-section-grid">
-          <figure class="landing-section-media"><img src="assets/images/pages/register/Register%20-%20Common%20Registration%20Problems%20and%20Simple%20Fixes.webp" alt="Register Button vs Get Cricket ID Button" loading="lazy" width="340" height="340" /></figure>
-          <div class="landing-section-body landing-prose"><h2>Register Button vs Get Cricket ID Button</h2>
-<p>Some users wonder whether they should click <strong>Register</strong> or <strong>Get Cricket ID</strong>. Both options can lead to account setup, but the wording is slightly different.</p>
-<p>The <strong>Register</strong> button is usually for users who want to create a new account by submitting their details. The <strong>Get Cricket ID</strong> button is more direct and is often used by users who already know they want account access for cricket, sports, or casino gaming sections.</p>
-<p>For beginners, either button is fine if it appears on the official Reddy Book Club website. The most important thing is to use the correct page and wait for proper account confirmation.</p>
-<p>Do not trust anyone who says you must pay extra just to “unlock” a special winning ID. A cricket ID gives account access. It does not guarantee profit, winning bets, or better results.</p>
-</div>
-        </div>
-      </section>
-<section class="landing-section-card">
-        <div class="landing-section-grid">
-          <figure class="landing-section-media"><img src="assets/images/pages/register/Register%20-%20What%20Details%20May%20Be%20Needed%20During%20Registration.webp" alt="What Details May Be Needed During Registration?" loading="lazy" width="340" height="340" /></figure>
-          <div class="landing-section-body landing-prose"><h2>What Details May Be Needed During Registration?</h2>
-<p>Reddy Book Club registration is usually straightforward, but the exact details may depend on the account process shown on the website.</p>
-<p>You may need to provide:</p>
-<ul>
-<li>Name or preferred username  </li>
-<li>Mobile number or contact method  </li>
-<li>Basic account request details  </li>
-<li>Confirmation that you meet age and eligibility requirements  </li>
-<li>Payment details later, if you choose to deposit</li>
-</ul>
-<p>You should never be asked for private banking passwords, UPI PINs, OTPs, or full card security details. If someone asks for these, stop immediately and contact official support.</p>
-<p>A proper registration process should help you create access, not expose your personal or financial information.</p>
-</div>
-        </div>
-      </section>
-<section class="landing-section-card is-reverse">
-        <div class="landing-section-grid">
-          <figure class="landing-section-media"><img src="assets/images/pages/register/Register%20-%20What%20About%20the%20Reddy%20Book%20Club%20APK.webp" alt="Reddy Book Club Registration on Mobile" loading="lazy" width="340" height="340" /></figure>
-          <div class="landing-section-body landing-prose"><h2>Reddy Book Club Registration on Mobile</h2>
-<p>Most users in India prefer mobile access because cricket matches, live markets, and casino games are easier to follow on a phone. The Reddy Book Club register page should work smoothly on mobile browsers.</p>
-<p>To register from mobile:</p>
-<p>Open the official Reddy Book Club website, tap <strong>Register</strong> or <strong>Get Cricket ID</strong>, fill in the required details, and submit your request. Keep your phone nearby in case the support team contacts you for confirmation.</p>
-<p>Use a secure internet connection. Avoid registering from public Wi-Fi, shared devices, or phones that other people can access.</p>
-<h3>What About the Reddy Book Club APK?</h3>
-<p>Some users search for <strong>reddy book club apk</strong> or <strong>reddybook.club apk</strong> when looking for mobile access. Be careful with APK files. Only use APK access if it is provided through an official and verified Reddy Book Club source.</p>
-<p>Do not download files from random Telegram groups, copied links, unknown websites, or pages using similar names like <strong>raddybook</strong>, <strong>book777</strong>, or unrelated login terms. A fake APK can steal login details, payment information, or personal data.</p>
-<p>For many users, using the mobile browser is safer and simpler than installing an unverified app file.</p>
-</div>
-        </div>
-      </section>
-<section class="landing-section-card">
-        <div class="landing-section-grid">
-          <figure class="landing-section-media"><img src="assets/images/pages/register/main-banner.webp" alt="After Registration: How to Use Your New Cricket ID" loading="lazy" width="340" height="340" /></figure>
-          <div class="landing-section-body landing-prose"><h2>After Registration: How to Use Your New Cricket ID</h2>
-<p>Once your Reddy Book Club account is ready, your cricket ID becomes your main access point. You can use it to log in and explore available sections.</p>
-<h3>Cricket and Sports Access</h3>
-<p>Cricket is one of the biggest reasons users register. After login, users may find cricket markets, match options, live match sections, and other sports areas depending on account availability.</p>
-<p>Beginners should learn how odds, stakes, match markets, and settlement rules work before placing any real-money activity. Experienced bettors should still check market rules, limits, and timing before every action.</p>
-<h3>Casino and Game Access</h3>
-<p>Some users register for casino-style games as well. These may include card games, table games, slots, or live casino options where available.</p>
-<p>Always read the rules of each game before playing. Casino games involve risk, and outcomes are not guaranteed.</p>
-<h3>Dashboard and Account Tools</h3>
-<p>Your account dashboard may include balance information, deposit options, withdrawal support, profile details, and customer care access. Take a few minutes to understand the dashboard before using funds.</p>
-<p>A careful start is always better than rushing.</p>
-</div>
-        </div>
-      </section>
-<section class="landing-content-card landing-prose"><h2>Deposits and Withdrawals After Registration</h2>
-<p>Registration gives you access, but deposits and withdrawals should be handled with extra care.</p>
-<p>Before adding money, check the minimum deposit amount, available payment methods, expected processing time, and support instructions. Payment options may include UPI, bank transfer, net banking, or digital wallets, depending on availability and account setup.</p>
-<p>Before withdrawing, check whether your account details are correct. Some withdrawals may require confirmation or verification. Incorrect payment details can delay processing.</p>
-<p>Keep records of all payment activity. Save transaction IDs, screenshots, and support messages where needed.</p>
-<p>Never send money to unknown personal accounts without verification. If payment instructions look different from what you expected, ask official support before proceeding.</p>
-</section>
-<section class="landing-section-card is-reverse">
-        <div class="landing-section-grid">
-          <figure class="landing-section-media"><img src="assets/images/pages/register/Register%20-%20Why%20Register%20with%20Reddy%20Book%20Club.webp" alt="How to Stay Safe When Creating a Reddy Book Account" loading="lazy" width="340" height="340" /></figure>
-          <div class="landing-section-body landing-prose"><h2>How to Stay Safe When Creating a Reddy Book Account</h2>
-<p>Registration is the moment when many users make mistakes because they are in a hurry to get started. Take your time and follow basic account safety rules.</p>
-<p>Use only the official Reddy Book Club website. Some users search for <a href="http://www.reddy"><strong>www.reddy</strong></a> <strong>book.com</strong>, <strong>reddy anna login</strong>, <strong>reddy anna book login</strong>, <strong>reddy kings login</strong>, or similar terms, but similar names do not always mean the same platform. Clone pages and fake login links can look convincing.</p>
-<p>Create a password that is not used anywhere else. Avoid saving your password on shared phones or public computers. Do not send your cricket ID or password to anyone on social media.</p>
-<p>Be careful with messages promising fixed matches, guaranteed winnings, special accounts, or secret tips. No genuine platform can promise a winning outcome. Betting and casino games involve risk, and losses are possible.</p>
-</div>
-        </div>
-      </section>
-<section class="landing-content-card landing-prose"><h2>Common Registration Problems and Simple Fixes</h2>
-<p>Most registration issues are easy to solve if you know what to check.</p>
-<h3>The Register Button Is Not Working</h3>
-<p>Refresh the page, check your internet connection, or try another browser. If the issue continues, use the <strong>Get Cricket ID</strong> button or contact customer care.</p>
-<h3>The Form Is Not Submitting</h3>
-<p>Check whether all required fields are complete. Make sure your mobile number or contact details are entered correctly. Remove extra spaces from text fields.</p>
-<h3>I Did Not Receive My Cricket ID</h3>
-<p>Account setup may not always be instant. Check your messages and make sure your contact details were correct. If you still have no update, contact official support.</p>
-<h3>I Entered the Wrong Details</h3>
-<p>Reach out to customer care as soon as possible. Do not submit multiple forms with different information, as this may create confusion.</p>
-<h3>I Already Have an Account</h3>
-<p>Do not register again if you already have a cricket ID. Use the <strong>Login</strong> button instead. If you forgot your password, contact support for recovery help.</p>
-</section>
-<section class="landing-content-card landing-prose"><h2>Responsible Gaming Before You Start</h2>
-<p>Reddy Book Club registration should be treated as access to entertainment, not a way to earn guaranteed money. Sports betting and casino games carry financial risk.</p>
-<p>Set a clear budget before you play. Never use money meant for rent, bills, school fees, family needs, or debt repayment. Do not chase losses. If you lose, stop and review your limits instead of trying to recover quickly.</p>
-<p>Take breaks, especially during live matches or long casino sessions. Fast decisions can lead to poor choices.</p>
-<p>If gaming starts affecting your sleep, work, relationships, studies, or finances, pause immediately and seek help from someone you trust.</p>
-<p>Responsible gaming is not only for new users. Even expert bettors need limits and discipline.</p>
-</section>
-<section class="landing-content-card landing-prose"><h2>Why Register with Reddy Book Club?</h2>
-<p>Users choose Reddy Book Club because they want a simple way to request a cricket ID and access sports, cricket, casino, and live gaming sections from one account area.</p>
-<p>The main benefit is convenience. Instead of searching across different pages, users can use one account to reach available features after login.</p>
-<p>For beginners, the registration process is designed to be easy. For experienced users, the platform may provide access to a wider range of markets and gaming options.</p>
-<p>Still, the smartest users register carefully, check the rules, confirm account details, and avoid unsafe links. A good account experience starts with a safe registration process.</p>
-<p>Click <strong>Register</strong> or <strong>Get Cricket ID</strong> only when you are ready, eligible, and using the official Reddy Book Club website.</p>
-</section>
-<section class="landing-content-card landing-prose"><h2>FAQ</h2>
-<h3>How do I register on Reddy Book Club?</h3>
-<p>Click the <strong>Register</strong> button or <strong>Get Cricket ID</strong> button on the official Reddy Book Club website. Fill in the required details and wait for account confirmation.</p>
-<h3>Can I get a Reddy Book Club cricket ID for free?</h3>
-<p>You can request a cricket ID through the registration process. Account access terms, deposit rules, and availability may depend on the website and support instructions.</p>
-<h3>Do I need the Reddy Book Club APK to register?</h3>
-<p>Not always. You can usually start registration from a mobile browser. Only use an APK if it comes from a verified Reddy Book Club source.</p>
-<h3>What should I do after receiving my cricket ID?</h3>
-<p>Use the login page, enter your username and password, check your dashboard, and review account rules before depositing or playing.</p>
-<h3>Is Reddy Book Club registration available in India?</h3>
-<p>Availability may depend on local rules, account eligibility, and platform access. Use the service only if you are legally allowed to do so in your location.</p>
-</section>
-<section class="landing-content-card landing-prose"><h2>Conclusion</h2>
-<p>The <strong>Reddy Book</strong> registration page helps new users request a Reddy Book Club cricket ID through the <strong>Register</strong> or <strong>Get Cricket ID</strong> button. The process is simple, but you should still use the official website, enter correct details, protect your login information, and check eligibility before using your account.</p>
-<p>Once your cricket ID is active, login carefully, review your dashboard, understand payment steps, and use sports or casino features responsibly.</p>
-</section>
-<section class="landing-content-card"><h2>Frequently Asked Questions</h2><div class="landing-faq"></div></section>
+    <div class="bento-wrap">
+      <div class="bento-grid">
+
+        <article class="bento-card bento-intro bento-span-8">
+          <p class="bento-card__tag">Registration</p>
+          <h2>What is Reddy Book Club registration?</h2>
+          <p class="lead">Registration is how new users request a cricket ID and login details for the Reddy Book Club dashboard — sports, cricket, casino, deposits, and support.</p>
+          <p>This is online account access, not a local cricket club. Use only the official website and verified support channels.</p>
+        </article>
+        <article class="bento-card bento-highlight bento-span-4">
+          <p class="bento-card__tag">Buttons</p>
+          <h3>Register vs Get Cricket ID</h3>
+          <p>Both start account setup on the official site. Neither guarantees profit — they only provide platform access.</p>
+        </article>
+        <article class="bento-card bento-visual bento-span-5">
+          <div class="bento-visual__img" role="img" aria-label="Registration"></div>
+          <div class="bento-visual__body">
+            <p class="bento-card__tag">Start here</p>
+            <h3>How to register</h3>
+            <p>Click Register or Get Cricket ID, submit accurate details, confirm eligibility, receive credentials, then log in.</p>
+          </div>
+        </article>
+        <article class="bento-card bento-span-7">
+          <p class="bento-card__tag">Steps</p>
+          <h2>Register on Reddy Book Club</h2>
+          <div class="bento-steps bento-steps--5">
+            <div class="bento-step"><span class="bento-step__num">1</span><p>Click Register or Get Cricket ID</p></div>
+            <div class="bento-step"><span class="bento-step__num">2</span><p>Fill name, mobile, username</p></div>
+            <div class="bento-step"><span class="bento-step__num">3</span><p>Confirm age &amp; eligibility</p></div>
+            <div class="bento-step"><span class="bento-step__num">4</span><p>Receive ID &amp; password privately</p></div>
+            <div class="bento-step"><span class="bento-step__num">5</span><p>Login and review account before deposit</p></div>
+          </div>
+        </article>
+        <article class="bento-card bento-span-6">
+          <p class="bento-card__tag">Details</p>
+          <h3>What you may need</h3>
+          <ul>
+            <li>Name or preferred username</li>
+            <li>Mobile or contact method</li>
+            <li>Eligibility confirmation (18+ / 21+ as applicable)</li>
+            <li>Payment later if you choose to deposit</li>
+          </ul>
+          <p>Never share banking passwords, UPI PIN, or OTPs during registration.</p>
+        </article>
+        <article class="bento-card bento-span-6">
+          <p class="bento-card__tag">Mobile</p>
+          <h3>Register on phone</h3>
+          <p>Open the official site, tap Register, submit details, and keep your phone nearby for confirmation. Avoid public Wi‑Fi and shared devices.</p>
+          <p>Only use APK files from verified sources — not random group links.</p>
+        </article>
+        <article class="bento-card bento-span-12">
+          <p class="bento-card__tag">Why join</p>
+          <h2>Why register with Reddy Book Club?</h2>
+          <div class="bento-tiles bento-tiles--3">
+            <div class="bento-tile"><i class="bi bi-speedometer2"></i><span>Fast setup</span><p>Start after ID is issued</p></div>
+            <div class="bento-tile"><i class="bi bi-trophy"></i><span>Sports &amp; cricket</span><p>IPL, football, live markets</p></div>
+            <div class="bento-tile"><i class="bi bi-suit-club"></i><span>Casino</span><p>Games where available</p></div>
+            <div class="bento-tile"><i class="bi bi-gift"></i><span>Promotions</span><p>Cashback &amp; offers</p></div>
+            <div class="bento-tile"><i class="bi bi-headset"></i><span>24/7 support</span><p>Customer care help</p></div>
+            <div class="bento-tile"><i class="bi bi-exclamation-triangle"></i><span>Play responsibly</span><p>Verify agents &amp; limits</p></div>
+          </div>
+        </article>
+        <article class="bento-card bento-span-6">
+          <p class="bento-card__tag">Problems</p>
+          <h3>Common registration issues</h3>
+          <ul>
+            <li>Form not submitting — check details &amp; connection</li>
+            <li>No ID received — contact official support once</li>
+            <li>Fake “winning ID” sellers — avoid completely</li>
+          </ul>
+        </article>
+        <article class="bento-card bento-cta-card bento-span-6">
+          <p class="bento-card__tag">Next step</p>
+          <h3>Already registered?</h3>
+          <p>Sign in with the credentials support sent you.</p>
+          <a href="login.html" class="btn-cta btn-cta-neon">Go to Login</a>
+          <a href="customer-care.html" class="btn-cta btn-cta-secondary" style="margin-top:8px;">Contact Support</a>
+        </article>
+      </div>
+    </div>
+
     <section class="landing-cta-band">
-      <h2>Ready to get started?</h2>
-      <p>Register for your Reddy Book Club cricket ID or log in to access sports, casino, and live betting.</p>
+      <h2>Start your registration</h2>
+      <p>Get your Reddy Book Club cricket ID and explore sports, casino, and live markets.</p>
       <div class="landing-hero-cta" style="justify-content:center;">
-        <a href="register.html" class="btn-cta btn-cta-secondary">Register Now</a>
-        <a href="customer-care.html" class="btn-cta btn-cta-secondary">Contact Support</a>
+        <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
+        <a href="login.html" class="btn-cta btn-cta-secondary">Login</a>
       </div>
     </section>
   </main>
-    <footer class="landing-footer">
+
+  <footer class="landing-footer">
     <div class="container">
       <div class="landing-footer-grid">
         <div>
@@ -247,21 +187,25 @@
         </div>
         <div>
           <h4>Quick Links</h4>
-          <ul><li><a href="home.html">Home</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="about-us.html">About</a></li>
-          <li><a href="customer-care.html">Support</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="categories.html">Categories</a></li></ul>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="customer-care.html">Support</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="categories.html">Categories</a></li>
+          </ul>
         </div>
         <div>
           <h4>Legal</h4>
-          <ul><li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-          <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="customer-care.html">Customer Care</a></li></ul>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="customer-care.html">Customer Care</a></li>
+          </ul>
         </div>
         <div>
           <h4>Account</h4>
@@ -277,5 +221,6 @@
       </div>
     </div>
   </footer>
+  <script src="assets/js/landing-ui.js" defer></script>
 </body>
 </html>

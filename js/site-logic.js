@@ -540,20 +540,225 @@
     });
   }
 
-  /* ── Header sport nav active state ── */
+  /* ── Sport tabs: filter home lists + inject mock panels ── */
+
+  var rbCurrentSportView = "home";
+
+  function ensureSportFilterStyles() {
+    if (qs("#rb-sport-filter-style")) return;
+    var style = document.createElement("style");
+    style.id = "rb-sport-filter-style";
+    style.textContent =
+      ".rb-sport-filter-hidden{display:none!important}" +
+      ".rb-sport-view-single .rb-home-promo{display:none!important}" +
+      ".rb-sport-view-single .rb-upcoming-block{display:none!important}" +
+      ".rb-sport-view-casino .rb-sport-lists-wrap{display:none!important}" +
+      ".rb-dynamic-sport-root{margin-bottom:8px}" +
+      ".rb-dynamic-sport-card.rb-sport-filter-hidden{display:none!important}";
+    document.head.appendChild(style);
+  }
+
+  function getSportNameFromList(list) {
+    var titleEl = qs(".list-sport-title", list);
+    if (!titleEl) return "";
+    return (titleEl.textContent || "").replace(/\s+/g, " ").trim();
+  }
+
+  function tagExistingSportPanels() {
+    var mock = window.RBSportMock;
+    if (!mock) return;
+    qsa("app-sport-list").forEach(function (list) {
+      var name = getSportNameFromList(list);
+      var sportId = mock.NAME_TO_ID[name.toLowerCase()];
+      if (!sportId) return;
+      var panel = list.closest(".card");
+      if (!panel) {
+        panel = list.parentElement;
+        while (panel && panel.tagName !== "BODY" && !panel.querySelector(".bet-table-body")) {
+          panel = panel.parentElement;
+        }
+      }
+      if (!panel) return;
+      panel.setAttribute("data-rb-sport-panel", sportId);
+      var listsWrap = panel.closest(".rb-sport-lists-wrap");
+      if (!listsWrap) {
+        var wrap = panel.parentElement;
+        if (wrap) wrap.classList.add("rb-sport-lists-wrap");
+      }
+    });
+  }
+
+  function tagHomePromoSections() {
+    var home = qs(".middle-page-content.home-page");
+    if (!home) return;
+    qsa(".game-slider, .coupon-card", home).forEach(function (el) {
+      el.classList.add("rb-home-promo");
+    });
+    var casinoTitle = qsa(".list-sport-title", home).filter(function (el) {
+      return (el.textContent || "").indexOf("Casino") !== -1;
+    })[0];
+    if (casinoTitle) {
+      var casinoBlock = casinoTitle.closest(".card") || casinoTitle.parentElement;
+      if (casinoBlock) casinoBlock.classList.add("rb-casino-block", "rb-home-promo");
+      var provider = qs(".casinoprovider-thumb-section", home);
+      if (provider) provider.classList.add("rb-casino-block", "rb-home-promo");
+    }
+    qsa(".upcomingmatch", home).forEach(function (el) {
+      var block = el.closest(".card");
+      if (block) block.classList.add("rb-upcoming-block");
+      else el.parentElement.classList.add("rb-upcoming-block");
+    });
+  }
+
+  function injectDynamicSportPanels() {
+    var mock = window.RBSportMock;
+    if (!mock) return;
+    var home = qs(".middle-page-content.home-page");
+    if (!home) return;
+    if (qs("#rb-dynamic-sport-root")) return;
+
+    var root = document.createElement("div");
+    root.id = "rb-dynamic-sport-root";
+    root.className = "rb-dynamic-sport-root rb-sport-filter-hidden";
+    root.innerHTML = mock.renderAllDynamicPanels();
+
+    var anchor = qs('[data-rb-sport-panel="2"]', home);
+    if (anchor) {
+      var tennisCard = anchor.closest(".card");
+      if (tennisCard && tennisCard.parentElement) {
+        tennisCard.parentElement.insertBefore(root, tennisCard.nextSibling);
+        return;
+      }
+    }
+    home.appendChild(root);
+  }
+
+  function panelHasLive(panel) {
+    return !!qs(".game-date.inplay", panel);
+  }
+
+  function applySportView(sportKey) {
+    var home = qs(".middle-page-content.home-page");
+    if (!home) return;
+    rbCurrentSportView = sportKey || "home";
+
+    var isHome = sportKey === "home";
+    var isInplay = sportKey === "inplay";
+    var isCasino = sportKey === "99998" || sportKey === "99997";
+    var isSportbook = sportKey === "sportbook";
+
+    home.classList.toggle(
+      "rb-sport-view-single",
+      !isHome && !isInplay && !isCasino && !isSportbook
+    );
+    home.classList.toggle("rb-sport-view-casino", isCasino);
+
+    qsa(".rb-home-promo", home).forEach(function (el) {
+      var hide = !isHome && !isInplay;
+      if (isCasino) hide = false;
+      el.classList.toggle("rb-sport-filter-hidden", hide);
+    });
+
+    qsa("[data-rb-sport-panel]").forEach(function (panel) {
+      var pid = panel.getAttribute("data-rb-sport-panel");
+      var show = isHome || isSportbook || pid === sportKey;
+      if (isInplay) show = panelHasLive(panel);
+      if (isCasino) show = false;
+      panel.classList.toggle("rb-sport-filter-hidden", !show);
+    });
+
+    var dynamicRoot = qs("#rb-dynamic-sport-root");
+    if (dynamicRoot) {
+      var showDynamic =
+        !isHome &&
+        !isInplay &&
+        !isCasino &&
+        !isSportbook &&
+        !!qs('[data-rb-dynamic-panel="' + sportKey + '"]', dynamicRoot);
+      dynamicRoot.classList.toggle("rb-sport-filter-hidden", !showDynamic);
+      qsa("[data-rb-dynamic-panel]", dynamicRoot).forEach(function (card) {
+        var match = card.getAttribute("data-rb-dynamic-panel") === sportKey;
+        card.classList.toggle("rb-sport-filter-hidden", !match);
+        if (match && isInplay) {
+          qsa(".bet-table-row", card).forEach(function (row) {
+            var live = !!qs(".game-date.inplay", row);
+            row.classList.toggle("rb-sport-filter-hidden", !live);
+          });
+        } else if (match) {
+          qsa(".bet-table-row.rb-sport-filter-hidden", card).forEach(function (row) {
+            row.classList.remove("rb-sport-filter-hidden");
+          });
+        }
+      });
+    }
+
+    if (isInplay) {
+      qsa("[data-rb-sport-panel] .bet-table-row").forEach(function (row) {
+        var live = !!qs(".game-date.inplay", row);
+        row.classList.toggle("rb-sport-filter-hidden", !live);
+      });
+    } else {
+      qsa("[data-rb-sport-panel] .bet-table-row.rb-sport-filter-hidden").forEach(function (row) {
+        row.classList.remove("rb-sport-filter-hidden");
+      });
+    }
+
+    if (isCasino) {
+      var casino = qs(".rb-casino-block", home) || qs(".casinoprovider-thumb-section", home);
+      if (casino) casino.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      var main = qs("#main");
+      if (main && !isHome) main.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  function setActiveSportTab(link) {
+    qsa(".new-middle-menus a").forEach(function (a) {
+      a.classList.remove("nmm-active", "router-link-active", "router-link-exact-active");
+    });
+    if (link) {
+      link.classList.add("nmm-active");
+    }
+  }
 
   function initSportNav() {
-    qsa(".new-middle-menus a[href^='/']").forEach(function (link) {
+    ensureSportFilterStyles();
+    tagHomePromoSections();
+    tagExistingSportPanels();
+    injectDynamicSportPanels();
+
+    var mock = window.RBSportMock;
+
+    function onNavClick(link, e) {
+      if (e) e.preventDefault();
+      setActiveSportTab(link);
+      var sportKey = "home";
+      if (mock) sportKey = mock.getSportIdFromNavLink(link) || "home";
+      if (link.id === "home001" || (link.getAttribute("href") || "") === "/home") sportKey = "home";
+      if (link.id === "inplay001" || (link.getAttribute("href") || "") === "/inplay") sportKey = "inplay";
+      applySportView(sportKey);
+    }
+
+    qsa(".new-middle-menus a").forEach(function (link) {
       link.addEventListener("click", function (e) {
-        e.preventDefault();
-        qsa(".new-middle-menus a").forEach(function (a) {
-          a.classList.remove("nmm-active", "router-link-active", "router-link-exact-active");
-        });
-        link.classList.add("nmm-active");
-        var main = qs("#main");
-        if (main) main.scrollIntoView({ behavior: "smooth", block: "start" });
+        onNavClick(link, e);
       });
     });
+
+    qsa("#sidebar-nav a.nav-link[data-bs-toggle='collapse']").forEach(function (link) {
+      var span = qs("span", link);
+      if (!span || !mock) return;
+      var sportId = mock.NAME_TO_ID[(span.textContent || "").trim().toLowerCase()];
+      if (!sportId) return;
+      link.addEventListener("click", function () {
+        var navLink = qs("#sport" + sportId);
+        if (navLink) setActiveSportTab(navLink);
+        applySportView(sportId);
+      });
+    });
+
+    applySportView("home");
+    initBetButtons();
   }
 
   /* ── Internal links (prevent 404 on static host) ── */
@@ -861,7 +1066,6 @@
     initSportNav();
     initInternalLinks();
     initSearch();
-    initBetButtons();
     initForms();
     initMarquee();
     initDropdowns();

@@ -1,0 +1,603 @@
+/* Shared bento layout for marketing pages (max 2 images per page) */
+
+.bento-page .landing-hero,
+.bento-page .landing-features,
+.bento-page .landing-section-card,
+.bento-page .landing-split,
+.bento-page .landing-content-card {
+  display: none !important;
+}
+
+.bento-page .landing-cta-band {
+  max-width: 1200px;
+  margin: 32px auto 0;
+}
+
+.bento-page .btn-ghost {
+  color: var(--rb-text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bento-page .btn-ghost:hover {
+  color: var(--rb-gold);
+}
+
+/* —— Hero —— */
+.page-hero,
+.home-hero {
+  position: relative;
+  min-height: min(72vh, 640px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--rb-border);
+}
+
+.page-hero__bg,
+.home-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.78) 50%, rgba(125, 0, 28, 0.35) 100%);
+}
+
+.page-hero__glow,
+.home-hero__glow {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: -20%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(240, 192, 64, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.page-hero__inner,
+.home-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 20px 56px;
+  width: 100%;
+}
+
+.page-hero__eyebrow,
+.home-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rb-gold);
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border: 1px solid var(--rb-border);
+  border-radius: 100px;
+  background: rgba(240, 192, 64, 0.08);
+}
+
+.page-hero__eyebrow .pulse,
+.home-hero__eyebrow .pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rb-neon);
+  box-shadow: 0 0 12px var(--rb-neon);
+  animation: bento-pulse 1.5s ease infinite;
+}
+
+@keyframes bento-pulse {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.page-hero h1,
+.home-hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(1.85rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #fff;
+  max-width: 18ch;
+}
+
+.page-hero h1 em,
+.home-hero h1 em {
+  font-style: normal;
+  color: var(--rb-gold);
+}
+
+.page-hero__lead,
+.home-hero__lead {
+  margin: 0 0 28px;
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  color: var(--rb-text-muted);
+  max-width: 54ch;
+  line-height: 1.65;
+}
+
+.page-hero__chips,
+.home-hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.page-hero__chip,
+.home-hero__chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--rb-text);
+}
+
+.page-hero__chip i,
+.home-hero__chip i {
+  color: var(--rb-gold);
+  font-size: 1.1rem;
+}
+
+.page-hero__chip strong,
+.home-hero__chip strong {
+  color: #fff;
+}
+
+.page-hero__actions,
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Per-page hero banners */
+.bento-page--home .page-hero__bg,
+.bento-page--home .home-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(125, 0, 28, 0.35) 100%),
+    url("../images/pages/home/Homepage%20Banner.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bento-page--login .page-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(125, 0, 28, 0.35) 100%),
+    url("../images/pages/login/Login%20Page%20Banner.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bento-page--register .page-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(125, 0, 28, 0.35) 100%),
+    url("../images/pages/register/Register%20Page%20banner.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bento-page--support .page-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(125, 0, 28, 0.35) 100%),
+    url("../images/pages/customer-care/Customer%20Care%20Main%20Banner%20-%201.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bento-page--privacy .page-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(125, 0, 28, 0.35) 100%),
+    url("../images/pages/privacy-policy/Privacy%20Policy%20Main%20Banner%20-%201.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bento-page--terms .page-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.94) 0%, rgba(22, 22, 28, 0.9) 60%, rgba(125, 0, 28, 0.4) 100%);
+}
+
+.bento-page--responsible .page-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(0, 80, 40, 0.35) 100%),
+    url("../images/pages/responsible-gaming/Responsible%20Gaming%20Main%20Banner%20-%201.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Per-page visual card (2nd image) */
+.bento-page--home .bento-visual__img {
+  background-image: url("../images/pages/home/Homepage%20-%20Live%20Betting%20Experience.webp");
+}
+
+.bento-page--login .bento-visual__img {
+  background-image: url("../images/pages/login/Login%20-%20How%20to%20Login%20to%20Your%20Reddy%20Book%20Club%20Account.webp");
+}
+
+.bento-page--register .bento-visual__img {
+  background-image: url("../images/pages/register/Register%20-%20How%20to%20Register%20on%20Reddy%20Book%20Club.webp");
+}
+
+.bento-page--support .bento-visual__img {
+  background-image: url("../images/pages/customer-care/Customer%20Care%20Banner%20-%202.webp");
+}
+
+.bento-page--privacy .bento-visual__img {
+  background-image: url("../images/pages/privacy-policy/Privacy%20Policy%20Banner%20-%202.webp");
+}
+
+.bento-page--responsible .bento-visual__img {
+  background-image: url("../images/pages/responsible-gaming/Responsible%20Gaming%20Banner%20-%202.webp");
+}
+
+/* —— Bento grid —— */
+.bento-wrap,
+.home-bento-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px 24px;
+}
+
+.bento-grid,
+.home-bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  grid-auto-rows: minmax(80px, auto);
+}
+
+.bento-card {
+  background: var(--rb-bg-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 22px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+
+.bento-card:hover {
+  border-color: var(--rb-border-glow);
+}
+
+.bento-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--rb-gold), transparent);
+  opacity: 0.6;
+}
+
+.bento-card__tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rb-gold);
+  margin-bottom: 8px;
+}
+
+.bento-card h2,
+.bento-card h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.bento-card h2 {
+  font-size: 1.25rem;
+}
+
+.bento-card h3 {
+  font-size: 1rem;
+}
+
+.bento-card p,
+.bento-card li {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--rb-text-muted);
+}
+
+.bento-card ul,
+.bento-card ol {
+  padding-left: 1.1rem;
+  margin: 0 0 10px;
+}
+
+.bento-card li {
+  margin-bottom: 6px;
+}
+
+.bento-card strong {
+  color: #fff;
+}
+
+.bento-intro .lead {
+  font-size: 15px;
+  color: var(--rb-text);
+}
+
+.bento-span-12 {
+  grid-column: span 12;
+}
+
+.bento-span-8,
+.bento-span-7,
+.bento-span-6,
+.bento-span-5,
+.bento-span-4 {
+  grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+  .bento-span-8 {
+    grid-column: span 8;
+  }
+
+  .bento-span-7 {
+    grid-column: span 7;
+  }
+
+  .bento-span-6 {
+    grid-column: span 6;
+  }
+
+  .bento-span-5 {
+    grid-column: span 5;
+  }
+
+  .bento-span-4 {
+    grid-column: span 4;
+  }
+}
+
+.bento-visual {
+  padding: 0;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-visual__img {
+  flex: 1;
+  min-height: 160px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bento-visual__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.95) 0%, transparent 55%);
+}
+
+.bento-visual__body {
+  padding: 18px 20px 22px;
+  position: relative;
+  z-index: 1;
+  margin-top: -40px;
+}
+
+.bento-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.bento-tiles--3 {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+.bento-tile {
+  padding: 14px 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--rb-border);
+  border-radius: 10px;
+}
+
+.bento-tile i {
+  color: var(--rb-gold);
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.bento-tile span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.bento-tile p {
+  font-size: 11px;
+  margin: 0;
+  line-height: 1.4;
+  color: var(--rb-text-muted);
+}
+
+.bento-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@media (min-width: 640px) {
+  .bento-steps--5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .bento-steps--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bento-steps--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bento-step {
+  text-align: center;
+  padding: 14px 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--rb-border);
+  border-radius: 10px;
+}
+
+.bento-step__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--rb-gold), var(--rb-gold-dim));
+  color: #0a0a0a;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bento-step p {
+  font-size: 12px;
+  margin: 0;
+  color: var(--rb-text-muted);
+}
+
+.bento-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.bento-pill {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--rb-text);
+  background: rgba(240, 192, 64, 0.1);
+  border: 1px solid var(--rb-border);
+  border-radius: 100px;
+}
+
+.bento-highlight {
+  background: linear-gradient(145deg, rgba(125, 0, 28, 0.4), rgba(22, 22, 28, 0.95));
+}
+
+.bento-highlight--safe {
+  background: linear-gradient(145deg, rgba(0, 80, 40, 0.35), rgba(22, 22, 28, 0.95));
+}
+
+.bento-highlight .bento-card__tag {
+  color: var(--rb-neon);
+}
+
+.bento-legal-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.bento-legal-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--rb-border);
+  border-radius: 10px;
+}
+
+.bento-legal-item__n {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(240, 192, 64, 0.15);
+  color: var(--rb-gold);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bento-legal-item p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.bento-faq {
+  padding: 0;
+}
+
+.bento-faq .landing-faq {
+  padding: 8px 12px;
+}
+
+.bento-faq .landing-faq details {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--rb-border);
+  border-radius: 0;
+  margin: 0;
+}
+
+.bento-faq .landing-faq details:last-child {
+  border-bottom: none;
+}
+
+.bento-cta-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(160deg, rgba(240, 192, 64, 0.15), rgba(22, 22, 28, 0.98));
+}
+
+.bento-cta-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.bento-cta-card .btn-cta {
+  margin-top: 8px;
+}
+
+.bento-no-visual .bento-visual__img {
+  display: none;
+}
+
+.bento-no-visual.bento-visual {
+  min-height: auto;
+  padding: 22px 20px;
+}
