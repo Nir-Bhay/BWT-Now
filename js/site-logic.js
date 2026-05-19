@@ -270,8 +270,8 @@
   function buildAuthMarkup() {
     return (
       '<div class="login-block row g-0">' +
-      '<div class="col-md-6 banner-sec d-none d-md-block">' +
-      '<img class="img-fluid w-100 rb-auth-banner" alt="ReddyBook login" src="' +
+      '<div class="col-md-6 banner-sec">' +
+      '<img class="img-fluid w-100 rb-auth-banner" alt="ReddyBook — deposits, withdrawals &amp; verification" src="' +
       AUTH_BANNER_SRC +
       '">' +
       "</div>" +
@@ -610,7 +610,30 @@
     }
   }
 
+  function upgradeDashboardAuthLinks() {
+    qsa(".header-auth-btns .btn-login").forEach(function (btn) {
+      if (btn.classList.contains("btn-login-profile")) return;
+      var label = (btn.textContent || "").trim().toUpperCase();
+      var href = btn.getAttribute("href") || "";
+      if (href.indexOf("/signup") !== -1 || label.indexOf("SIGN") !== -1) {
+        btn.setAttribute("href", "javascript:void(0)");
+        btn.setAttribute("data-auth-open", "signup");
+        btn.dataset.authBound = "";
+      } else if (
+        label.indexOf("LOGIN") !== -1 ||
+        btn.getAttribute("data-bs-target") === ".login-popup"
+      ) {
+        btn.setAttribute("href", "javascript:void(0)");
+        btn.setAttribute("data-auth-open", "login");
+        btn.removeAttribute("data-bs-toggle");
+        btn.removeAttribute("data-bs-target");
+        btn.dataset.authBound = "";
+      }
+    });
+  }
+
   function initAuthButtons() {
+    upgradeDashboardAuthLinks();
     qsa('[data-auth-open="signup"], [data-auth-open="login"]').forEach(bindAuthTrigger);
 
     qsa('.header-nav .profile a[href="javascript:void(0)"]').forEach(function (a) {
