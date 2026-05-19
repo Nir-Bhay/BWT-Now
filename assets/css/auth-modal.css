@@ -1,0 +1,167 @@
+/* Auth modal — matches ReddyBook index theme (#c10930 / #7d001c) */
+
+.login-popup .modal-content {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.login-popup .modal-content .close {
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  right: 8px;
+  top: 8px;
+  z-index: 20;
+}
+
+.login-popup .login-sec {
+  background: linear-gradient(160deg, #1a1a1a 0%, #3d0a14 45%, #7d001c 100%);
+  padding: 22px 26px 18px;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-popup .banner-sec {
+  background: #111;
+}
+
+.rb-auth-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.rb-auth-tab {
+  flex: 1;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.rb-auth-tab:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.rb-auth-tab.active {
+  background: #c10930;
+  border-color: #c10930;
+  color: #fff;
+}
+
+.rb-auth-pane {
+  display: none;
+  flex: 1;
+}
+
+.rb-auth-pane.active {
+  display: block;
+}
+
+.login-popup .login-form .form-group {
+  margin-bottom: 14px;
+}
+
+.login-popup .login-form .rb-field-label {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.4px;
+}
+
+.login-popup .login-form .form-control {
+  width: 100%;
+  display: block;
+  background: #fff;
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.login-popup .login-form .form-control:focus {
+  outline: none;
+  border-color: #c10930;
+  box-shadow: 0 0 0 2px rgba(193, 9, 48, 0.25);
+}
+
+.login-popup .remember-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 12px;
+  margin: 4px 0 14px;
+  cursor: pointer;
+}
+
+.login-popup .remember-row input {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.login-popup .login-form .button-login {
+  background: #c10930;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  margin: 4px 0 0;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-popup .login-form .button-login:hover {
+  background: #a00828;
+  color: #fff;
+}
+
+.login-popup .login-feedback {
+  color: #ffc9c9;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.login-popup .login-sec .copy-text {
+  position: static;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 14px;
+  font-size: 11px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.login-popup .login-sec .copy-text p {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .login-popup .login-sec {
+    min-height: auto;
+    padding: 20px 18px 16px;
+  }
+}
