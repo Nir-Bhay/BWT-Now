@@ -56,22 +56,21 @@ if (index.includes(startTag) && index.includes(endTag)) {
   index = index.replace(re, wrapped.trim());
   console.log("Updated existing dashboard home embed.");
 } else {
-  const marker =
-    'src="assets/images/casino-providers/17627668338456002.webp" />\n' +
-    "                        </div>\n" +
-    "                        <!---->\n" +
-    "                      </div>";
-  if (!index.includes(marker)) {
+  const providerEnd =
+    /class="casinoprovider-thumb-section">[\s\S]*?17627668338456002\.webp" \/>[\s\S]*?<\/motion.div>\s*<!---->\s*<\/motion.div>\s*<!---->/;
+  if (!providerEnd.test(index)) {
     console.error("Casino provider end marker not found in index.html");
     process.exit(1);
   }
-  index = index.replace(marker, marker + "\n" + wrapped);
+  index = index.replace(providerEnd, (match) => match + "\n" + wrapped);
   console.log("Inserted dashboard home embed after Casino Provider.");
 }
 
 const cssLinks = [
+  '<link href="assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />',
   '<link href="assets/css/landing.css" rel="stylesheet" />',
   '<link href="assets/css/landing-dark.css" rel="stylesheet" />',
+  '<link href="assets/css/landing-footer.css" rel="stylesheet" />',
   '<link href="assets/css/home-bento.css" rel="stylesheet" />',
   '<link href="assets/css/dashboard-home-embed.css" rel="stylesheet" />',
 ];

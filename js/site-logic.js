@@ -229,12 +229,15 @@
 
     qsa("[data-bs-toggle='modal']").forEach(function (trigger) {
       if (trigger.getAttribute("data-auth-open")) return;
+      if (trigger.closest(".header-auth-btns, .landing-header-actions")) return;
       trigger.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
         var targetSel = trigger.getAttribute("data-bs-target");
         if (!targetSel) return;
-        showModal(qs(targetSel));
+        var modal = qs(targetSel);
+        if (!modal) return;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        showModal(modal);
       });
     });
   }
@@ -551,10 +554,17 @@
 
   /* ── Auth UI toggle ── */
 
+  function prepareAuthTriggers() {
+    upgradeDashboardAuthLinks();
+    upgradeLandingAuthLinks();
+  }
+
   function applyAuthUI() {
     var session = getSession();
     var signupBtn = qs('.header-auth-btns .btn-signup, .header-auth-btns [data-auth-open="signup"]');
-    var loginBtn = qs('.header-auth-btns .btn-signin, .header-auth-btns a.btn-login-profile');
+    var loginBtn =
+      qs('.header-auth-btns [data-auth-open="login"]') ||
+      qs(".header-auth-btns a.btn-login-profile");
     var profileMenu = qs(".dropdown-menu.profile");
     var dropdownHeader = qs(".dropdown-menu.profile .dropdown-header h6");
     var landingSignup = qs('.landing-header-actions [data-auth-open="signup"]');
@@ -592,6 +602,8 @@
         loginBtn.removeAttribute("data-bs-toggle");
         loginBtn.removeAttribute("data-bs-target");
         loginBtn.href = "javascript:void(0)";
+        loginBtn.setAttribute("data-auth-open", "login");
+        loginBtn.dataset.authBound = "";
       }
       if (profileMenu) profileMenu.style.display = "none";
       if (landingSignup) {
@@ -633,7 +645,8 @@
   }
 
   function initAuthButtons() {
-    upgradeDashboardAuthLinks();
+    prepareAuthTriggers();
+    applyAuthUI();
     qsa('[data-auth-open="signup"], [data-auth-open="login"]').forEach(bindAuthTrigger);
 
     qsa('.header-nav .profile a[href="javascript:void(0)"]').forEach(function (a) {
@@ -649,8 +662,6 @@
         });
       }
     });
-
-    applyAuthUI();
   }
 
   /* ── Sidebar toggle ── */
@@ -760,6 +771,8 @@
       var provider = qs(".casinoprovider-thumb-section", home);
       if (provider) provider.classList.add("rb-casino-block", "rb-home-promo");
     }
+    var dashboardHome = qs(".rb-dashboard-home-embed", home);
+    if (dashboardHome) dashboardHome.classList.add("rb-dashboard-home-slot");
   }
 
   function injectDynamicSportPanels() {
@@ -809,6 +822,10 @@
       var hide = !isHome && !isInplay;
       if (isCasino) hide = false;
       el.classList.toggle("rb-sport-filter-hidden", hide);
+    });
+
+    qsa(".rb-dashboard-home-embed", home).forEach(function (el) {
+      el.classList.toggle("rb-sport-filter-hidden", !isHome);
     });
 
     qsa("[data-rb-sport-panel]").forEach(function (panel) {
@@ -1253,9 +1270,9 @@
     ensureAuthModalStyles();
     if (isLandingPage()) {
       ensureAuthModalOnPage();
+      prepareAuthTriggers();
       initAuthForms();
       initModals();
-      upgradeLandingAuthLinks();
       initAuthButtons();
       showApkPromoOnLoad();
       window.RBStatic = {
@@ -1277,6 +1294,7 @@
     }
 
     disableAngularBoot();
+    prepareAuthTriggers();
     initAuthForms();
     initModals();
     initAuthButtons();
