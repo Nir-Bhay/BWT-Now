@@ -498,37 +498,7 @@ function headerHtml(activeFile) {
 }
 
 function footerHtml() {
-  const links = FOOTER_LINKS.map((l) => `<li><a href="${l.href}">${l.label}</a></li>`).join("\n          ");
-  const quick = NAV.map((l) => `<li><a href="${l.href}">${l.label}</a></li>`).join("\n          ");
-  return `  <footer class="landing-footer">
-    <motion class="container">
-      <div class="landing-footer-grid">
-        <motion>
-          <h4>Reddy Book Club</h4>
-          <p style="font-size:14px;margin:0;color:#aaa;">India's trusted cricket betting ID platform. Sports, casino, and live markets in one account.</p>
-        </motion>
-        <motion>
-          <h4>Quick Links</h4>
-          <ul>${quick}</ul>
-        </motion>
-        <motion>
-          <h4>Legal</h4>
-          <ul>${links}</ul>
-        </motion>
-        <motion>
-          <h4>Account</h4>
-          <ul>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="index.html">Betting Dashboard</a></li>
-          </ul>
-        </motion>
-      </div>
-      <div class="landing-footer-bottom">
-        <p>&copy; ${new Date().getFullYear()} Reddy Book Club. Play responsibly. 18+ only where legally permitted.</p>
-      </motion>
-    </motion>
-  </footer>`.replace(/<motion/g, "<motion").replace(/motion/g, "motion").replace(/<motion/g, "<motion");
+  return renderLandingFooter();
 }
 
 function pageShell({ title, metaDesc, active, heroSrc, h1, lead, bodyHtml, extraClass = "" }) {
