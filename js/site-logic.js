@@ -313,7 +313,7 @@
       '<p class="login-feedback" style="display:none" role="alert"></p>' +
       "</form>" +
       "</div>" +
-      '<div class="copy-text"><p>Demo mode — use any username &amp; password (6+ characters)</p></div>' +
+      '<div class="copy-text"><p>Demo mode — use any username &amp; password (6+ chars)</p></div>' +
       "</div></div>"
     );
   }
@@ -346,15 +346,15 @@
     return document.body.classList.contains("landing-page");
   }
 
-  function ensureLandingAuthStyles() {
-    if (!isLandingPage()) return;
+  function ensureAuthModalStyles() {
+    if (!qs(".login-popup")) return;
     if (!qs('link[href*="auth-modal.css"]')) {
       var authCss = document.createElement("link");
       authCss.rel = "stylesheet";
       authCss.href = "assets/css/auth-modal.css";
       document.head.appendChild(authCss);
     }
-    if (!qs('link[href*="bootstrap.min.css"]')) {
+    if (isLandingPage() && !qs('link[href*="bootstrap.min.css"]')) {
       var bsCss = document.createElement("link");
       bsCss.rel = "stylesheet";
       bsCss.href = "assets/css/bootstrap/css/bootstrap.min.css";
@@ -1227,8 +1227,8 @@
   }
 
   ready(function () {
+    ensureAuthModalStyles();
     if (isLandingPage()) {
-      ensureLandingAuthStyles();
       ensureAuthModalOnPage();
       initAuthForms();
       initModals();
