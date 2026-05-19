@@ -7,6 +7,8 @@
 
   var STORAGE_KEY = "reddybook_demo_session";
   var APK_DISMISSED_KEY = "reddybook_apk_dismissed";
+  /** Fixed banner for login + signup (Login - Deposits, Withdrawals, and Verification (3)) */
+  var AUTH_BANNER_SRC = "assets/images/auth/login-signup-banner.webp";
 
   function ready(fn) {
     if (document.readyState === "loading") {
@@ -56,17 +58,32 @@
     return qsa(".modal.show, .modal.in").length > 0;
   }
 
+  /** Bootstrap may inject extra div.modal-backdrop; remove so the page never stays foggy. */
+  function removeStrayBackdrops() {
+    qsa("body > div.modal-backdrop").forEach(function (el) {
+      el.remove();
+    });
+  }
+
+  function clearBodyModalLock() {
+    document.body.classList.remove("modal-open");
+    document.body.style.overflow = "";
+    document.body.style.overflowY = "";
+    document.body.style.paddingRight = "";
+    removeStrayBackdrops();
+  }
+
   function syncBodyModalState() {
     var backdrop = getBackdrop();
     if (anyModalOpen()) {
+      removeStrayBackdrops();
       document.body.classList.add("modal-open");
       document.body.style.overflowY = "hidden";
       backdrop.classList.add("show", "in");
       backdrop.style.display = "block";
       backdrop.style.pointerEvents = "auto";
     } else {
-      document.body.classList.remove("modal-open");
-      document.body.style.overflowY = "";
+      clearBodyModalLock();
       backdrop.classList.remove("show", "in");
       backdrop.style.display = "none";
       backdrop.style.pointerEvents = "none";
@@ -99,6 +116,7 @@
       hideModal(m, false);
     });
     syncBodyModalState();
+    clearBodyModalLock();
   }
 
   function getApkPromoModal() {
@@ -125,6 +143,7 @@
     if (!modal) return;
     hideModal(modal);
     if (modal.dataset.apkPromo === "1") rememberApkDismissed();
+    if (!anyModalOpen()) clearBodyModalLock();
   }
 
   function enhanceModalCloseButtons(modal) {
@@ -208,8 +227,10 @@
     });
 
     qsa("[data-bs-toggle='modal']").forEach(function (trigger) {
+      if (trigger.getAttribute("data-auth-open")) return;
       trigger.addEventListener("click", function (e) {
         e.preventDefault();
+        e.stopImmediatePropagation();
         var targetSel = trigger.getAttribute("data-bs-target");
         if (!targetSel) return;
         showModal(qs(targetSel));
@@ -221,6 +242,11 @@
     qsa(".modal").forEach(function (m) {
       hideModal(m, false);
     });
+
+    if (isLandingPage()) {
+      syncBodyModalState();
+      return;
+    }
 
     if (wasApkDismissed()) {
       syncBodyModalState();
@@ -244,10 +270,9 @@
     return (
       '<div class="login-block row g-0">' +
       '<div class="col-md-6 banner-sec d-none d-md-block">' +
-      '<img class="img-fluid w-100" alt="ReddyBook" src="' +
-      pickRandomBanner() +
-      '" ' +
-      'onerror="this.style.display=\'none\'">' +
+      '<img class="img-fluid w-100 rb-auth-banner" alt="ReddyBook login" src="' +
+      AUTH_BANNER_SRC +
+      '">' +
       "</div>" +
       '<div class="col-md-6 login-sec">' +
       '<div class="rb-auth-tabs" role="tablist">' +
@@ -316,17 +341,111 @@
     feedback.style.display = "block";
   }
 
+  function isLandingPage() {
+    return document.body.classList.contains("landing-page");
+  }
+
+  function ensureLandingAuthStyles() {
+    if (!isLandingPage()) return;
+    if (!qs('link[href*="auth-modal.css"]')) {
+      var authCss = document.createElement("link");
+      authCss.rel = "stylesheet";
+      authCss.href = "assets/css/auth-modal.css";
+      document.head.appendChild(authCss);
+    }
+    if (!qs('link[href*="bootstrap.min.css"]')) {
+      var bsCss = document.createElement("link");
+      bsCss.rel = "stylesheet";
+      bsCss.href = "assets/css/bootstrap/css/bootstrap.min.css";
+      document.head.appendChild(bsCss);
+    }
+  }
+
+  function ensureAuthModalOnPage() {
+    if (qs(".login-popup")) return;
+    if (!isLandingPage()) return;
+
+    var modal = document.createElement("motion");
+    modal.className = "modal fade login-popup";
+    modal.setAttribute("tabindex", "-1");
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-hidden", "true");
+    modal.innerHTML =
+      '<motion class="modal-dialog modal-lg modal-dialog-centered">' +
+      '<motion class="modal-content"><motion class="modal-body">' +
+      '<button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">' +
+      '<span aria-hidden="true">×</span></button>' +
+      "<app-login></app-login>" +
+      "</motion></motion></motion>";
+    modal.innerHTML = modal.innerHTML.replace(/<motion/g, "<div").replace(/<\/motion>/g, "</div>");
+    document.body.appendChild(modal);
+
+    if (!qs("bs-modal-backdrop")) {
+      var backdrop = document.createElement("bs-modal-backdrop");
+      backdrop.className = "modal-backdrop fade";
+      document.body.appendChild(backdrop);
+    }
+  }
+
+  function upgradeLandingAuthLinks() {
+    if (!isLandingPage()) return;
+
+    qsa('.landing-header-actions a[href="register.html"]').forEach(function (a) {
+      a.setAttribute("href", "javascript:void(0)");
+      a.setAttribute("data-auth-open", "signup");
+    });
+    qsa('.landing-header-actions a[href="login.html"]').forEach(function (a) {
+      a.setAttribute("href", "javascript:void(0)");
+      a.setAttribute("data-auth-open", "login");
+    });
+
+    qsa('a.btn-cta[href="register.html"]').forEach(function (a) {
+      if (a.closest("footer")) return;
+      a.setAttribute("href", "javascript:void(0)");
+      a.setAttribute("data-auth-open", "signup");
+    });
+    qsa('a.btn-cta[href="login.html"]').forEach(function (a) {
+      if (a.closest("footer")) return;
+      var label = (a.textContent || "").trim().toLowerCase();
+      if (label.indexOf("login") === -1 && label.indexOf("log in") === -1) return;
+      a.setAttribute("href", "javascript:void(0)");
+      a.setAttribute("data-auth-open", "login");
+    });
+  }
+
+  function bindAuthTrigger(el) {
+    if (!el || el.dataset.authBound === "1") return;
+    if (el.classList.contains("rb-auth-dashboard-link")) return;
+    var tab = el.getAttribute("data-auth-open");
+    if (tab !== "login" && tab !== "signup") return;
+    el.dataset.authBound = "1";
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      openAuthModal(tab);
+    });
+  }
+
   function completeAuth(session) {
     setSession(session);
     applyAuthUI();
     hideModal(qs(".login-popup"));
+    if (isLandingPage()) {
+      window.location.href = "index.html";
+    }
   }
 
   function initAuthForms() {
     var host = qs("app-login");
-    if (!host || host.dataset.loginReady) return;
-    host.innerHTML = buildAuthMarkup();
-    host.dataset.loginReady = "1";
+    if (!host) return;
+    if (!host.dataset.loginReady) {
+      host.innerHTML = buildAuthMarkup();
+      host.dataset.loginReady = "1";
+    }
+    var banner = qs(".rb-auth-banner", host);
+    if (banner) banner.setAttribute("src", AUTH_BANNER_SRC);
+
+    if (host.dataset.authBound) return;
+    host.dataset.authBound = "1";
 
     qsa(".rb-auth-tab", host).forEach(function (btn) {
       btn.addEventListener("click", function () {
@@ -437,6 +556,8 @@
     var loginBtn = qs('.header-auth-btns .btn-signin, .header-auth-btns a.btn-login-profile');
     var profileMenu = qs(".dropdown-menu.profile");
     var dropdownHeader = qs(".dropdown-menu.profile .dropdown-header h6");
+    var landingSignup = qs('.landing-header-actions [data-auth-open="signup"]');
+    var landingLogin = qs('.landing-header-actions [data-auth-open="login"]');
 
     if (session) {
       if (signupBtn) signupBtn.style.display = "none";
@@ -452,36 +573,44 @@
         dropdownHeader.textContent = "HI, " + session.username.toUpperCase();
       }
       if (profileMenu) profileMenu.style.display = "";
+      if (landingSignup) landingSignup.style.display = "none";
+      if (landingLogin) {
+        landingLogin.style.display = "";
+        landingLogin.textContent = "Dashboard";
+        landingLogin.removeAttribute("data-auth-open");
+        landingLogin.href = "index.html";
+        landingLogin.classList.add("rb-auth-dashboard-link");
+        landingLogin.dataset.authBound = "";
+      }
     } else {
       if (signupBtn) signupBtn.style.display = "";
       if (loginBtn) {
         loginBtn.style.display = "";
         loginBtn.textContent = "LOGIN";
         loginBtn.classList.remove("btn-login-profile");
-        loginBtn.setAttribute("data-bs-toggle", "modal");
-        loginBtn.setAttribute("data-bs-target", ".login-popup");
+        loginBtn.removeAttribute("data-bs-toggle");
+        loginBtn.removeAttribute("data-bs-target");
         loginBtn.href = "javascript:void(0)";
       }
       if (profileMenu) profileMenu.style.display = "none";
+      if (landingSignup) {
+        landingSignup.style.display = "";
+        landingSignup.href = "javascript:void(0)";
+        landingSignup.setAttribute("data-auth-open", "signup");
+      }
+      if (landingLogin) {
+        landingLogin.style.display = "";
+        landingLogin.textContent = "Login";
+        landingLogin.href = "javascript:void(0)";
+        landingLogin.setAttribute("data-auth-open", "login");
+        landingLogin.classList.remove("rb-auth-dashboard-link");
+        landingLogin.dataset.authBound = "";
+      }
     }
   }
 
   function initAuthButtons() {
-    var signupBtn = qs('.header-auth-btns [data-auth-open="signup"]');
-    if (signupBtn) {
-      signupBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        openSignupModal();
-      });
-    }
-
-    var loginBtn = qs('.header-auth-btns [data-auth-open="login"]');
-    if (loginBtn) {
-      loginBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        openLoginModal();
-      });
-    }
+    qsa('[data-auth-open="signup"], [data-auth-open="login"]').forEach(bindAuthTrigger);
 
     qsa('.header-nav .profile a[href="javascript:void(0)"]').forEach(function (a) {
       if ((a.textContent || "").toLowerCase().indexOf("sign out") !== -1) {
@@ -489,6 +618,10 @@
           e.preventDefault();
           clearSession();
           applyAuthUI();
+          qsa('[data-auth-open="signup"], [data-auth-open="login"]').forEach(function (el) {
+            el.dataset.authBound = "";
+          });
+          initAuthButtons();
         });
       }
     });
@@ -603,11 +736,6 @@
       var provider = qs(".casinoprovider-thumb-section", home);
       if (provider) provider.classList.add("rb-casino-block", "rb-home-promo");
     }
-    qsa(".upcomingmatch", home).forEach(function (el) {
-      var block = el.closest(".card");
-      if (block) block.classList.add("rb-upcoming-block");
-      else el.parentElement.classList.add("rb-upcoming-block");
-    });
   }
 
   function injectDynamicSportPanels() {
@@ -1005,15 +1133,50 @@
     return PROMO_BANNERS[Math.floor(Math.random() * PROMO_BANNERS.length)];
   }
 
+  /* Original casino-provider ad tiles (MAC88, GAMZIX, etc.) — not landing-page banners */
+  var CASINO_PROVIDER_IMAGES = [
+    "assets/images/casino-providers/17627666895880894.webp",
+    "assets/images/casino-providers/17627666966773371.webp",
+    "assets/images/casino-providers/17627667037947034.webp",
+    "assets/images/casino-providers/17627667094382181.webp",
+    "assets/images/casino-providers/17627667207446881.webp",
+    "assets/images/casino-providers/17627667265483610.webp",
+    "assets/images/casino-providers/17627667335828371.webp",
+    "assets/images/casino-providers/17627667396466553.webp",
+    "assets/images/casino-providers/17627667473323418.webp",
+    "assets/images/casino-providers/17627667559465232.webp",
+    "assets/images/casino-providers/17627667617577382.webp",
+    "assets/images/casino-providers/17627667697736998.webp",
+    "assets/images/casino-providers/17627667768757066.webp",
+    "assets/images/casino-providers/17627667832075489.webp",
+    "assets/images/casino-providers/17627667896330903.webp",
+    "assets/images/casino-providers/17627667959015593.webp",
+    "assets/images/casino-providers/17627668019132332.webp",
+    "assets/images/casino-providers/17627668338456002.webp",
+  ];
+
+  function initCasinoProviderImages() {
+    var section = qs(".casinoprovider-thumb-section");
+    if (!section) return;
+    var imgs = qsa("img", section);
+    imgs.forEach(function (img, i) {
+      var src = CASINO_PROVIDER_IMAGES[i % CASINO_PROVIDER_IMAGES.length];
+      img.setAttribute("data-rb-casino-provider", "1");
+      img.src = src;
+      img.removeAttribute("srcset");
+      img.alt = img.alt || "Casino provider";
+      img.style.objectFit = "cover";
+      img.style.width = "100%";
+      img.style.height = "100%";
+    });
+  }
+
   function collectPromoImageElements() {
     var seen = new Set();
     var out = [];
     var selectors = [
-      ".custom-thumb-section img",
-      ".casinoprovider-thumb-section img",
       ".top-baner img",
       "#carouselExampleIndicators .carousel-item img",
-      'img[src*="speedcdn.io/frontend_config/tiger"]',
       'img[src*="speedcdn.io/assets/v9-modal-popup"]',
       '#sidebar img[src*="assets/images/ls_"]',
     ];
@@ -1021,6 +1184,12 @@
     selectors.forEach(function (sel) {
       qsa(sel).forEach(function (img) {
         if (seen.has(img)) return;
+        if (
+          img.closest(".casinoprovider-thumb-section, .custom-thumb-section") ||
+          img.getAttribute("data-rb-casino-provider")
+        ) {
+          return;
+        }
         seen.add(img);
         out.push(img);
       });
@@ -1057,6 +1226,32 @@
   }
 
   ready(function () {
+    if (isLandingPage()) {
+      ensureLandingAuthStyles();
+      ensureAuthModalOnPage();
+      initAuthForms();
+      initModals();
+      upgradeLandingAuthLinks();
+      initAuthButtons();
+      showApkPromoOnLoad();
+      window.RBStatic = {
+        showModal: showModal,
+        hideModal: hideModal,
+        openLogin: openLoginModal,
+        openSignup: openSignupModal,
+        getSession: getSession,
+        logout: function () {
+          clearSession();
+          applyAuthUI();
+          qsa('[data-auth-open="signup"], [data-auth-open="login"]').forEach(function (el) {
+            el.dataset.authBound = "";
+          });
+          initAuthButtons();
+        },
+      };
+      return;
+    }
+
     disableAngularBoot();
     initAuthForms();
     initModals();
@@ -1070,6 +1265,7 @@
     initMarquee();
     initDropdowns();
     initPromoImages();
+    initCasinoProviderImages();
     initSwipers();
     showApkPromoOnLoad();
 

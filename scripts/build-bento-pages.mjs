@@ -6,6 +6,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { renderLandingFooter } from "./landing-footer.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -58,6 +59,7 @@ function renderShell(page) {
   <link href="assets/css/landing.css" rel="stylesheet" />
   <link href="assets/css/landing-dark.css" rel="stylesheet" />
   <link href="assets/css/landing-bento.css" rel="stylesheet" />
+  <link href="assets/css/landing-footer.css" rel="stylesheet" />
 </head>
 <body class="landing-page bento-page bento-page--${theme}">
   <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</div>

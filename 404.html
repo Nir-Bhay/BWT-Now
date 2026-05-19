@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,12 +11,31 @@
   <link href="/assets/css/landing.css" rel="stylesheet" />
   <link href="/assets/css/landing-dark.css" rel="stylesheet" />
   <style>
-    body.landing-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
-    .not-found h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-    .not-found p { opacity: 0.85; margin-bottom: 1.5rem; }
-    .not-found a { margin: 0 0.35rem; }
+    body.landing-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .not-found h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .not-found p {
+      opacity: 0.85;
+      margin-bottom: 1.5rem;
+    }
+
+    .not-found a {
+      margin: 0 0.35rem;
+    }
   </style>
 </head>
+
 <body class="landing-page">
   <div class="not-found">
     <h1>404 — Page not found</h1>
@@ -26,5 +46,23 @@
       <a href="/login" class="btn-login">Login</a>
     </p>
   </div>
+
+<div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="dialog-login-name" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">
+          <span aria-hidden="true">×</span>
+        </button>
+        <app-login></app-login>
+      </div>
+    </div>
+  </div>
+</div>
+<bs-modal-backdrop class="modal-backdrop fade"></bs-modal-backdrop>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="js/site-logic.js"></script>
 </body>
+
 </html>

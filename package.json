@@ -7,6 +7,7 @@
     "build": "node scripts/build-landing-pages.mjs",
     "build:pages": "node scripts/build-landing-pages.mjs",
     "build:bento": "node scripts/build-bento-pages.mjs",
+    "embed:home": "node scripts/embed-home-into-index.mjs",
     "start": "npx --yes serve -l 3000",
     "preview": "npx --yes serve -l 3000",
     "test": "echo \"Error: no test specified\" && exit 1"

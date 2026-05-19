@@ -1,0 +1,57 @@
+/* Home marketing block embedded inside index.html dashboard */
+
+.rb-dashboard-home-embed {
+  --rb-bg: #0a0a0a;
+  --rb-bg-elevated: #121212;
+  --rb-bg-card: rgba(22, 22, 28, 0.92);
+  --rb-border: rgba(240, 192, 64, 0.22);
+  --rb-gold: #f0c040;
+  --rb-neon: #39ff14;
+  --rb-text: #e8e8ec;
+  --rb-text-muted: #9ca3af;
+  --rb-maroon: #7d001c;
+  width: 100%;
+  margin-top: 12px;
+  color: var(--rb-text);
+  background: var(--rb-bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(125, 0, 28, 0.35), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(240, 192, 64, 0.06), transparent),
+    linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--rb-border);
+}
+
+.middle-page-content .rb-dashboard-home-embed {
+  clear: both;
+}
+
+.rb-dashboard-home-embed .home-hero,
+.rb-dashboard-home-embed .winners-ticker-wrap,
+.rb-dashboard-home-embed .landing-main,
+.rb-dashboard-home-embed .landing-cta-band,
+.rb-dashboard-home-embed .landing-footer {
+  max-width: 100%;
+}
+
+.rb-dashboard-home-embed .landing-main {
+  padding: 0 12px 24px;
+}
+
+.rb-dashboard-home-embed .landing-footer .container,
+.rb-dashboard-home-embed .home-hero__inner {
+  max-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.rb-dashboard-home-embed a:not(.btn-login):not(.rules-btn):not(.btn-cta) {
+  color: var(--rb-gold);
+}
+
+/* Dashboard parent may constrain height — allow full scroll */
+.coupon-card .rb-dashboard-home-embed {
+  margin-left: 0;
+  margin-right: 0;
+}

@@ -1,6 +1,14 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { renderLandingFooter } from "./landing-footer.mjs";
+import { renderLandingFooter } from "./landing-footer.mjs";
+import {
+  AUTH_MODAL_HTML,
+  AUTH_HEAD_LINKS,
+  AUTH_FOOT_SCRIPTS,
+  headerAuthButtonsHtml,
+} from "./auth-modal-snippet.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -479,8 +487,7 @@ function headerHtml(activeFile) {
       </nav>
       <div class="landing-header-actions">
         <a href="index.html" class="rules-btn">Bet Now</a>
-        <a href="register.html" class="btn-login btn-accent">Signup</a>
-        <a href="login.html" class="btn-login">Login</a>
+        ${headerAuthButtonsHtml()}
       </div>
     </motion>
   </header>
@@ -541,7 +548,7 @@ function pageShell({ title, metaDesc, active, heroSrc, h1, lead, bodyHtml, extra
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="assets/css/common_style.css" rel="stylesheet" />
   <link href="assets/css/landing.css" rel="stylesheet" />
-  <link href="assets/css/landing-dark.css" rel="stylesheet" />
+  <link href="assets/css/landing-dark.css" rel="stylesheet" />${AUTH_HEAD_LINKS}
 </head>
 <body class="landing-page ${extraClass}">
   <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</motion>
@@ -585,7 +592,8 @@ function pageShell({ title, metaDesc, active, heroSrc, h1, lead, bodyHtml, extra
     </section>
   </main>
   ${footerHtml()}
-  <script src="assets/js/landing-ui.js" defer></script>
+  <script src="assets/js/landing-ui.js" defer></script>${AUTH_FOOT_SCRIPTS}
+${AUTH_MODAL_HTML}
 </body>
 </html>`;
   return fixHtml(raw);
