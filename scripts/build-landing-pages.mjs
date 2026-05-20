@@ -677,53 +677,8 @@ for (const cfg of PAGE_CONFIG) {
 }
 
 // Blogs & Categories
-function simpleGridPage({ file, active, title, h1, metaDesc, items }) {
-  const cards = items
-    .map(
-      (it) => `<article class="landing-grid-card">
-      <div class="card-img">${escapeHtml(it.tag)}</motion>
-      <div class="card-body"><h3>${escapeHtml(it.title)}</h3><p>${escapeHtml(it.desc)}</p><a href="${it.href}">Read more →</a></div>
-    </article>`
-    )
-    .join("\n");
-
-  const body = `<section class="landing-content-card">
-    <p>${escapeHtml(metaDesc)}</p>
-    <div class="landing-grid-cards">${cards.replace(/<\/motion>/g, "</motion>")}</div>
-  </section>`;
-
-  const hero = `${IMG_BASE}/home/Homepage Banner.webp`;
-  const html = pageShell({ title, metaDesc, active, heroSrc: hero, h1, lead: metaDesc, bodyHtml: body });
-  fs.writeFileSync(path.join(ROOT, file), html.replace(/<motion/g, "<motion").replace(/motion/g, "motion").replace(/<motion/g, "<div").replace(/<\/motion>/g, "</div>"), "utf8");
-  console.log("Wrote", file);
-}
-
-simpleGridPage({
-  file: "blogs.html",
-  active: "blogs.html",
-  title: "Reddy Book Blog | Tips, Guides & Updates",
-  h1: "Reddy Book Club Blog",
-  metaDesc: "Read guides on cricket IDs, login, registration, sports betting tips, and platform updates.",
-  items: [
-    { tag: "Guide", title: "How to Get a ReddyBook Cricket ID", desc: "Step-by-step agent registration and account setup.", href: "register.html" },
-    { tag: "Login", title: "Reddy Book Login Troubleshooting", desc: "Fix common login issues safely.", href: "login.html" },
-    { tag: "Payments", title: "Deposits & Withdrawals Explained", desc: "UPI, bank transfer, and agent-assisted payments.", href: "home.html" },
-    { tag: "Safety", title: "Responsible Gaming Basics", desc: "Set limits and play within your budget.", href: "responsible-gaming.html" },
-  ],
-});
-
-simpleGridPage({
-  file: "categories.html",
-  active: "categories.html",
-  title: "Categories | Reddy Book Club",
-  h1: "Browse Categories",
-  metaDesc: "Explore cricket, football, casino, live betting, and account categories on Reddy Book Club.",
-  items: [
-    { tag: "Cricket", title: "Cricket Betting & IPL Markets", desc: "Cricket ID access and live match betting.", href: "index.html" },
-    { tag: "Football", title: "Football & Global Leagues", desc: "Pre-match and live football markets.", href: "index.html" },
-    { tag: "Casino", title: "Casino & Live Games", desc: "Slots, cards, and live casino sections.", href: "index.html" },
-    { tag: "Account", title: "Login & Registration", desc: "Manage your cricket ID and account.", href: "login.html" },
-  ],
-});
+/* blogs.html and categories.html use the modern bento layout — edit those files directly.
+   Do not regenerate them with the legacy landing-hero grid builder. */
+console.log("Skip blogs.html / categories.html (maintained as bento pages).");
 
 console.log("Done.");

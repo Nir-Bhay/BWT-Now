@@ -40,4 +40,11 @@
   document.querySelectorAll(".winners-ticker").forEach((track) => {
     track.innerHTML = track.innerHTML + track.innerHTML;
   });
+
+  document.querySelectorAll(".landing-nav a, .landing-subnav a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("javascript:") || href.startsWith("#")) return;
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  });
 })();

@@ -288,6 +288,24 @@
   background-repeat: no-repeat;
 }
 
+.bento-page--blogs .page-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(125, 0, 28, 0.35) 100%),
+    url("../images/pages/home/Homepage%20-%20What%20is%20ReddyBook_%20Complete%20Guide%20to%20Betting,%20Login%20%26%20Registration.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bento-page--categories .page-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(125, 0, 28, 0.35) 100%),
+    url("../images/pages/home/Homepage%20-%20Live%20Betting%20Experience.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* Per-page visual card (2nd image) */
 .bento-page--home .bento-visual__img {
   background-image: url("../images/pages/home/Homepage%20-%20Live%20Betting%20Experience.webp");

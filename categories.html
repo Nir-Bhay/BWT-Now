@@ -17,33 +17,35 @@
   <link href="assets/css/common_style.css" rel="stylesheet" />
   <link href="assets/css/landing.css" rel="stylesheet" />
   <link href="assets/css/landing-footer.css" rel="stylesheet" />
+  <link href="assets/css/landing-bento.css" rel="stylesheet" />
   <link href="assets/css/landing-home-light.css" rel="stylesheet" />
+  <link href="assets/css/blogs-categories.css" rel="stylesheet" />
   <link href="assets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/auth-modal.css" rel="stylesheet" />
   <link href="assets/css/landing-header.css" rel="stylesheet" />
-<link href="assets/css/landing-responsive.css" rel="stylesheet" />
+  <link href="assets/css/landing-responsive.css" rel="stylesheet" />
 </head>
-<body class="landing-page home-page--light">
+<body class="landing-page bento-page bento-page--categories home-page--light">
     <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</div>
 
     <header class="landing-header">
     <div class="container">
-      <a href="home.html" class="logo"><img src="https://speedcdn.io/assets/logos/reddybook.live.png"
+      <a href="home.html" target="_self" class="logo"><img src="https://speedcdn.io/assets/logos/reddybook.live.png"
           alt="Reddy Book Club" /></a>
       <nav>
         <ul class="landing-nav">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="about-us.html">About</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="categories.html" class="active">Categories</a></li>
+        <li><a href="home.html" target="_self">Home</a></li>
+        <li><a href="login.html" target="_self">Login</a></li>
+        <li><a href="register.html" target="_self">Register</a></li>
+        <li><a href="about-us.html" target="_self">About</a></li>
+        <li><a href="blogs.html" target="_self">Blogs</a></li>
+        <li><a href="categories.html" target="_self" class="active">Categories</a></li>
         </ul>
       </nav>
       <div class="landing-header-actions">
-        <a href="index.html" class="rules-btn">Bet Now</a>
-        <a href="javascript:void(0)" class="btn-login btn-accent" data-auth-open="signup">Signup</a>
-        <a href="javascript:void(0)" class="btn-login" data-auth-open="login">Login</a>
+        <a href="index.html" target="_self" class="rules-btn">Bet Now</a>
+        <a href="register.html" target="_self" class="btn-login btn-accent">Signup</a>
+        <a href="login.html" target="_self" class="btn-login">Login</a>
       </div>
     </div>
   </header>
@@ -51,33 +53,40 @@
   <nav class="landing-subnav" aria-label="Page sections">
     <div class="container">
       <ul>
-      <li><a href="home.html">Home</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="about-us.html">About</a></li>
-      <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="categories.html" class="active">Categories</a></li>
-      <li><a href="privacy-policy.html">Privacy</a></li>
-      <li><a href="terms-and-conditions.html">Terms</a></li>
-      <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
-      <li><a href="customer-care.html">Customer Care</a></li>
+      <li><a href="home.html" target="_self">Home</a></li>
+      <li><a href="login.html" target="_self">Login</a></li>
+      <li><a href="register.html" target="_self">Register</a></li>
+      <li><a href="about-us.html" target="_self">About</a></li>
+      <li><a href="blogs.html" target="_self">Blogs</a></li>
+      <li><a href="categories.html" target="_self" class="active">Categories</a></li>
+      <li><a href="privacy-policy.html" target="_self">Privacy</a></li>
+      <li><a href="terms-and-conditions.html" target="_self">Terms</a></li>
+      <li><a href="responsible-gaming.html" target="_self">Responsible Gaming</a></li>
+      <li><a href="customer-care.html" target="_self">Customer Care</a></li>
       </ul>
     </div>
   </nav>
-  <section class="landing-hero">
-    <img src="assets/images/pages/home/Homepage Banner.webp" alt="Browse Categories" />
-    <div class="landing-hero-overlay">
-      <div class="container">
-        <h1>Browse Categories</h1>
-        <p class="hero-lead">Explore cricket, football, casino, live betting, and account categories on Reddy Book Club.</p>
-        <div class="landing-hero-cta">
-          <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
-          <a href="login.html" class="btn-cta btn-cta-secondary">Login</a>
-          <a href="index.html" class="btn-cta btn-cta-secondary">Go to Dashboard</a>
-        </div>
+
+  <section class="page-hero" aria-labelledby="page-hero-title">
+    <div class="page-hero__bg" role="img" aria-label="Browse Reddy Book Club categories"></div>
+    <div class="page-hero__glow" aria-hidden="true"></div>
+    <div class="page-hero__inner">
+      <p class="page-hero__eyebrow"><span class="pulse" aria-hidden="true"></span> Browse markets</p>
+      <h1 id="page-hero-title">Browse Categories</h1>
+      <p class="page-hero__lead">Explore cricket, football, casino, live betting, and account categories on Reddy Book Club — all from one cricket ID.</p>
+      <div class="page-hero__chips">
+        <div class="page-hero__chip"><i class="bi bi-trophy-fill" aria-hidden="true"></i> <strong>Cricket</strong> &amp; IPL</div>
+        <div class="page-hero__chip"><i class="bi bi-flag-fill" aria-hidden="true"></i> <strong>Football</strong> leagues</div>
+        <div class="page-hero__chip"><i class="bi bi-suit-club-fill" aria-hidden="true"></i> <strong>Casino</strong> &amp; live</div>
+      </div>
+      <div class="page-hero__actions">
+        <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
+        <a href="login.html" class="btn-cta btn-cta-neon">Login</a>
+        <a href="index.html" class="btn-ghost">Open dashboard →</a>
       </div>
     </div>
   </section>
+
   <div class="winners-ticker-wrap" aria-hidden="true">
     <div class="winners-ticker-row">
       <span class="winners-ticker-label"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Live Wins</span>
@@ -97,35 +106,59 @@
   </div>
 
   <main class="landing-main">
-    <section class="landing-content-card">
-    <p>Explore cricket, football, casino, live betting, and account categories on Reddy Book Club.</p>
-    <div class="landing-grid-cards"><article class="landing-grid-card">
-      <div class="card-img">Cricket</div>
-      <div class="card-body"><h3>Cricket Betting &amp; IPL Markets</h3><p>Cricket ID access and live match betting.</p><a href="index.html">Read more →</a></div>
-    </article>
-<article class="landing-grid-card">
-      <div class="card-img">Football</div>
-      <div class="card-body"><h3>Football &amp; Global Leagues</h3><p>Pre-match and live football markets.</p><a href="index.html">Read more →</a></div>
-    </article>
-<article class="landing-grid-card">
-      <div class="card-img">Casino</div>
-      <div class="card-body"><h3>Casino &amp; Live Games</h3><p>Slots, cards, and live casino sections.</p><a href="index.html">Read more →</a></div>
-    </article>
-<article class="landing-grid-card">
-      <div class="card-img">Account</div>
-      <div class="card-body"><h3>Login &amp; Registration</h3><p>Manage your cricket ID and account.</p><a href="login.html">Read more →</a></div>
-    </article></div>
-  </section>
+    <div class="bento-wrap">
+      <div class="home-bento">
+        <article class="bento-card bento-intro bento-span-12">
+          <p class="bento-card__tag">Categories</p>
+          <h2>Everything available on Reddy Book Club</h2>
+          <p class="lead">Pick a category to learn what you can access with your cricket ID — sports markets, casino play, live betting, and account tools.</p>
+        </article>
+
+        <article class="bento-card bento-span-6 resource-card">
+          <span class="resource-card__icon"><i class="bi bi-trophy-fill" aria-hidden="true"></i></span>
+          <span class="resource-card__tag">Cricket</span>
+          <h3>Cricket Betting &amp; IPL Markets</h3>
+          <p>Cricket ID access, IPL, international series, and live match betting.</p>
+          <a href="home.html" class="resource-card__link">Explore cricket <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="bento-card bento-span-6 resource-card">
+          <span class="resource-card__icon"><i class="bi bi-flag-fill" aria-hidden="true"></i></span>
+          <span class="resource-card__tag">Football</span>
+          <h3>Football &amp; Global Leagues</h3>
+          <p>Pre-match and live football markets across major leagues.</p>
+          <a href="home.html" class="resource-card__link">Explore football <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="bento-card bento-span-6 resource-card">
+          <span class="resource-card__icon"><i class="bi bi-suit-club-fill" aria-hidden="true"></i></span>
+          <span class="resource-card__tag">Casino</span>
+          <h3>Casino &amp; Live Games</h3>
+          <p>Slots, card games, and live casino sections where available.</p>
+          <a href="index.html" class="resource-card__link">Explore casino <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="bento-card bento-span-6 resource-card">
+          <span class="resource-card__icon"><i class="bi bi-person-badge-fill" aria-hidden="true"></i></span>
+          <span class="resource-card__tag">Account</span>
+          <h3>Login &amp; Registration</h3>
+          <p>Manage your cricket ID, login safely, and get agent support.</p>
+          <a href="login.html" class="resource-card__link">Account help <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i></a>
+        </article>
+      </div>
+    </div>
+
     <section class="landing-cta-band">
       <h2>Ready to get started?</h2>
       <p>Register for your Reddy Book Club cricket ID or log in to access sports, casino, and live betting.</p>
       <div class="landing-hero-cta" style="justify-content:center;">
-        <a href="register.html" class="btn-cta btn-cta-secondary">Register Now</a>
+        <a href="register.html" class="btn-cta btn-cta-primary">Register Now</a>
         <a href="customer-care.html" class="btn-cta btn-cta-secondary">Contact Support</a>
       </div>
     </section>
   </main>
-    <footer class="landing-footer">
+
+  <footer class="landing-footer">
     <div class="landing-footer__glow" aria-hidden="true"></div>
     <div class="container">
       <div class="landing-footer__main">
@@ -153,6 +186,7 @@
               <li><a href="login.html">Login</a></li>
               <li><a href="register.html">Register</a></li>
               <li><a href="about-us.html">About</a></li>
+              <li><a href="customer-care.html">Support</a></li>
               <li><a href="blogs.html">Blogs</a></li>
               <li><a href="categories.html">Categories</a></li>
             </ul>
@@ -161,7 +195,7 @@
             <h4 class="landing-footer__heading"><i class="bi bi-file-text-fill" aria-hidden="true"></i> Legal</h4>
             <ul>
               <li><a href="privacy-policy.html">Privacy Policy</a></li>
-              <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+              <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
               <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
               <li><a href="about-us.html">About Us</a></li>
               <li><a href="customer-care.html">Customer Care</a></li>
@@ -192,18 +226,18 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="js/site-logic.js"></script>
 
-<div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="dialog-login-name" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">
-          <span aria-hidden="true">×</span>
-        </button>
-        <app-login></app-login>
+  <div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="dialog-login-name" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">
+            <span aria-hidden="true">×</span>
+          </button>
+          <app-login></app-login>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<bs-modal-backdrop class="modal-backdrop fade"></bs-modal-backdrop>
+  <bs-modal-backdrop class="modal-backdrop fade"></bs-modal-backdrop>
 </body>
 </html>

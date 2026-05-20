@@ -33,6 +33,13 @@ for (const file of PAGES) {
     console.log("already linked:", file);
     continue;
   }
+  if (!html.includes("blogs-categories.css") && (file === "blogs.html" || file === "categories.html")) {
+    html = html.replace(
+      /(<link href="assets\/css\/landing-home-light\.css" rel="stylesheet" \/>)/,
+      `$1\n  <link href="assets/css/blogs-categories.css" rel="stylesheet" />`
+    );
+  }
+
   if (html.includes("landing-header.css")) {
     html = html.replace(
       /(<link href="assets\/css\/landing-header\.css" rel="stylesheet" \/>)/,

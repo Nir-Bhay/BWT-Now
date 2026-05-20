@@ -18,20 +18,21 @@ export const MARKETING_SUBNAV_EXTRA = [
   { href: "responsible-gaming.html", label: "Responsible Gaming" },
 ];
 
-function navActive(href, active) {
-  return href === active ? ' class="active"' : "";
+function navLinkAttrs(href, active) {
+  const activeClass = href === active ? ' class="active"' : "";
+  return `href="${href}" target="_blank" rel="noopener noreferrer"${activeClass}`;
 }
 
 export function renderMarketingChrome(activePage) {
   const mainNav = MARKETING_NAV.map(
-    (n) => `        <li><a href="${n.href}"${navActive(n.href, activePage)}>${n.label}</a></li>`
+    (n) => `        <li><a ${navLinkAttrs(n.href, activePage)}>${n.label}</a></li>`
   ).join("\n");
 
   const subItems = [...MARKETING_NAV, ...MARKETING_SUBNAV_EXTRA].filter(
     (n, i, arr) => arr.findIndex((x) => x.href === n.href) === i
   );
   const subNav = subItems
-    .map((n) => `      <li><a href="${n.href}"${navActive(n.href, activePage)}>${n.label}</a></li>`)
+    .map((n) => `      <li><a ${navLinkAttrs(n.href, activePage)}>${n.label}</a></li>`)
     .join("\n");
 
   return `  <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</div>
