@@ -1,0 +1,58 @@
+[
+  {
+    "page": "home.html",
+    "status": "OK",
+    "sections": 9,
+    "images": 9,
+    "words": 3398
+  },
+  {
+    "page": "login.html",
+    "status": "OK",
+    "sections": 13,
+    "images": 9,
+    "words": 2306
+  },
+  {
+    "page": "register.html",
+    "status": "OK",
+    "sections": 14,
+    "images": 8,
+    "words": 2314
+  },
+  {
+    "page": "privacy-policy.html",
+    "status": "OK",
+    "sections": 21,
+    "images": 2,
+    "words": 2759
+  },
+  {
+    "page": "terms-and-conditions.html",
+    "status": "OK",
+    "sections": 26,
+    "images": 2,
+    "words": 3164
+  },
+  {
+    "page": "about-us.html",
+    "status": "OK",
+    "sections": 14,
+    "images": 2,
+    "words": 2296
+  },
+  {
+    "page": "customer-care.html",
+    "status": "OK",
+    "sections": 16,
+    "images": 2,
+    "words": 2499
+  },
+  {
+    "page": "responsible-gaming.html",
+    "status": "OK",
+    "sections": 17,
+    "images": 2,
+    "words": 2407
+  }
+]

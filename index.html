@@ -298,26 +298,30 @@
     /* RULES — match live site devtools (a.rules) */
     .header a.rules {
       font-family: "Titillium Web", sans-serif;
-      font-size: 11px;
-      font-weight: 400;
-      line-height: normal;
-      color: #ffffff;
-      background-color: #c10930;
-      padding: 7px 15px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1;
+      color: #1a1405;
+      background: linear-gradient(145deg, #f3cf66 0%, #d8a825 55%, #be8e13 100%);
+      padding: 10px 18px;
       margin: 0 5px 0 0;
-      border: none;
-      border-radius: 5px;
+      border: 1px solid #b9860f;
+      border-radius: 10px;
       text-decoration: none;
-      text-transform: uppercase;
+      text-transform: none;
       display: flex;
       align-items: center;
-      box-shadow: none;
-      letter-spacing: normal;
+      justify-content: center;
+      box-shadow: 0 8px 18px rgba(184, 134, 11, 0.25);
+      letter-spacing: 0.01em;
+      min-height: 40px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .header a.rules:hover {
-      color: #ffffff;
-      background-color: #c10930;
+      color: #1a1405;
+      transform: translateY(-1px);
+      box-shadow: 0 12px 22px rgba(184, 134, 11, 0.28);
     }
 
     .header .header-auth-btns {
@@ -337,27 +341,29 @@
     .header .header-auth-btns .btn-login {
       font-family: "Titillium Web", sans-serif;
       font-size: 13px;
-      font-weight: 600;
-      line-height: normal;
-      color: #ffffff;
-      background-color: #333333;
-      padding: 7px 15px;
+      font-weight: 700;
+      line-height: 1;
+      color: #333333;
+      background: linear-gradient(180deg, #ffffff 0%, #fff9ef 100%);
+      padding: 10px 16px;
       margin: 0 0 0 10px;
-      border: none;
+      border: 1px solid rgba(184, 134, 11, 0.35);
       border-radius: 10px;
       text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: inset 0 0 0 1px #ffffff;
-      transition: 0.9s;
+      text-transform: none;
+      letter-spacing: 0.01em;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-height: 40px;
     }
 
     .header .header-auth-btns .btn-login:hover {
-      color: #ffffff;
-      background-color: #333333;
+      color: #333333;
+      transform: translateY(-1px);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
     }
 
     @media (max-width: 1199px) {
@@ -368,8 +374,11 @@
 
     @media (max-width: 991px) {
       .header .header-auth-btns .btn-login {
-        padding: 7px 18px;
-        border-radius: 5px;
+        padding: 9px 14px;
+      }
+
+      .header a.rules {
+        padding: 9px 14px;
       }
     }
 
@@ -427,6 +436,8 @@
   </noscript>
   <style></style>
   <link rel="stylesheet" href="assets/css/theme_master.css" />
+  <link href="assets/css/home-sections.css" rel="stylesheet" />
+  <link href="assets/css/landing-home-light.css" rel="stylesheet" />
   <link href="assets/css/dashboard-home-embed.css" rel="stylesheet" />
   <link href="assets/css/home-bento.css" rel="stylesheet" />
   <link href="assets/css/landing-footer.css" rel="stylesheet" />
@@ -15945,15 +15956,15 @@
                         <!---->
                       </div>
 <!-- RB_DASHBOARD_HOME_START -->
-                      <div class="rb-dashboard-home-embed landing-page bento-page bento-page--home">
+                      <div class="rb-dashboard-home-embed landing-page bento-page bento-page--home home-page home-page--light home-embed--light">
                       <section class="home-hero" aria-labelledby="home-hero-title">
                           <div class="home-hero__bg" role="img" aria-label="Reddy Book Club betting platform"></div>
                           <div class="home-hero__glow" aria-hidden="true"></div>
                           <div class="home-hero__inner">
                             <p class="home-hero__eyebrow"><span class="pulse" aria-hidden="true"></span> Reddy Book Club · 2026</p>
-                            <h1 id="home-hero-title">Your <em>Cricket ID</em> for live betting &amp; casino</h1>
-                            <p class="home-hero__lead">Sports exchanges, in-play markets, and casino games — accessed through verified agents
-                              with fast login and 24/7 support.</p>
+                            <h1 id="home-hero-title">What is <em>ReddyBook</em>? Complete guide to betting, login &amp; registration</h1>
+                            <p class="home-hero__lead">ReddyBook is a website for betting and gaming where players can find sports betting,
+                              casino games, and live betting exchanges — accessed through verified agents with fast login and 24/7 support.</p>
                             <div class="home-hero__chips">
                               <div class="home-hero__chip"><i class="bi bi-trophy" aria-hidden="true"></i> <strong>IPL &amp; cricket</strong>
                                 live markets</div>
@@ -15972,13 +15983,13 @@
 
                         <div class="winners-ticker-wrap" aria-hidden="true">
                           <div class="winners-ticker-row">
-                            <span class="winners-ticker-label">Live Wins</span>
+                            <span class="winners-ticker-label"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Live Wins</span>
                             <div class="winners-ticker-viewport">
                               <div class="winners-ticker">
-                                <span><strong>Rahul M.</strong> won ₹42,500 on IPL</span>
-                                <span><strong>Priya S.</strong> won ₹18,200 on Live Casino</span>
-                                <span><strong>Amit K.</strong> won ₹95,000 on Cricket</span>
-                                <span><strong>Vikram D.</strong> won ₹31,400 on Football</span>
+                                <div class="win-chip"><span class="win-chip__amt">₹42,500</span> <strong>Rahul M.</strong> <span class="win-chip__game">· IPL</span></div>
+                                <div class="win-chip"><span class="win-chip__amt">₹18,200</span> <strong>Priya S.</strong> <span class="win-chip__game">· Live Casino</span></div>
+                                <div class="win-chip"><span class="win-chip__amt">₹95,000</span> <strong>Amit K.</strong> <span class="win-chip__game">· Cricket</span></div>
+                                <div class="win-chip"><span class="win-chip__amt">₹31,400</span> <strong>Vikram D.</strong> <span class="win-chip__game">· Football</span></div>
                               </div>
                             </div>
                           </div>
@@ -15988,291 +15999,525 @@
                           <div class="home-bento-wrap">
                             <div class="home-bento">
 
-                              <!-- Intro + stat -->
+                              <!-- What is ReddyBook -->
                               <article class="bento-card bento-intro bento-span-8">
                                 <p class="bento-card__tag">What is ReddyBook?</p>
-                                <h2>Agent-powered betting &amp; gaming in one place</h2>
-                                <p class="lead">ReddyBook is a betting and gaming platform for sports, casino, and live exchange markets.
-                                  Unlike typical apps, access runs through verified agents who provide your cricket ID and login — not a
-                                  public app-store signup.</p>
-                                <p>ReddyBook Club, ReddyBook App 2026, and ReddyBook Betting ID are facets of the same system built around
-                                  fast agent onboarding and round-the-clock play.</p>
+                                <h2>Complete guide to betting, login &amp; registration</h2>
+                                <p class="lead">ReddyBook is a website for betting and gaming where players can find many different types of
+                                  sports betting, casino games, and live betting exchanges. Unlike usual betting apps, this one does not use
+                                  official app stores or regular user registration systems.</p>
+                                <p>Actually, ReddyBook is based on a decentralised network of agents. Users are mostly introduced to the
+                                  service by agents who provide them with login credentials. So, users access the service through
+                                  intermediaries, unlike on regulated platforms, where they can register directly.</p>
+                                <p>The terms in the ReddyBook ecosystem, like ReddyBook Club, ReddyBook App 2026, and ReddyBook Betting ID, do
+                                  not stand for independent services but different aspects or versions of a single system, all developing the
+                                  same business model.</p>
                               </article>
 
                               <article class="bento-card bento-highlight bento-span-4">
                                 <p class="bento-card__tag">Quick facts</p>
-                                <h3>Why players choose us</h3>
+                                <h3>At a glance</h3>
                                 <ul>
-                                  <li>Agent-based ID in minutes</li>
-                                  <li>Cricket, football, tennis &amp; esports</li>
-                                  <li>Live in-play + pre-match</li>
-                                  <li>UPI, bank &amp; wallet deposits</li>
+                                  <li>Agent-based access — no public self-signup</li>
+                                  <li>Sports, casino &amp; live exchange markets</li>
+                                  <li>Cricket, football, tennis, basketball &amp; esports</li>
+                                  <li>UPI, net banking, bank transfer &amp; wallets</li>
                                 </ul>
                                 <a href="about-us.html" class="btn-ghost" style="margin-top:8px;display:inline-block;">About Reddy Book Club
                                   →</a>
                               </article>
 
-                              <!-- Visual card: 2nd image only -->
-                              <article class="bento-card bento-visual bento-span-5">
-                                <div class="bento-visual__img" role="img" aria-label="Live betting experience"></div>
-                                <div class="bento-visual__body">
-                                  <p class="bento-card__tag">Live experience</p>
-                                  <h3>In-play betting while the match runs</h3>
-                                  <p>Odds shift minute by minute — session markets, over/under, and match winner on cricket, football, and
-                                    more.</p>
-                      </div>
+                              <!-- Guide image + How it operates -->
+                              <article class="bento-card bento-media bento-span-5">
+                                <figure class="bento-figure">
+                                  <img src="assets/images/pages/home/Homepage - What is ReddyBook_ Complete Guide to Betting, Login &amp; Registration.webp"
+                                    alt="What is ReddyBook — complete guide to betting, login and registration" loading="lazy" width="540"
+                                    height="675" />
+                                </figure>
                               </article>
 
                               <article class="bento-card bento-span-7">
                                 <p class="bento-card__tag">How it works</p>
-                                <h2>How ReddyBook Club operates</h2>
-                                <p>Accounts are opened through agents — not a public self-signup form. Deposits and withdrawals are
-                                  coordinated with your agent for speed and flexibility.</p>
+                                <h2>How ReddyBook Club operates?</h2>
+                                <p>ReddyBook Club operates in a way that is different from other traditional betting platforms. The platform
+                                  doesn't allow users to sign up directly, but rather it depends on intermediaries (agents) to a large extent.
+                                </p>
                                 <div class="bento-tiles">
                                   <div class="bento-tile">
                                     <i class="bi bi-person-badge" aria-hidden="true"></i>
-                                    <span>Agent access</span>
-                                    <p>Credentials issued by your verified agent</p>
-                              </div>
+                                    <span>Agent-based access</span>
+                                    <p>Users are not allowed to independently open accounts — reach an agent for login details</p>
+                                  </div>
+                                  <div class="bento-tile">
+                                    <i class="bi bi-wallet2" aria-hidden="true"></i>
+                                    <span>Manual transactions</span>
+                                    <p>Deposits and withdrawals are done through the agent manually, not via automated payment gateways</p>
+                                  </div>
                                   <div class="bento-tile">
                                     <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
                                     <span>Exchange betting</span>
-                                    <p>Cricket, football &amp; live odds</p>
-                      </div>
+                                    <p>Bet on cricket and football with live odds, just like betting exchanges</p>
+                                  </div>
                                   <div class="bento-tile">
                                     <i class="bi bi-suit-club" aria-hidden="true"></i>
-                                    <span>Casino</span>
-                                    <p>Slots, poker &amp; table games</p>
-                              </div>
-                                  <div class="bento-tile">
-                                    <i class="bi bi-wallet2" aria-hidden="true"></i>
-                                    <span>Manual payouts</span>
-                                    <p>UPI, bank &amp; wallets via agent</p>
-                      </div>
-                              </div>
+                                    <span>Casino integration</span>
+                                    <p>Casino-style games such as slots, poker, and card games</p>
+                                  </div>
+                                </div>
+                                <p style="margin-top:12px;font-size:13px;">While this structure makes the platform simpler for many people to
+                                  use, it also raises the dependence on third parties.</p>
                               </article>
 
-                              <!-- Registration steps -->
-                              <article class="bento-card bento-span-12">
-                                <p class="bento-card__tag">Get started</p>
-                                <h2>ReddyBook registration in 5 steps</h2>
-                                <p>Contact a certified agent — registration is not available as a public form on the site.</p>
-                                <div class="bento-steps">
-                                  <div class="bento-step"><span class="bento-step__num">1</span>
-                                    <p>Contact agent via WhatsApp, Telegram or referral</p>
-                      </div>
-                                  <div class="bento-step"><span class="bento-step__num">2</span>
-                                    <p>Share name or alias &amp; optional contact</p>
-                              </div>
-                                  <div class="bento-step"><span class="bento-step__num">3</span>
-                                    <p>Receive User ID, password &amp; login link</p>
-                      </div>
-                                  <div class="bento-step"><span class="bento-step__num">4</span>
-                                    <p>Deposit via UPI, bank or wallet</p>
-                              </div>
-                                  <div class="bento-step"><span class="bento-step__num">5</span>
-                                    <p>Log in and explore markets &amp; casino</p>
-                      </div>
-                              </div>
-                                <p style="margin-top:14px;"><a href="register.html" class="btn-cta btn-cta-primary"
-                                    style="display:inline-block;">Start registration</a></p>
-                              </article>
+                            </div>
 
-                              <!-- Login + safety -->
-                              <article class="bento-card bento-span-6">
-                                <p class="bento-card__tag">Login</p>
-                                <h3>Enter your ID and start betting</h3>
-                                <p>Open the login URL or Reddy Book Club app from your agent. Enter the username and password they provided —
-                                  email self-registration is not used.</p>
-                                <ul>
-                                  <li>Use the latest link from your agent</li>
-                                  <li>Enable “Remember me” on personal devices only</li>
-                                  <li>Forgot password? Contact your agent</li>
-                      </ul>
-                                <a href="login.html" class="btn-cta btn-cta-secondary" style="display:inline-block;margin-top:8px;">Go to
-                                  login</a>
-                              </article>
+                            <!-- Compact live strip -->
+                            <div class="home-strip home-strip--live">
+                              <img src="assets/images/pages/home/Homepage - Live Betting Experience.webp"
+                                alt="Live betting on ReddyBook" loading="lazy" width="140" height="100" />
+                              <div>
+                                <p class="home-strip__tag">Live experience</p>
+                                <h3>Explore sports betting — live &amp; pre-match markets</h3>
+                                <p>ReddyBook covers local and worldwide events with in-play odds that shift minute by minute — making every
+                                  match more thrilling as you decide quickly while the game progresses.</p>
+                              </div>
+                            </div>
+                          </div>
 
-                              <article class="bento-card bento-span-6">
-                                <p class="bento-card__tag">Stay safe</p>
-                                <h3>Before you get a new ID</h3>
-                                <ul>
-                                  <li><strong>Verify the agent</strong> before any payment</li>
-                                  <li><strong>Start small</strong> to test deposits &amp; withdrawals</li>
-                                  <li><strong>Never share</strong> OTPs or bank passwords</li>
-                                  <li><strong>Avoid fake links</strong> and cloned sites</li>
-                                  <li><strong>Keep records</strong> of all transactions</li>
-                      </ul>
-                                <a href="responsible-gaming.html" class="btn-ghost" style="display:inline-block;margin-top:8px;">Responsible
-                                  gaming →</a>
-                              </article>
+                          <section class="home-section home-section--register">
+                            <div class="home-section__inner">
+                              <p class="home-section__tag">Get started</p>
+                              <h2>What is the ReddyBook registration process?</h2>
+                              <p>Unlike the majority of online platforms, ReddyBook does not use a user self-registration system as the
+                                default option. Directly signing up via a public form is impossible for users. Account creation is mainly done
+                                through the agents or intermediaries of the platform.</p>
+                              <div class="home-timeline">
+                                <div class="home-timeline__step">
+                                  <span class="home-timeline__num">1</span>
+                                  <p><strong>Contact an agent</strong> via referrals, social media, or messaging apps</p>
+                                </div>
+                                <div class="home-timeline__step">
+                                  <span class="home-timeline__num">2</span>
+                                  <p><strong>Provide basic details</strong> — name or alias, contact number (optional)</p>
+                                </div>
+                                <div class="home-timeline__step">
+                                  <span class="home-timeline__num">3</span>
+                                  <p><strong>Receive login credentials</strong> — User ID, password, login link, or ReddyBook app 2026 access</p>
+                                </div>
+                                <div class="home-timeline__step">
+                                  <span class="home-timeline__num">4</span>
+                                  <p><strong>Deposit funds</strong> — your agent explains how to transfer money into your account</p>
+                                </div>
+                                <div class="home-timeline__step">
+                                  <span class="home-timeline__num">5</span>
+                                  <p><strong>Start using your account</strong> — log in via link or Reddy Book Club apk and explore markets</p>
+                                </div>
+                              </div>
+                              <p style="margin-top:18px;margin-bottom:0;"><a href="register.html" class="btn-cta btn-cta-primary"
+                                  style="display:inline-block;">Start registration</a></p>
+                            </div>
+                          </section>
 
-                              <!-- Why choose - feature grid -->
+                          <section class="home-section home-section--login">
+                            <div class="home-section__inner">
+                              <p class="home-section__tag">Login</p>
+                              <div class="home-login-grid">
+                                <div>
+                                  <h2>ReddyBook login process: enter your ID and start betting</h2>
+                                  <p>Getting into your ReddyBook account is straightforward, but the way it operates is a bit different from
+                                    other platforms. Since no public registration system is available, you can only use an agent's credentials
+                                    for login.</p>
+                                  <div class="home-login-steps">
+                                    <div class="home-login-step">
+                                      <span class="home-login-step__n">1</span>
+                                      <p>Open the login page or website — enter the ReddyBook login ID URL (reddybook.com) your agent gave you,
+                                        or use the Reddy Book Club APK app.</p>
+                                    </div>
+                                    <div class="home-login-step">
+                                      <span class="home-login-step__n">2</span>
+                                      <p>Type the username and password that your agent gave you. ReddyBook does not allow logging in with
+                                        emails or phone numbers that are self-registered.</p>
+                                    </div>
+                                    <div class="home-login-step">
+                                      <span class="home-login-step__n">3</span>
+                                      <p>Press the "Login" button to reach your dashboard. Select "Remember Me" on personal devices for quicker
+                                        future visits.</p>
+                                    </div>
+                                  </div>
+                                  <ul class="home-login-tips">
+                                    <li><strong>No sign up for everyone</strong> — only agent-provided credentials work</li>
+                                    <li><strong>No common password reset</strong> — contact your agent if you forget your password</li>
+                                    <li><strong>Changing links</strong> — always use the most up-to-date login URL from your agent</li>
+                                    <li><strong>To stay safe</strong> — do not store login info on shared or public computers</li>
+                                  </ul>
+                                  <a href="login.html" class="btn-cta btn-cta-secondary" style="display:inline-block;">Go to login</a>
+                                </div>
+                                <div class="home-login-visual">
+                                  <img src="assets/images/pages/home/Homepage - ReddyBook Login Process_ Enter Your ID and Start Betting.webp"
+                                    alt="ReddyBook login process — enter your ID and start betting" loading="lazy" width="340"
+                                    height="425" />
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+
+                          <section class="home-section home-section--betting-id">
+                            <div class="home-section__inner">
+                              <p class="home-section__tag">Betting ID</p>
+                              <div class="home-id-grid">
+                                <div class="home-id-gallery">
+                                  <img src="assets/images/pages/home/Homepage - Important Points to Remember.webp"
+                                    alt="Important login points to remember for safe access" loading="lazy" width="280" height="350" />
+                                </div>
+                                <div class="home-id-content">
+                                  <h2>How to obtain a Reddy Book ID for online betting?</h2>
+                                  <p>That ID is necessary if you want to access sports betting and casino games. Unlike normal websites, you
+                                    cannot register a user account by yourself directly on the public website.</p>
+                                  <ul>
+                                    <li>Get in touch with a verified ReddyBook agent via WhatsApp, Telegram, or referral</li>
+                                    <li>Check that the agent or source is reliable before any payment</li>
+                                    <li>Provide basic details such as your name and contact number</li>
+                                    <li>Pick a payment option — UPI or bank transfer</li>
+                                    <li>Agent sets up your account and gives User ID, password, and Reddybook app login link</li>
+                                    <li>Deposit into your account for betting activities</li>
+                                  </ul>
+                                  <div class="home-id-alert"><strong>Things to keep in mind:</strong> verify the agent is trustworthy; try a
+                                    small deposit first; never reveal OTPs or bank passwords; keep records of all transactions; do not be
+                                    tempted by fake links or cloned websites.</div>
+                                  <a href="register.html" class="btn-cta btn-cta-primary" style="display:inline-block;">Get your Reddy Book
+                                    new ID</a>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+
+                          <div class="home-bento-wrap">
+                            <div class="home-bento">
                               <article class="bento-card bento-span-12">
                                 <p class="bento-card__tag">Reddy Book Club</p>
-                                <h2>Why prefer Reddy Book Club?</h2>
+                                <h2>Why should you prefer Reddy Book Club?</h2>
+                                <p>When users think of a good online betting portal, the top three features that come to their mind are
+                                  user-friendliness, variety, and trustworthiness. Aiming at these very aspects, Reddy Book Club has managed
+                                  to create a decent platform that is attracting a lot of bettors from India.</p>
                                 <div class="bento-tiles" style="grid-template-columns:repeat(auto-fill,minmax(160px,1fr));">
-                                  <div class="bento-tile"><i class="bi bi-speedometer2"></i><span>Fast signup</span>
-                                    <p>ID from agent, play same day</p>
+                                  <div class="bento-tile"><i class="bi bi-speedometer2"></i><span>Quick sign-up</span>
+                                    <p>Get your ReddyBook new ID from the agent and start playing right away — Reddy Book 247 ID &amp; 365 ID
+                                      options available</p>
                                   </div>
-                                  <div class="bento-tile"><i class="bi bi-grid-3x3-gap"></i><span>Wide markets</span>
-                                    <p>Cricket, football, tennis, esports</p>
+                                  <div class="bento-tile"><i class="bi bi-grid-3x3-gap"></i><span>Large range of betting</span>
+                                    <p>Cricket, football, tennis, esports — IPL, FIFA World Cup, EPL &amp; more</p>
                                   </div>
                                   <div class="bento-tile"><i class="bi bi-broadcast"></i><span>Live betting</span>
-                                    <p>In-play across major events</p>
+                                    <p>Reddy Book Live lets you bet on games in progress with real-time odds</p>
                                   </div>
-                                  <div class="bento-tile"><i class="bi bi-phone"></i><span>Simple UI</span>
-                                    <p>Works on lower-end phones</p>
+                                  <div class="bento-tile"><i class="bi bi-phone"></i><span>User-friendly interface</span>
+                                    <p>Intuitive design — works well on lower-end smartphones too</p>
                                   </div>
-                                  <div class="bento-tile"><i class="bi bi-gift"></i><span>Rewards</span>
-                                    <p>Cashback, referral &amp; promos</p>
+                                  <div class="bento-tile"><i class="bi bi-gift"></i><span>Promotions &amp; rewards</span>
+                                    <p>Reddy Book Win — cashback, referral rewards, and special bonuses</p>
                                   </div>
-                                  <div class="bento-tile"><i class="bi bi-headset"></i><span>24/7 support</span>
-                                    <p>Agents &amp; customer care</p>
-                      </div>
-                              </div>
-                                <p style="margin-top:14px;font-size:13px;">Play responsibly — verify sources and understand this is an
-                                  agent-based, non-regulated model.</p>
-                              </article>
-
-                              <!-- Sports row -->
-                              <article class="bento-card bento-span-4">
-                                <p class="bento-card__tag">Sportsbook</p>
-                                <h3>Markets &amp; sports</h3>
-                                <p>Pre-match and live betting on local and global events.</p>
-                                <div class="bento-pills">
-                                  <span class="bento-pill">Cricket / IPL</span>
-                                  <span class="bento-pill">Football</span>
-                                  <span class="bento-pill">Tennis</span>
-                                  <span class="bento-pill">Basketball</span>
-                                  <span class="bento-pill">Esports</span>
+                                  <div class="bento-tile"><i class="bi bi-headset"></i><span>Round-the-clock support</span>
+                                    <p>24/7 support for login, transactions, and any questions via agents</p>
+                                  </div>
                                 </div>
+                                <p style="margin-top:14px;font-size:13px;"><strong>A balanced perspective:</strong> Reddy Book Club offers
+                                  conveniences, wide selections, and interactive features. However, such an online bookie is not a regulated
+                                  one — users need to be very careful, always verify the sources, and go for responsible betting.</p>
                               </article>
 
-                              <article class="bento-card bento-span-4">
-                                <p class="bento-card__tag">Bet types</p>
-                                <h3>Pre-match &amp; live</h3>
-                                <ul>
-                                  <li>Match winner &amp; totals</li>
-                                  <li>Player performance</li>
-                                  <li>Over / under markets</li>
-                                  <li>Session bets (cricket)</li>
-                      </ul>
-                              </article>
+                            </div>
+                          </div>
 
-                              <article class="bento-card bento-highlight bento-span-4">
+                          <section class="home-section home-section--sports">
+                            <div class="home-section__inner">
+                              <p class="home-section__tag">Sportsbook</p>
+                              <div class="home-sports-layout">
+                                <div class="home-sports-hero">
+                                  <img src="assets/images/pages/home/Homepage - Live Betting Experience.webp"
+                                    alt="Live betting experience on ReddyBook" loading="lazy" width="280" height="350" />
+                                  <div class="home-sports-hero__badge"><i class="bi bi-broadcast-pin"></i> Live & pre-match odds</div>
+                                </div>
+                                <div class="home-sports-content">
+                                  <h2>Wide range of sports markets</h2>
+                                  <p>The sports selection at ReddyBook may surprise you, as it includes different types of sports that allow
+                                    you to check out new betting possibilities:</p>
+                                  <div class="home-sports-grid">
+                                    <div class="home-sport-card"><i class="bi bi-trophy"></i><strong>Cricket</strong>
+                                      <p>IPL, international series, and domestic matches — one of the most lively sections</p>
+                                    </div>
+                                    <div class="home-sport-card"><i class="bi bi-dribbble"></i><strong>Football</strong>
+                                      <p>EPL, La Liga, UEFA Champions League, and other global competitions</p>
+                                    </div>
+                                    <div class="home-sport-card"><i class="bi bi-circle"></i><strong>Tennis</strong>
+                                      <p>Grand Slam events — bet on your favourite ATP or WTA players</p>
+                                    </div>
+                                    <div class="home-sport-card"><i class="bi bi-circle-square"></i><strong>Basketball</strong>
+                                      <p>NBA and international games with several market options</p>
+                                    </div>
+                                    <div class="home-sport-card"><i class="bi bi-controller"></i><strong>Esports</strong>
+                                      <p>Famous titles like Dota 2, CS:GO, and more</p>
+                                    </div>
+                                  </div>
+                                  <div class="home-markets-row">
+                                    <div class="home-markets-col">
+                                      <h3><i class="bi bi-activity"></i> Pre-match and live betting at ReddyBook explained</h3>
+                                      <ul>
+                                        <li><strong>Pre-match betting</strong> — put your money down before the game starts as you do your
+                                          homework on teams, forms, and statistics</li>
+                                        <li><strong>Live (in-play) betting</strong> — bet while the match is going on, with odds changing minute
+                                          by minute with the game situation</li>
+                                      </ul>
+                                      <p style="font-size:13px;margin:8px 0 0;">This live betting option makes the game more thrilling, since
+                                        bettors get to decide quickly as the game progresses.</p>
+                                    </div>
+                                    <div class="home-markets-col">
+                                      <h3><i class="bi bi-kanban"></i> Multiple betting markets</h3>
+                                      <p style="font-size:13px;margin:0 0 8px;">To ensure that all bettors stay attentive even when the match
+                                        is in progress, ReddyBook keeps throwing various betting options:</p>
+                                      <ul>
+                                        <li>Winner of the match</li>
+                                        <li>Sum of runs / goals / points</li>
+                                        <li>Best scorer or player performance</li>
+                                        <li>Over / under markets</li>
+                                        <li>Session-based bets (especially in cricket)</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+
+                          <div class="home-bento-wrap">
+                            <div class="home-bento">
+
+                              <!-- Cricket ID -->
+                              <article class="bento-card bento-highlight bento-span-12">
                                 <p class="bento-card__tag">Cricket ID</p>
-                                <h3>ReddyBook Cricket ID</h3>
-                                <p>Your pass to IPL, World Cups, tours &amp; domestic cricket with live and session markets.</p>
+                                <h2>What is a ReddyBook Cricket ID and how does it work?</h2>
+                                <p>A ReddyBook Cricket ID is a pass for users to avail themselves of special cricket betting markets,
+                                  including some of the world's most famous cricket tournaments. Since cricket is one of the feature-rich
+                                  sections on the website, this specific ID is of great significance for cricket lovers.</p>
+                                <div class="bento-tiles bento-tiles--3">
+                                  <div class="bento-tile"><i class="bi bi-calendar-event"></i><span>Tournaments</span>
+                                    <p>IPL, ICC T20 World Cup, ODI World Cup, international tours &amp; local matches</p>
+                                  </div>
+                                  <div class="bento-tile"><i class="bi bi-broadcast-pin"></i><span>Live features</span>
+                                    <p>Live betting, session markets, and player-oriented betting options</p>
+                                  </div>
+                                  <div class="bento-tile"><i class="bi bi-person-check"></i><span>How to get it</span>
+                                    <p>Contact a trusted agent via WhatsApp, Telegram, or referral — the only method of getting access</p>
+                                  </div>
+                                </div>
+                                <p style="margin-top:12px;">The agent will set up your account and provide User ID, password, and login link
+                                  or Reddy Book Club app access. This ID can also serve as your cricket ReddyBook betting ID.</p>
                                 <a href="register.html" class="btn-cta btn-cta-neon" style="display:inline-block;margin-top:10px;">Get cricket
                                   ID</a>
                               </article>
 
                               <!-- Bonuses -->
-                              <article class="bento-card bento-span-12">
+                              <article class="bento-card bento-span-8">
                                 <p class="bento-card__tag">Promotions</p>
-                                <h2>Bonuses &amp; promotions</h2>
-                                <p>Offers vary by agent and season — confirm details with your agent for current terms.</p>
+                                <h2>How do ReddyBook bonuses and promotions work?</h2>
+                                <p>ReddyBook has a range of bonuses and promotional deals aimed at making the betting experience of new and
+                                  existing users more enjoyable. These incentives help users get the most out of their games.</p>
                                 <div class="bento-bonus-grid">
-                                  <div class="bento-bonus"><span class="val">400%</span><span class="lbl">Welcome</span></div>
-                                  <div class="bento-bonus"><span class="val">5%</span><span class="lbl">Deposit bonus</span></div>
-                                  <div class="bento-bonus"><span class="val">2%</span><span class="lbl">Weekly cashback</span></div>
-                                  <div class="bento-bonus"><span class="val">∞</span><span class="lbl">Refer-a-friend</span></div>
+                                  <div class="bento-bonus"><span class="val">400%</span><span class="lbl">Welcome bonus</span>
+                                    <p>Up to ₹25,000 on first deposit — extra funds instantly for new members</p>
+                                  </div>
+                                  <div class="bento-bonus"><span class="val">5%</span><span class="lbl">Deposit bonus</span>
+                                    <p>5% bonus for every deposit — increase your balance without limitations</p>
+                                  </div>
+                                  <div class="bento-bonus"><span class="val">2%</span><span class="lbl">Weekly cashback</span>
+                                    <p>2% weekly cashback on losses to help mitigate tough weeks</p>
+                                  </div>
+                                  <div class="bento-bonus"><span class="val">∞</span><span class="lbl">Refer-a-friend</span>
+                                    <p>Earn bonuses when invited friends register and place bets</p>
+                                  </div>
+                                </div>
+                                <p style="margin-top:14px;font-size:13px;">The platform regularly unveils new seasonal deals. Rely on your
+                                  agent or platform updates for accurate and timely information on limited-time offers.</p>
+                              </article>
+
+                              <article class="bento-card bento-media bento-span-4">
+                                <figure class="bento-figure">
+                                  <img src="assets/images/pages/home/Homepage - How Do ReddyBook Bonuses and Promotions Work.webp"
+                                    alt="How ReddyBook bonuses and promotions work" loading="lazy" width="360" height="450" />
+                                </figure>
+                              </article>
+
+                            </div>
+                          </div>
+
+                          <section class="home-section home-section--payments">
+                            <div class="home-section__inner">
+                              <p class="home-section__tag">Payments &amp; deposits</p>
+                              <div class="home-pay-layout">
+                                <div>
+                                  <h2>Payment methods available on ReddyBook</h2>
+                                  <p>Transactions are mostly done through agents — steps may vary but remain quick and useful.</p>
+                                  <div class="home-pay-methods">
+                                    <div class="home-pay-method">
+                                      <i class="bi bi-phone" aria-hidden="true"></i>
+                                      <div><strong>UPI</strong><span>Fast &amp; regular — instant transfers from your bank account</span></div>
+                                    </div>
+                                    <div class="home-pay-method">
+                                      <i class="bi bi-globe" aria-hidden="true"></i>
+                                      <div><strong>Net banking</strong><span>Internet banking from majority of Indian banks</span></div>
+                                    </div>
+                                    <div class="home-pay-method">
+                                      <i class="bi bi-bank" aria-hidden="true"></i>
+                                      <div><strong>Bank transfer</strong><span>Direct deposits per agent instructions</span></div>
+                                    </div>
+                                    <div class="home-pay-method">
+                                      <i class="bi bi-wallet2" aria-hidden="true"></i>
+                                      <div><strong>Digital wallets</strong><span>Paytm and similar wallet-based payments</span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div>
+                                  <h2>How to add / deposit funds</h2>
+                                  <div class="home-deposit-steps">
+                                    <div class="home-deposit-step"><span class="home-deposit-step__n">1</span>
+                                      <p>Log in with username and password from your agent</p>
+                                    </div>
+                                    <div class="home-deposit-step"><span class="home-deposit-step__n">2</span>
+                                      <p>Navigate to Deposit on the dashboard, or ask your agent for payment instructions</p>
+                                    </div>
+                                    <div class="home-deposit-step"><span class="home-deposit-step__n">3</span>
+                                      <p>Pick UPI, net banking, bank transfer, or digital wallets</p>
+                                    </div>
+                                    <div class="home-deposit-step"><span class="home-deposit-step__n">4</span>
+                                      <p>Decide deposit amount — minimum ~₹100 (agent discretion)</p>
+                                    </div>
+                                    <div class="home-deposit-step"><span class="home-deposit-step__n">5</span>
+                                      <p>Pay using UPI ID or bank details from your agent</p>
+                                    </div>
+                                    <div class="home-deposit-step"><span class="home-deposit-step__n">6</span>
+                                      <p>After confirmation, funds credit instantly or after short verification</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+
+                          <div class="home-bento-wrap">
+                            <div class="home-bento">
+
+                              <!-- Withdrawals -->
+                              <article class="bento-card bento-span-12 withdrawal-card withdrawal-card--wide">
+                                <p class="bento-card__tag">Withdrawals</p>
+                                <h3>Process of withdrawing from ReddyBook</h3>
+                                <div class="withdrawal-steps">
+                                  <div class="withdrawal-step"><span class="withdrawal-step__n">1</span>
+                                    <p>Log in with your Reddy book login information</p>
+                                  </div>
+                                  <div class="withdrawal-step"><span class="withdrawal-step__n">2</span>
+                                    <p>Go to withdrawal section or contact your agent</p>
+                                  </div>
+                                  <div class="withdrawal-step"><span class="withdrawal-step__n">3</span>
+                                    <p>Choose UPI, bank transfer, or net banking</p>
+                                  </div>
+                                  <div class="withdrawal-step"><span class="withdrawal-step__n">4</span>
+                                    <p>Enter amount — minimum ~₹500 (may vary)</p>
+                                  </div>
+                                  <div class="withdrawal-step"><span class="withdrawal-step__n">5</span>
+                                    <p>Submit request with UPI ID or bank details if required</p>
+                                  </div>
+                                  <div class="withdrawal-step"><span class="withdrawal-step__n">6</span>
+                                    <p>Receive funds within a few hours to one day after approval</p>
+                                  </div>
+                                </div>
+                                <a href="customer-care.html" class="btn-ghost" style="display:inline-block;margin-top:12px;">Payment help →</a>
+                              </article>
+
+                              <!-- Conclusion + CTA combined -->
+                              <article class="bento-card bento-span-12 home-conclusion-card">
+                                <div class="home-conclusion-card__layout">
+                                  <div>
+                                    <p class="bento-card__tag">Conclusion</p>
+                                    <h2>Your ticket to a feature-rich betting session</h2>
+                                    <p>A Reddy Book Club ID is really your ticket to a very user-friendly and feature-rich betting session. It
+                                      allows you to tap into an extensive selection of sports and casino games, all in one place. Whether it's
+                                      cricket or football you want to bet on, or if you prefer live games and real-time betting, you will find the
+                                      platform perfectly crafted to entertain users through a wide range of choices and a neat interface.</p>
+                                    <p>What makes it attractive even for seasoned users is its instant access, different markets, and simplicity.
+                                      But as it is run by agents without a fully regulated system, there is a need to be very careful, ensure the
+                                      origin of the sources, and handle your activities wisely. With the right amount of precaution, a Reddy Book
+                                      Club ID could be your way to a quick and fun online betting experience without losing sight of the potential
+                                      risks.</p>
+                                  </div>
+                                  <aside class="home-conclusion-card__cta">
+                                    <p class="bento-card__tag">Ready?</p>
+                                    <h3>Get your Reddy Book Club ID today</h3>
+                                    <p>Sports, casino, and live markets in one account — with agent support when you need it.</p>
+                                    <a href="register.html" class="btn-cta btn-cta-primary">Register now</a>
+                                    <a href="customer-care.html" class="btn-cta btn-cta-secondary" style="margin-top:8px;">Contact support</a>
+                                  </aside>
                                 </div>
                               </article>
 
-                              <!-- Payments -->
-                              <article class="bento-card bento-span-6">
-                                <p class="bento-card__tag">Payments</p>
-                                <h3>Deposit methods</h3>
-                                <p>Transactions are coordinated with your agent after login.</p>
-                                <ul>
-                                  <li><strong>UPI</strong> — fast transfers</li>
-                                  <li><strong>Net banking</strong> — major Indian banks</li>
-                                  <li><strong>Bank transfer</strong> — direct deposit</li>
-                                  <li><strong>Paytm &amp; wallets</strong> — quick top-ups</li>
-                      </ul>
-                                <p>Typical minimum deposit ~₹100 (agent discretion). Funds credit after agent verification.</p>
-                              </article>
-
-                              <article class="bento-card bento-span-6">
-                                <p class="bento-card__tag">Withdrawals</p>
-                                <h3>Cash out step-by-step</h3>
-                                <ol style="padding-left:1.2rem;margin:0;">
-                                  <li>Log in with your Reddy Book credentials</li>
-                                  <li>Open Withdraw or message your agent</li>
-                                  <li>Choose UPI, bank transfer, or net banking</li>
-                                  <li>Enter amount (min ~₹500, may vary)</li>
-                                  <li>Receive funds within hours to one day</li>
-                                </ol>
-                                <a href="customer-care.html" class="btn-ghost" style="display:inline-block;margin-top:10px;">Payment help
-                                  →</a>
-                              </article>
-
-                              <!-- FAQ + CTA -->
-                              <article class="bento-card bento-faq bento-span-8">
+                              <article class="bento-card bento-faq bento-span-12">
                                 <div style="padding:18px 20px 8px;">
                                   <p class="bento-card__tag">FAQ</p>
                                   <h2>Frequently asked questions</h2>
                                 </div>
-                      <div class="landing-faq">
+                                <div class="landing-faq">
                                   <details>
                                     <summary>What is ReddyBook?</summary>
                                     <div class="faq-body">
-                                      <p>ReddyBook is a web-based platform for sports betting, casino games, and live markets through an agent
-                                        network.</p>
+                                      <p>ReddyBook is a web-based platform providing sports betting, casino games, and live market betting
+                                        services through an agent-network system.</p>
                                     </div>
                                   </details>
                                   <details>
                                     <summary>How do I get a ReddyBook ID?</summary>
                                     <div class="faq-body">
-                                      <p>Contact a verified agent on WhatsApp, Telegram, or by referral. They register your account and send
-                                        login details.</p>
+                                      <p>You get your ReddyBook ID by first finding a verified agent whom you can contact via WhatsApp,
+                                        Telegram, or a referral. The agent will then help you register your account and provide you with your
+                                        login information.</p>
                                     </div>
                                   </details>
                                   <details>
-                                    <summary>Can I register directly?</summary>
+                                    <summary>Can I register on ReddyBook directly?</summary>
                                     <div class="faq-body">
-                                      <p>No public self-registration — accounts are created only through agents.</p>
+                                      <p>Unfortunately, there is no way to sign up for ReddyBook really on your own, as ReddyBook accounts are
+                                        only made through agents.</p>
                                     </div>
                                   </details>
                                   <details>
-                                    <summary>How do I log in?</summary>
+                                    <summary>How do I log in to ReddyBook?</summary>
                                     <div class="faq-body">
-                                      <p>Use the username, password, and link from your agent on the official login page or app.</p>
+                                      <p>Once you have received your username and password from the agent, just click on the official login
+                                        page or use the app to get to the login screen.</p>
                                     </div>
                                   </details>
                                   <details>
-                                    <summary>What payment methods are used?</summary>
+                                    <summary>What payment methods are used on ReddyBook?</summary>
                                     <div class="faq-body">
-                                      <p>UPI, bank transfer, net banking, and wallets like Paytm — depending on your agent.</p>
+                                      <p>In most cases, payment methods include UPI, bank transfers, net banking, and digital wallets like
+                                        Paytm (depending on the agent).</p>
                                     </div>
                                   </details>
                                   <details>
                                     <summary>Is ReddyBook safe to use?</summary>
                                     <div class="faq-body">
-                                      <p>Exercise caution: verify agent credibility before payments and play responsibly.</p>
+                                      <p>Since ReddyBook is based on an unregulated agent model, it is recommended that users exercise caution
+                                        and thoroughly check the credibility of any agent before doing business with them.</p>
                                     </div>
                                   </details>
                                   <details>
-                                    <summary>What sports can I bet on?</summary>
+                                    <summary>What sports can I bet on in ReddyBook?</summary>
                                     <div class="faq-body">
-                                      <p>Cricket, football, tennis, basketball, esports, and live in-play markets.</p>
+                                      <p>The choice of sports in ReddyBook includes cricket, football, tennis, basketball, esports, and even
+                                        live betting markets.</p>
                                     </div>
                                   </details>
-                      </div>
+                                </div>
                               </article>
 
-                              <article class="bento-card bento-cta-card bento-span-4">
-                                <p class="bento-card__tag">Ready?</p>
-                                <h3>Get your Reddy Book Club ID today</h3>
-                                <p>Sports, casino, and live markets in one account — with agent support when you need it.</p>
-                                <a href="register.html" class="btn-cta btn-cta-primary">Register now</a>
-                                <a href="customer-care.html" class="btn-cta btn-cta-secondary" style="margin-top:8px;">Contact support</a>
-                              </article>
-
-                      </div>
-                              </div>
+                            </div>
+                          </div>
 
                           <section class="landing-cta-band">
                             <h2>Ready to get started?</h2>
@@ -16285,92 +16530,69 @@
                         </main>
 
                           <footer class="landing-footer">
-                          <div class="landing-footer__glow" aria-hidden="true"></div>
-                          <div class="container">
-                            <div class="landing-footer__main">
-                              <div class="landing-footer__brand">
-                                <a href="home.html" class="landing-footer__logo">
-                                  <img src="https://speedcdn.io/assets/logos/reddybook.live.png" alt="Reddy Book Club" width="168" height="42"
-                                    loading="lazy" />
-                                </a>
-                                <p class="landing-footer__tagline">Cricket IDs, live sports markets, and casino play — onboarded through
-                                  verified agents with fast login and round-the-clock support.</p>
-                                <div class="landing-footer__badges">
-                                  <span class="landing-footer__badge"><i class="bi bi-shield-check" aria-hidden="true"></i> Verified
-                                    agents</span>
-                                  <span class="landing-footer__badge landing-footer__badge--accent">18+</span>
-                                  <span class="landing-footer__badge"><i class="bi bi-lightning-charge" aria-hidden="true"></i> Live
-                                    markets</span>
-                                  <span class="landing-footer__badge"><i class="bi bi-headset" aria-hidden="true"></i> 24/7 care</span>
-                                </div>
-                                <div class="landing-footer__actions">
-                                  <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
-                                  <a href="index.html" class="btn-ghost">Open dashboard →</a>
-                                </div>
-                              </div>
-                              <div class="landing-footer__nav">
-                                <div class="landing-footer__col">
-                                  <h4 class="landing-footer__heading"><i class="bi bi-compass" aria-hidden="true"></i> Explore</h4>
-                                  <ul>
-                                    <li><a href="home.html">Home</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="about-us.html">About</a></li>
-                                <li><a href="customer-care.html">Support</a></li>
-                                <li><a href="blogs.html">Blogs</a></li>
-                                    <li><a href="categories.html">Categories</a></li>
-                                  </ul>
-                              </div>
-                                <div class="landing-footer__col">
-                                  <h4 class="landing-footer__heading"><i class="bi bi-journal-text" aria-hidden="true"></i> Legal</h4>
-                                  <ul>
-                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                                <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="customer-care.html">Customer Care</a></li>
-                                  </ul>
-                              </div>
-                                <div class="landing-footer__col">
-                                  <h4 class="landing-footer__heading"><i class="bi bi-person-badge" aria-hidden="true"></i> Account</h4>
-                                <ul>
-                                  <li><a href="login.html">Login</a></li>
-                                  <li><a href="register.html">Register</a></li>
-                                  <li><a href="index.html">Betting Dashboard</a></li>
-                                </ul>
-                              </div>
-                                <div class="landing-footer__col landing-footer__col--highlight">
-                                  <h4 class="landing-footer__heading"><i class="bi bi-chat-dots" aria-hidden="true"></i> Need help?</h4>
-                                  <p class="landing-footer__hint">Agents handle deposits, withdrawals, and ID recovery.</p>
-                                  <ul>
-                                    <li><a href="customer-care.html">Customer care</a></li>
-                                    <li><a href="login.html">Login help</a></li>
-                                    <li><a href="register.html">Registration guide</a></li>
-                                  </ul>
-                                  <div class="landing-footer__payments" aria-label="Payment methods">
-                                    <span>UPI</span>
-                                    <span>Bank</span>
-                                    <span>Paytm</span>
-                                    <span>Wallet</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="landing-footer__ribbon" aria-hidden="true">
-                              <span>Cricket</span><span>Football</span><span>Live
-                                casino</span><span>In-play</span><span>IPL</span><span>Exchange</span>
-                            </div>
-                            <div class="landing-footer-bottom">
-                              <p class="landing-footer__copy">&copy; 2026 Reddy Book Club. All rights reserved.</p>
-                              <nav class="landing-footer__legal-nav" aria-label="Footer legal">
-                                <a href="privacy-policy.html">Privacy</a>
-                                <a href="terms-and-conditions.html">Terms</a>
-                                <a href="responsible-gaming.html">Responsible gaming</a>
-                              </nav>
-                              <p class="landing-footer__disclaimer">Play responsibly · Entertainment only where legally permitted</p>
-                            </div>
-                          </div>
-                        </footer>
+    <div class="landing-footer__glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="landing-footer__main">
+        <div class="landing-footer__brand">
+          <a href="home.html" class="landing-footer__logo">
+            <img src="https://speedcdn.io/assets/logos/reddybook.live.png" alt="Reddy Book Club" width="168" height="42" loading="lazy" />
+          </a>
+          <p class="landing-footer__tagline">Cricket IDs, live sports markets, and casino play — onboarded through verified agents with fast login and round-the-clock support.</p>
+          <div class="landing-footer__badges">
+            <span class="landing-footer__badge"><i class="bi bi-shield-check" aria-hidden="true"></i> Verified agents</span>
+            <span class="landing-footer__badge landing-footer__badge--accent">18+</span>
+            <span class="landing-footer__badge"><i class="bi bi-lightning-charge" aria-hidden="true"></i> Live markets</span>
+            <span class="landing-footer__badge"><i class="bi bi-headset" aria-hidden="true"></i> 24/7 care</span>
+          </div>
+          <div class="landing-footer__actions">
+            <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
+            <a href="index.html" class="btn-ghost">Open dashboard →</a>
+          </div>
+        </div>
+        <div class="landing-footer__nav">
+          <div class="landing-footer__col">
+            <h4 class="landing-footer__heading"><i class="bi bi-compass" aria-hidden="true"></i> Explore</h4>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="about-us.html">About</a></li>
+              <li><a href="customer-care.html">Support</a></li>
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="categories.html">Categories</a></li>
+            </ul>
+          </div>
+          <div class="landing-footer__col">
+            <h4 class="landing-footer__heading"><i class="bi bi-journal-text" aria-hidden="true"></i> Legal</h4>
+            <ul>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+              <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="customer-care.html">Customer Care</a></li>
+            </ul>
+          </div>
+          <div class="landing-footer__col">
+            <h4 class="landing-footer__heading"><i class="bi bi-person-badge" aria-hidden="true"></i> Account</h4>
+            <ul>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="index.html">Betting Dashboard</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="landing-footer-bottom">
+        <p class="landing-footer__copy">&copy; 2026 Reddy Book Club. All rights reserved.</p>
+        <nav class="landing-footer__legal-nav" aria-label="Footer legal">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="terms-and-conditions.html">Terms</a>
+          <a href="responsible-gaming.html">Responsible gaming</a>
+        </nav>
+        <p class="landing-footer__disclaimer">Play responsibly · Entertainment only where legally permitted</p>
+      </div>
+    </div>
+  </footer>
                       </div>
                       <!-- RB_DASHBOARD_HOME_END -->
                       <!---->

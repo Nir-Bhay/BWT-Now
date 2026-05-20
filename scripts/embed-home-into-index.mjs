@@ -32,7 +32,7 @@ const indented = fragment
 
 const wrapped =
   `${indent}<!-- RB_DASHBOARD_HOME_START -->\n` +
-  `${indent}<div class="rb-dashboard-home-embed landing-page bento-page bento-page--home">\n` +
+  `${indent}<div class="rb-dashboard-home-embed landing-page bento-page bento-page--home home-page home-page--light home-embed--light">\n` +
   indented +
   `\n${indent}</div>\n` +
   `${indent}<!-- RB_DASHBOARD_HOME_END -->`;
@@ -81,9 +81,10 @@ if (relocate.test(index)) {
 
 const cssLinks = [
   '<link href="assets/css/landing.css" rel="stylesheet" />',
-  '<link href="assets/css/landing-dark.css" rel="stylesheet" />',
-  '<link href="assets/css/home-bento.css" rel="stylesheet" />',
   '<link href="assets/css/landing-footer.css" rel="stylesheet" />',
+  '<link href="assets/css/landing-home-light.css" rel="stylesheet" />',
+  '<link href="assets/css/home-sections.css" rel="stylesheet" />',
+  '<link href="assets/css/home-bento.css" rel="stylesheet" />',
   '<link href="assets/css/dashboard-home-embed.css" rel="stylesheet" />',
 ];
 

@@ -70,25 +70,7 @@ export function renderLandingFooter(year = new Date().getFullYear()) {
               ${linkList(ACCOUNT_LINKS)}
             </ul>
           </div>
-          <div class="landing-footer__col landing-footer__col--highlight">
-            <h4 class="landing-footer__heading"><i class="bi bi-chat-dots" aria-hidden="true"></i> Need help?</h4>
-            <p class="landing-footer__hint">Agents handle deposits, withdrawals, and ID recovery.</p>
-            <ul>
-              <li><a href="customer-care.html">Customer care</a></li>
-              <li><a href="login.html">Login help</a></li>
-              <li><a href="register.html">Registration guide</a></li>
-            </ul>
-            <div class="landing-footer__payments" aria-label="Payment methods">
-              <span>UPI</span>
-              <span>Bank</span>
-              <span>Paytm</span>
-              <span>Wallet</span>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="landing-footer__ribbon" aria-hidden="true">
-        <span>Cricket</span><span>Football</span><span>Live casino</span><span>In-play</span><span>IPL</span><span>Exchange</span>
       </div>
       <div class="landing-footer-bottom">
         <p class="landing-footer__copy">&copy; ${year} Reddy Book Club. All rights reserved.</p>

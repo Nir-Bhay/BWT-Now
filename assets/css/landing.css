@@ -91,48 +91,76 @@ body.landing-page {
 .landing-header-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .landing-header a.rules-btn {
-  font-size: 11px;
-  font-weight: 400;
-  color: #fff;
-  background: var(--rb-red);
-  padding: 7px 15px;
-  border-radius: 5px;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid #b9860f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #1a1405;
+  background: linear-gradient(145deg, #f3cf66 0%, #d8a825 55%, #be8e13 100%);
+  box-shadow: 0 8px 18px rgba(184, 134, 11, 0.25);
   text-decoration: none;
+  text-transform: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .landing-header a.rules-btn:hover {
-  color: #fff;
+  color: #1a1405;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(184, 134, 11, 0.28);
   text-decoration: none;
 }
 
 .landing-header .btn-login {
-  font-size: 13px;
-  font-weight: 600;
-  color: #fff;
-  background: var(--rb-dark);
-  padding: 7px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 16px;
   border-radius: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: inset 0 0 0 1px #fff;
+  border: 1px solid rgba(184, 134, 11, 0.35);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--rb-dark);
+  background: linear-gradient(180deg, #fff 0%, #fff9ef 100%);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   text-decoration: none;
-  transition: 0.3s;
+  text-transform: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .landing-header .btn-login:hover {
-  color: #fff;
+  color: var(--rb-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
   text-decoration: none;
 }
 
 .landing-header .btn-login.btn-accent {
-  background: linear-gradient(180deg, var(--rb-orange-light) 0%, var(--rb-orange) 80%);
-  box-shadow: inset 0 -6px 12px 0 #9f0101;
-  border: none;
+  color: #fff;
+  border-color: #7f1527;
+  background: linear-gradient(145deg, #b31f3c 0%, #9b1b30 60%, #7f1527 100%);
+  box-shadow: 0 8px 18px rgba(155, 27, 48, 0.25);
+}
+
+.landing-header .btn-login.btn-accent:hover {
+  color: #fff;
+}
+
+.landing-header a.rules-btn:focus-visible,
+.landing-header .btn-login:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.28);
 }
 
 /* Sub nav strip */

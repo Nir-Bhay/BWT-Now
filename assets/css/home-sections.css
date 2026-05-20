@@ -1,0 +1,802 @@
+/* Home page — full-width sections & premium blocks (outside plain bento cards) */
+
+.home-page--light .home-section {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0 16px;
+}
+
+/* —— Live wins ticker (card chips, infinite scroll) —— */
+.home-page--light .winners-ticker-wrap {
+  padding: 14px 0;
+  background: linear-gradient(90deg, #fff 0%, #fff9ee 50%, #fff 100%);
+  border-block: 1px solid rgba(180, 140, 40, 0.2);
+  overflow: hidden;
+}
+
+.home-page--light .winners-ticker-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.home-page--light .winners-ticker-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #9b1b30, #c10930);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 100px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(155, 27, 48, 0.25);
+}
+
+.home-page--light .winners-ticker-label i {
+  font-size: 12px;
+}
+
+.home-page--light .winners-ticker-viewport {
+  flex: 1;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+
+.home-page--light .winners-ticker {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: home-ticker-scroll 34s linear infinite;
+}
+
+@keyframes home-ticker-scroll {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.home-page--light .win-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.28);
+  border-radius: 100px;
+  font-size: 13px;
+  color: #5a5a66;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(28, 24, 16, 0.06);
+}
+
+.home-page--light .win-chip strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.home-page--light .win-chip__amt {
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.home-page--light .win-chip__game {
+  color: #9b1b30;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* —— Compact live strip (replaces oversized card) —— */
+.home-strip {
+  max-width: 1200px;
+  margin: 24px auto 16px;
+  padding: 0 16px;
+}
+
+.home-strip--live {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #fff 0%, #fff9ee 100%);
+  border: 1px solid rgba(180, 140, 40, 0.22);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(28, 24, 16, 0.06);
+}
+
+.home-strip--live img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 100px;
+}
+
+.home-strip--live h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+.home-strip--live p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5a5a66;
+}
+
+.home-strip__tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b8860b;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 640px) {
+  .home-strip--live {
+    grid-template-columns: 1fr;
+  }
+
+  .home-strip--live img {
+    max-height: 80px;
+    width: auto;
+    max-width: 120px;
+  }
+}
+
+/* —— Shared section shell —— */
+.home-section__inner {
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.22);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 24px rgba(28, 24, 16, 0.06);
+}
+
+.home-section__tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b8860b;
+  margin-bottom: 8px;
+}
+
+.home-section__inner h2 {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+  color: #1a1a1a;
+}
+
+.home-section__inner h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  color: #1a1a1a;
+}
+
+.home-section__inner > p {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #5a5a66;
+}
+
+/* —— Registration timeline —— */
+.home-section--register .home-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.home-section--register .home-timeline::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, #b8860b, rgba(184, 134, 11, 0.2));
+  z-index: 0;
+}
+
+.home-section--register .home-timeline__step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 6px;
+}
+
+.home-section--register .home-timeline__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f5d565, #b8860b);
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+}
+
+.home-section--register .home-timeline__step p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #5a5a66;
+}
+
+.home-section--register .home-timeline__step strong {
+  display: block;
+  color: #1a1a1a;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 900px) {
+  .home-section--register .home-timeline {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .home-section--register .home-timeline::before {
+    display: none;
+  }
+
+  .home-section--register .home-timeline__step {
+    display: flex;
+    gap: 14px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .home-section--register .home-timeline__num {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
+
+/* —— Login split panel —— */
+.home-section--login .home-login-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+.home-section--login .home-login-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.home-section--login .home-login-step {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #faf8f5;
+  border: 1px solid rgba(180, 140, 40, 0.15);
+  border-radius: 10px;
+  border-left: 3px solid #b8860b;
+}
+
+.home-section--login .home-login-step__n {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.3);
+  font-size: 12px;
+  font-weight: 700;
+  color: #b8860b;
+}
+
+.home-section--login .home-login-step p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5a5a66;
+}
+
+.home-section--login .home-login-tips {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-section--login .home-login-tips li {
+  font-size: 12px;
+  padding: 8px 10px;
+  background: #fff9ee;
+  border-radius: 8px;
+  color: #5a5a66;
+  border: 1px solid rgba(180, 140, 40, 0.12);
+}
+
+.home-section--login .home-login-tips strong {
+  color: #1a1a1a;
+}
+
+.home-section--login .home-login-visual img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.15);
+}
+
+@media (max-width: 768px) {
+  .home-section--login .home-login-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section--login .home-login-tips {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* —— Betting ID showcase —— */
+.home-section--betting-id .home-id-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 340px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.home-section--betting-id .home-id-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-section--betting-id .home-id-gallery img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.15);
+  box-shadow: 0 4px 16px rgba(28, 24, 16, 0.06);
+}
+
+.home-section--betting-id .home-id-content ul {
+  margin: 0 0 14px;
+  padding-left: 1.1rem;
+}
+
+.home-section--betting-id .home-id-content li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #5a5a66;
+}
+
+.home-section--betting-id .home-id-alert {
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #fff9ee, #fff);
+  border: 1px solid rgba(180, 140, 40, 0.25);
+  border-radius: 10px;
+  font-size: 13px;
+  color: #5a5a66;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 900px) {
+  .home-section--betting-id .home-id-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section--betting-id .home-id-gallery {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .home-section--betting-id .home-id-gallery img {
+    min-width: 200px;
+    max-width: 240px;
+  }
+}
+
+/* —— Sports unified section —— */
+.home-section--sports .home-sports-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.home-section--sports .home-sports-hero {
+  position: sticky;
+  top: 118px;
+}
+
+.home-section--sports .home-sports-hero img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.15);
+  box-shadow: 0 8px 24px rgba(28, 24, 16, 0.1);
+}
+
+.home-section--sports .home-sports-hero__badge {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #9b1b30, #c10930);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.home-section--sports .home-sports-content {
+  background: linear-gradient(145deg, #fff 0%, #fffaf1 100%);
+  border: 1px solid rgba(180, 140, 40, 0.2);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.home-section--sports .home-sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.home-section--sports .home-sport-card {
+  padding: 14px 12px;
+  background: #ffffff;
+  border: 1px solid rgba(180, 140, 40, 0.15);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-section--sports .home-sport-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(28, 24, 16, 0.08);
+}
+
+.home-section--sports .home-sport-card i {
+  display: block;
+  font-size: 1.3rem;
+  color: #b8860b;
+  margin-bottom: 6px;
+}
+
+.home-section--sports .home-sport-card strong {
+  display: block;
+  font-size: 12px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.home-section--sports .home-sport-card p {
+  margin: 0;
+  font-size: 11px;
+  color: #5a5a66;
+  line-height: 1.4;
+}
+
+.home-section--sports .home-markets-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(180, 140, 40, 0.2);
+}
+
+.home-section--sports .home-markets-col h3 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-section--sports .home-markets-col h3 i {
+  color: #b8860b;
+}
+
+.home-section--sports .home-markets-col ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 13px;
+  color: #5a5a66;
+}
+
+.home-section--sports .home-markets-col li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .home-section--sports .home-sports-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section--sports .home-sports-hero {
+    position: static;
+  }
+
+  .home-section--sports .home-markets-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* —— Withdrawals card cleanup —— */
+.home-page--light .withdrawal-card {
+  background: linear-gradient(145deg, #fff 0%, #fffaf1 100%);
+}
+
+.home-page--light .withdrawal-card h3 {
+  margin-top: 2px;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.home-page--light .withdrawal-card ol li {
+  color: #4d4d59;
+}
+
+.home-page--light .withdrawal-card--wide {
+  padding: 20px;
+}
+
+.home-page--light .withdrawal-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 14px;
+}
+
+.home-page--light .withdrawal-step {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.home-page--light .withdrawal-step__n {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #f5d565, #b8860b);
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.home-page--light .withdrawal-step p {
+  margin: 0;
+  color: #4d4d59;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* —— Conclusion + CTA combined card —— */
+.home-page--light .home-conclusion-card {
+  background: linear-gradient(145deg, #fff 0%, #fffaf1 100%);
+}
+
+.home-page--light .home-conclusion-card__layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 320px);
+  gap: 22px;
+  align-items: start;
+}
+
+.home-page--light .home-conclusion-card h2,
+.home-page--light .home-conclusion-card h3 {
+  color: #1a1a1a;
+}
+
+.home-page--light .home-conclusion-card p {
+  color: #4d4d59;
+}
+
+.home-page--light .home-conclusion-card__cta {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.25);
+  background: linear-gradient(160deg, #fffefb 0%, #fff3d8 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.home-page--light .home-conclusion-card__cta .btn-cta {
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .home-page--light .home-conclusion-card__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light .withdrawal-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* —— Payments full section —— */
+.home-section--payments .home-pay-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.home-section--payments .home-pay-methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.home-section--payments .home-pay-method {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #faf8f5;
+  border: 1px solid rgba(180, 140, 40, 0.15);
+  border-radius: 10px;
+}
+
+.home-section--payments .home-pay-method i {
+  font-size: 1.4rem;
+  color: #b8860b;
+  width: 36px;
+  text-align: center;
+}
+
+.home-section--payments .home-pay-method strong {
+  display: block;
+  font-size: 13px;
+  color: #1a1a1a;
+}
+
+.home-section--payments .home-pay-method span {
+  font-size: 11px;
+  color: #5a5a66;
+}
+
+.home-section--payments .home-deposit-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.home-section--payments .home-deposit-step {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  background: #faf8f5;
+  border-radius: 8px;
+  border: 1px solid rgba(180, 140, 40, 0.1);
+}
+
+.home-section--payments .home-deposit-step__n {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f5d565, #b8860b);
+  color: #1a1a1a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.home-section--payments .home-deposit-step p {
+  margin: 0;
+  font-size: 13px;
+  color: #5a5a66;
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .home-section--payments .home-pay-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section--payments .home-pay-methods {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* —— Footer Need Help (light home) —— */
+.home-page--light .landing-footer__col--highlight {
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #fff9ee 0%, #ffffff 100%);
+  border: 1px solid rgba(180, 140, 40, 0.28);
+  box-shadow: 0 8px 28px rgba(28, 24, 16, 0.08);
+}
+
+.home-page--light .landing-footer__col--highlight .landing-footer__heading {
+  color: #9b1b30;
+  font-size: 13px;
+}
+
+.home-page--light .landing-footer__col--highlight .landing-footer__heading i {
+  color: #b8860b;
+}
+
+.home-page--light .landing-footer__col--highlight .landing-footer__hint {
+  color: #5a5a66;
+}
+
+.home-page--light .landing-footer__col--highlight a {
+  color: #3d3d48 !important;
+  font-weight: 600;
+}
+
+.home-page--light .landing-footer__col--highlight a:hover {
+  color: #b8860b !important;
+  padding-left: 4px;
+}
+
+.home-page--light .landing-footer__col--highlight .landing-footer__payments {
+  border-top-color: rgba(180, 140, 40, 0.15);
+}
+
+.home-page--light .landing-footer__col--highlight .landing-footer__payments span {
+  color: #9b1b30;
+  background: #fff;
+  border-color: rgba(180, 140, 40, 0.25);
+}
+
+.home-page--light .landing-footer__help-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: linear-gradient(180deg, #f5d565, #b8860b);
+  color: #1a1a1a !important;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.25);
+}
+
+.home-page--light .landing-footer__help-cta:hover {
+  color: #1a1a1a !important;
+  padding-left: 16px !important;
+  filter: brightness(1.05);
+}

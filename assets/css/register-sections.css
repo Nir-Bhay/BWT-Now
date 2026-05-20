@@ -1,0 +1,535 @@
+/* Register page — light theme sections (mirrors login/home patterns) */
+
+.home-page--light.bento-page--register .register-wrap {
+  padding-top: 30px;
+}
+
+/* Hero type aligned in landing-home-light.css */
+
+.home-page--light.bento-page--register .bento-card {
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.22);
+  box-shadow: 0 4px 24px rgba(28, 24, 16, 0.06);
+}
+
+.home-page--light.bento-page--register .bento-card h2,
+.home-page--light.bento-page--register .bento-card h3,
+.home-page--light.bento-page--register .bento-card h4,
+.home-page--light.bento-page--register .bento-card strong {
+  color: #1a1a1a;
+}
+
+.home-page--light.bento-page--register .bento-card p,
+.home-page--light.bento-page--register .bento-card li {
+  color: #555561;
+}
+
+.home-page--light.bento-page--register .bento-card__tag {
+  color: #b8860b;
+}
+
+/* Full-width sections outside heavy bento */
+.home-page--light.bento-page--register .register-section {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0 16px;
+}
+
+.home-page--light.bento-page--register .register-section__inner {
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.22);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 24px rgba(28, 24, 16, 0.06);
+}
+
+.home-page--light.bento-page--register .register-section__tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b8860b;
+  margin-bottom: 8px;
+}
+
+.home-page--light.bento-page--register .register-section__inner h2,
+.home-page--light.bento-page--register .register-section__inner h3 {
+  margin: 0 0 12px;
+  color: #1a1a1a;
+}
+
+.home-page--light.bento-page--register .register-section__inner h3 {
+  font-size: 1.05rem;
+}
+
+.home-page--light.bento-page--register .register-section__inner p,
+.home-page--light.bento-page--register .register-section__inner li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #555561;
+}
+
+/* Intro card */
+.home-page--light.bento-page--register .register-intro-card {
+  background: linear-gradient(145deg, #fff 0%, #fffaf2 100%);
+}
+
+.home-page--light.bento-page--register .register-intro-card__layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 360px);
+  gap: 18px;
+  align-items: start;
+}
+
+.home-page--light.bento-page--register .register-intro-card__highlight {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(155, 27, 48, 0.2);
+  background: linear-gradient(145deg, #fff8ef 0%, #fff 100%);
+  color: #5d4a35;
+}
+
+.home-page--light.bento-page--register .register-intro-card__panel {
+  border: 1px solid rgba(180, 140, 40, 0.22);
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+}
+
+.home-page--light.bento-page--register .register-intro-card__figure {
+  margin: 0 0 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(180, 140, 40, 0.2);
+}
+
+.home-page--light.bento-page--register .register-intro-card__figure img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.home-page--light.bento-page--register .register-intro-card__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.home-page--light.bento-page--register .register-intro-card__chips span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5b4d32;
+  border: 1px solid rgba(180, 140, 40, 0.25);
+  background: #fff;
+}
+
+.home-page--light.bento-page--register .register-intro-card__chips i {
+  color: #b8860b;
+}
+
+/* Button comparison bento */
+.home-page--light.bento-page--register .register-compare-card {
+  background: linear-gradient(145deg, #fff9ee 0%, #fff 100%);
+}
+
+.home-page--light.bento-page--register .register-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.home-page--light.bento-page--register .register-compare-item {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(180, 140, 40, 0.18);
+  background: #fff;
+}
+
+.home-page--light.bento-page--register .register-compare-item strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #9b1b30;
+}
+
+/* Step timeline */
+.home-page--light.bento-page--register .register-steps-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 300px);
+  gap: 20px;
+  align-items: start;
+}
+
+.home-page--light.bento-page--register .register-steps {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.home-page--light.bento-page--register .register-step {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.18);
+  border-radius: 10px;
+  background: #fffaf5;
+}
+
+.home-page--light.bento-page--register .register-step__n {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  background: linear-gradient(145deg, #f5d565, #b8860b);
+  color: #1a1a1a;
+}
+
+.home-page--light.bento-page--register .register-step h4 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+.home-page--light.bento-page--register .register-step p {
+  margin: 0 0 6px;
+}
+
+.home-page--light.bento-page--register .register-step p:last-child {
+  margin-bottom: 0;
+}
+
+.home-page--light.bento-page--register .register-steps-visual img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.2);
+  box-shadow: 0 6px 18px rgba(28, 24, 16, 0.08);
+  max-height: 420px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Details with image */
+.home-page--light.bento-page--register .register-details-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.home-page--light.bento-page--register .register-details-layout figure {
+  margin: 0;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(180, 140, 40, 0.22);
+  background: linear-gradient(145deg, #fffaf2 0%, #fff 100%);
+  box-shadow: 0 6px 20px rgba(28, 24, 16, 0.06);
+}
+
+.home-page--light.bento-page--register .register-details-layout img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  border: none;
+  display: block;
+}
+
+/* Mobile + APK */
+.home-page--light.bento-page--register .register-section--mobile .register-section__inner {
+  background: linear-gradient(145deg, #fff 0%, #fff9ee 55%, #fffaf5 100%);
+  border-color: rgba(180, 140, 40, 0.28);
+}
+
+.home-page--light.bento-page--register .register-mobile-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 380px);
+  gap: 20px;
+  align-items: start;
+  margin-top: 4px;
+}
+
+.home-page--light.bento-page--register .register-mobile-steps {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 14px;
+}
+
+.home-page--light.bento-page--register .register-mobile-step {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.18);
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(28, 24, 16, 0.04);
+}
+
+.home-page--light.bento-page--register .register-mobile-step i {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #b8860b;
+  background: linear-gradient(145deg, #fff6e0, #fff);
+  border: 1px solid rgba(180, 140, 40, 0.22);
+}
+
+.home-page--light.bento-page--register .register-mobile-step strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #1a1a1a;
+}
+
+.home-page--light.bento-page--register .register-mobile-step p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.home-page--light.bento-page--register .register-mobile-tips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.home-page--light.bento-page--register .register-mobile-tips span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5b4d32;
+  border: 1px solid rgba(180, 140, 40, 0.25);
+  background: #fff;
+}
+
+.home-page--light.bento-page--register .register-mobile-tips i {
+  color: #b8860b;
+}
+
+.home-page--light.bento-page--register .register-apk-panel {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(155, 27, 48, 0.18);
+  background: linear-gradient(160deg, #fff 0%, #fff7f9 100%);
+  box-shadow: 0 6px 22px rgba(28, 24, 16, 0.06);
+}
+
+.home-page--light.bento-page--register .register-apk-panel h3 {
+  margin-top: 0;
+}
+
+.home-page--light.bento-page--register .register-apk-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.home-page--light.bento-page--register .register-apk-gallery img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  border: 1px solid rgba(180, 140, 40, 0.2);
+  background: #fff;
+  padding: 4px;
+}
+
+.home-page--light.bento-page--register .register-apk-warning {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(155, 27, 48, 0.22);
+  background: #fff4f6;
+  font-size: 13px;
+  color: #6b3344;
+}
+
+/* After registration access grid */
+.home-page--light.bento-page--register .register-access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.home-page--light.bento-page--register .register-access-card {
+  padding: 14px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.18);
+  background: #fffaf5;
+}
+
+.home-page--light.bento-page--register .register-access-card i {
+  font-size: 1.2rem;
+  color: #b8860b;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.home-page--light.bento-page--register .register-access-card span {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.home-page--light.bento-page--register .register-access-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Combined deposits + safety + responsible */
+.home-page--light.bento-page--register .register-trust-card {
+  background: linear-gradient(145deg, #fff 0%, #fffaf2 100%);
+}
+
+.home-page--light.bento-page--register .register-trust-card__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.home-page--light.bento-page--register .register-trust-panel {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.18);
+  background: #fff;
+}
+
+.home-page--light.bento-page--register .register-trust-panel--accent {
+  border-color: rgba(155, 27, 48, 0.2);
+  background: linear-gradient(145deg, #fff7f9 0%, #fff 100%);
+}
+
+/* Troubleshoot */
+.home-page--light.bento-page--register .register-troubleshoot-layout {
+  display: grid;
+  grid-template-columns: minmax(200px, 240px) 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.home-page--light.bento-page--register .register-troubleshoot-layout img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.2);
+}
+
+.home-page--light.bento-page--register .register-troubleshoot-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.home-page--light.bento-page--register .register-troubleshoot-item {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(180, 140, 40, 0.15);
+  background: #fffaf5;
+}
+
+.home-page--light.bento-page--register .register-troubleshoot-item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #9b1b30;
+}
+
+/* Why register with image */
+.home-page--light.bento-page--register .register-why-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 280px);
+  gap: 20px;
+  align-items: start;
+}
+
+.home-page--light.bento-page--register .register-why-layout img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 140, 40, 0.2);
+}
+
+.home-page--light.bento-page--register .register-conclusion-card {
+  background: linear-gradient(160deg, #fff6e5 0%, #fff 100%);
+}
+
+.home-page--light.bento-page--register .landing-footer__col--highlight {
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #fff9ee 0%, #ffffff 100%);
+  border: 1px solid rgba(180, 140, 40, 0.28);
+  box-shadow: 0 8px 28px rgba(28, 24, 16, 0.08);
+}
+
+.home-page--light.bento-page--register .landing-footer__help-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: linear-gradient(180deg, #f5d565, #b8860b);
+  color: #1a1a1a !important;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.25);
+}
+
+@media (max-width: 900px) {
+  .home-page--light.bento-page--register .register-intro-card__layout,
+  .home-page--light.bento-page--register .register-steps-layout,
+  .home-page--light.bento-page--register .register-details-layout,
+  .home-page--light.bento-page--register .register-trust-card__layout,
+  .home-page--light.bento-page--register .register-troubleshoot-layout,
+  .home-page--light.bento-page--register .register-why-layout,
+  .home-page--light.bento-page--register .register-access-grid,
+  .home-page--light.bento-page--register .register-compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light.bento-page--register .register-details-layout figure {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .home-page--light.bento-page--register .register-mobile-layout,
+  .home-page--light.bento-page--register .register-apk-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light.bento-page--register .register-why-layout img {
+    max-width: 280px;
+  }
+}

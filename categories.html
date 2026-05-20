@@ -7,27 +7,35 @@
   <meta name="description" content="Explore cricket, football, casino, live betting, and account categories on Reddy Book Club." />
   <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
   <link href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="assets/css/common_style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body, button, input, select, textarea {
+      font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    }
+  </style>
   <link href="assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/css/common_style.css" rel="stylesheet" />
   <link href="assets/css/landing.css" rel="stylesheet" />
-  <link href="assets/css/landing-dark.css" rel="stylesheet" />
-<link href="assets/css/landing-footer.css" rel="stylesheet" />
+  <link href="assets/css/landing-footer.css" rel="stylesheet" />
+  <link href="assets/css/landing-home-light.css" rel="stylesheet" />
   <link href="assets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/auth-modal.css" rel="stylesheet" />
+  <link href="assets/css/landing-header.css" rel="stylesheet" />
+<link href="assets/css/landing-responsive.css" rel="stylesheet" />
 </head>
-<body class="landing-page ">
-  <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</div>
+<body class="landing-page home-page--light">
+    <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</div>
+
     <header class="landing-header">
     <div class="container">
-      <a href="home.html" class="logo"><img src="https://speedcdn.io/assets/logos/reddybook.live.png" alt="Reddy Book Club" /></a>
+      <a href="home.html" class="logo"><img src="https://speedcdn.io/assets/logos/reddybook.live.png"
+          alt="Reddy Book Club" /></a>
       <nav>
         <ul class="landing-nav">
         <li><a href="home.html">Home</a></li>
         <li><a href="login.html">Login</a></li>
         <li><a href="register.html">Register</a></li>
         <li><a href="about-us.html">About</a></li>
-        <li><a href="customer-care.html">Support</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="categories.html" class="active">Categories</a></li>
         </ul>
@@ -39,19 +47,22 @@
       </div>
     </div>
   </header>
+
   <nav class="landing-subnav" aria-label="Page sections">
-    <div class="container"><ul>
+    <div class="container">
+      <ul>
       <li><a href="home.html">Home</a></li>
       <li><a href="login.html">Login</a></li>
       <li><a href="register.html">Register</a></li>
       <li><a href="about-us.html">About</a></li>
-      <li><a href="customer-care.html">Support</a></li>
       <li><a href="blogs.html">Blogs</a></li>
       <li><a href="categories.html" class="active">Categories</a></li>
       <li><a href="privacy-policy.html">Privacy</a></li>
       <li><a href="terms-and-conditions.html">Terms</a></li>
       <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
-    </ul></div>
+      <li><a href="customer-care.html">Customer Care</a></li>
+      </ul>
+    </div>
   </nav>
   <section class="landing-hero">
     <img src="assets/images/pages/home/Homepage Banner.webp" alt="Browse Categories" />
@@ -69,17 +80,22 @@
   </section>
   <div class="winners-ticker-wrap" aria-hidden="true">
     <div class="winners-ticker-row">
-      <span class="winners-ticker-label">Live Wins</span>
+      <span class="winners-ticker-label"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Live Wins</span>
       <div class="winners-ticker-viewport">
         <div class="winners-ticker">
-          <span><strong>Rahul M.</strong> won ₹42,500 on IPL</span>
-          <span><strong>Priya S.</strong> won ₹18,200 on Live Casino</span>
-          <span><strong>Amit K.</strong> won ₹95,000 on Cricket</span>
-          <span><strong>Vikram D.</strong> won ₹31,400 on Football</span>
+          <div class="win-chip"><span class="win-chip__amt">₹42,500</span> <strong>Rahul M.</strong> <span class="win-chip__game">· IPL</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹18,200</span> <strong>Priya S.</strong> <span class="win-chip__game">· Live Casino</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹95,000</span> <strong>Amit K.</strong> <span class="win-chip__game">· Cricket</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹31,400</span> <strong>Vikram D.</strong> <span class="win-chip__game">· Football</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹42,500</span> <strong>Rahul M.</strong> <span class="win-chip__game">· IPL</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹18,200</span> <strong>Priya S.</strong> <span class="win-chip__game">· Live Casino</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹95,000</span> <strong>Amit K.</strong> <span class="win-chip__game">· Cricket</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹31,400</span> <strong>Vikram D.</strong> <span class="win-chip__game">· Football</span></div>
         </div>
       </div>
     </div>
   </div>
+
   <main class="landing-main">
     <section class="landing-content-card">
     <p>Explore cricket, football, casino, live betting, and account categories on Reddy Book Club.</p>
@@ -119,10 +135,10 @@
           </a>
           <p class="landing-footer__tagline">Cricket IDs, live sports markets, and casino play — onboarded through verified agents with fast login and round-the-clock support.</p>
           <div class="landing-footer__badges">
-            <span class="landing-footer__badge"><i class="bi bi-shield-check" aria-hidden="true"></i> Verified agents</span>
+            <span class="landing-footer__badge"><i class="bi bi-shield-fill-check" aria-hidden="true"></i> Verified agents</span>
             <span class="landing-footer__badge landing-footer__badge--accent">18+</span>
-            <span class="landing-footer__badge"><i class="bi bi-lightning-charge" aria-hidden="true"></i> Live markets</span>
-            <span class="landing-footer__badge"><i class="bi bi-headset" aria-hidden="true"></i> 24/7 care</span>
+            <span class="landing-footer__badge"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Live markets</span>
+            <span class="landing-footer__badge"><i class="bi bi-telephone-fill" aria-hidden="true"></i> 24/7 care</span>
           </div>
           <div class="landing-footer__actions">
             <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
@@ -131,19 +147,18 @@
         </div>
         <div class="landing-footer__nav">
           <div class="landing-footer__col">
-            <h4 class="landing-footer__heading"><i class="bi bi-compass" aria-hidden="true"></i> Explore</h4>
+            <h4 class="landing-footer__heading"><i class="bi bi-compass-fill" aria-hidden="true"></i> Explore</h4>
             <ul>
               <li><a href="home.html">Home</a></li>
               <li><a href="login.html">Login</a></li>
               <li><a href="register.html">Register</a></li>
               <li><a href="about-us.html">About</a></li>
-              <li><a href="customer-care.html">Support</a></li>
               <li><a href="blogs.html">Blogs</a></li>
               <li><a href="categories.html">Categories</a></li>
             </ul>
           </div>
           <div class="landing-footer__col">
-            <h4 class="landing-footer__heading"><i class="bi bi-journal-text" aria-hidden="true"></i> Legal</h4>
+            <h4 class="landing-footer__heading"><i class="bi bi-file-text-fill" aria-hidden="true"></i> Legal</h4>
             <ul>
               <li><a href="privacy-policy.html">Privacy Policy</a></li>
               <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
@@ -153,32 +168,14 @@
             </ul>
           </div>
           <div class="landing-footer__col">
-            <h4 class="landing-footer__heading"><i class="bi bi-person-badge" aria-hidden="true"></i> Account</h4>
+            <h4 class="landing-footer__heading"><i class="bi bi-person-badge-fill" aria-hidden="true"></i> Account</h4>
             <ul>
               <li><a href="login.html">Login</a></li>
               <li><a href="register.html">Register</a></li>
               <li><a href="index.html">Betting Dashboard</a></li>
             </ul>
           </div>
-          <div class="landing-footer__col landing-footer__col--highlight">
-            <h4 class="landing-footer__heading"><i class="bi bi-chat-dots" aria-hidden="true"></i> Need help?</h4>
-            <p class="landing-footer__hint">Agents handle deposits, withdrawals, and ID recovery.</p>
-            <ul>
-              <li><a href="customer-care.html">Customer care</a></li>
-              <li><a href="login.html">Login help</a></li>
-              <li><a href="register.html">Registration guide</a></li>
-            </ul>
-            <div class="landing-footer__payments" aria-label="Payment methods">
-              <span>UPI</span>
-              <span>Bank</span>
-              <span>Paytm</span>
-              <span>Wallet</span>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="landing-footer__ribbon" aria-hidden="true">
-        <span>Cricket</span><span>Football</span><span>Live casino</span><span>In-play</span><span>IPL</span><span>Exchange</span>
       </div>
       <div class="landing-footer-bottom">
         <p class="landing-footer__copy">&copy; 2026 Reddy Book Club. All rights reserved.</p>

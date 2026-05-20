@@ -1,0 +1,535 @@
+/* Home page — light cream/gold theme (matches section infographic artwork) */
+
+.home-page--light {
+  --rb-bg: #f7f4ef;
+  --rb-bg-elevated: #ffffff;
+  --rb-bg-card: #ffffff;
+  --rb-bg-card-solid: #ffffff;
+  --rb-border: rgba(180, 140, 40, 0.22);
+  --rb-border-glow: rgba(180, 140, 40, 0.45);
+  --rb-gold: #b8860b;
+  --rb-gold-dim: #96700a;
+  --rb-neon: #2e7d32;
+  --rb-neon-dim: #256628;
+  --rb-text: #1c1c22;
+  --rb-text-muted: #5a5a66;
+  --rb-maroon: #9b1b30;
+  --rb-shadow-card: 0 4px 24px rgba(28, 24, 16, 0.08), 0 0 0 1px var(--rb-border);
+  --rb-radius-lg: 16px;
+  --rb-radius-md: 12px;
+}
+
+.home-page--light.landing-page {
+  color: var(--rb-text);
+  background: var(--rb-bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(240, 192, 64, 0.12), transparent),
+    radial-gradient(ellipse 50% 40% at 100% 20%, rgba(155, 27, 48, 0.05), transparent),
+    linear-gradient(180deg, #faf8f5 0%, #f3efe8 100%);
+}
+
+.home-page--light.landing-page a:not(.btn-login):not(.rules-btn):not(.btn-cta):not(.btn-ghost) {
+  color: var(--rb-maroon);
+}
+
+.home-page--light.landing-page a:not(.btn-login):not(.rules-btn):not(.btn-cta):not(.btn-ghost):hover {
+  color: var(--rb-gold);
+}
+
+/* Hero — show banner artwork, dark readable text */
+.home-page--light .home-hero {
+  border-bottom: 1px solid var(--rb-border);
+  min-height: min(52vh, 520px);
+}
+
+.home-page--light .home-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(125, 0, 28, 0.35) 100%),
+    url("../images/pages/home/Homepage%20Banner.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.home-page--light .home-hero__glow {
+  background: radial-gradient(circle, rgba(240, 192, 64, 0.18), transparent 70%);
+}
+
+.home-page--light .home-hero h1 {
+  color: #fff;
+  max-width: 20ch;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  text-shadow: none;
+}
+
+.home-page--light .home-hero h1 em {
+  color: var(--rb-gold);
+}
+
+.home-page--light .home-hero__lead {
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: none;
+}
+
+.home-page--light .home-hero__chip {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--rb-border);
+  color: var(--rb-text);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.home-page--light .home-hero__chip strong {
+  color: #1a1a1a;
+}
+
+.home-page--light .page-hero__chip strong {
+  color: #1a1a1a;
+}
+
+.home-page--light .btn-ghost {
+  color: var(--rb-text-muted);
+}
+
+.home-page--light .btn-ghost:hover {
+  color: var(--rb-gold);
+}
+
+/* Bento cards */
+.home-page--light .bento-card {
+  box-shadow: var(--rb-shadow-card);
+}
+
+.home-page--light .bento-card h2,
+.home-page--light .bento-card h3 {
+  color: #1a1a1a;
+}
+
+.home-page--light .bento-card strong {
+  color: #1a1a1a;
+}
+
+.home-page--light .bento-intro .lead {
+  color: #2a2a32;
+}
+
+.home-page--light .bento-tile,
+.home-page--light .bento-step,
+.home-page--light .bento-bonus,
+.home-page--light .bento-sport,
+.home-page--light .bento-legal-item {
+  background: #faf8f5;
+}
+
+.home-page--light .bento-tile span,
+.home-page--light .bento-sport strong {
+  color: #1a1a1a;
+}
+
+.home-page--light .bento-highlight {
+  background: linear-gradient(145deg, rgba(255, 248, 235, 0.95), #ffffff);
+}
+
+.home-page--light .bento-highlight .bento-card__tag {
+  color: var(--rb-maroon);
+}
+
+.home-page--light .bento-cta-card {
+  background: linear-gradient(160deg, rgba(255, 248, 230, 0.95), #ffffff);
+}
+
+.home-page--light .bento-visual__img::after {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.92) 0%, transparent 55%);
+}
+
+/* Section infographic images */
+.home-page--light .bento-media {
+  padding: 0;
+  background: #fff;
+}
+
+.home-page--light .bento-figure {
+  margin: 0;
+  line-height: 0;
+}
+
+.home-page--light .bento-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: #fff;
+  border-radius: calc(var(--rb-radius-lg) - 2px);
+}
+
+.home-page--light .bento-figure--compact img {
+  max-height: 220px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.home-page--light .bento-pay-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.home-page--light .bento-pay-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 64px;
+  padding: 10px 8px;
+  background: #faf8f5;
+  border: 1px solid var(--rb-border);
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--rb-text-muted);
+  text-align: center;
+}
+
+.home-page--light .bento-pay-icon i {
+  font-size: 1.25rem;
+  color: var(--rb-gold);
+}
+
+/* FAQ */
+.home-page--light .landing-faq details {
+  background: #faf8f5;
+  border-color: var(--rb-border);
+  color: var(--rb-text);
+}
+
+.home-page--light .landing-faq summary {
+  color: #1a1a1a;
+}
+
+.home-page--light .landing-faq details[open] summary {
+  color: var(--rb-gold);
+  border-bottom-color: var(--rb-border);
+}
+
+.home-page--light .landing-faq .faq-body {
+  color: var(--rb-text-muted);
+}
+
+/* CTA band */
+.home-page--light .landing-cta-band {
+  background: linear-gradient(135deg, rgba(255, 248, 230, 0.95), rgba(255, 255, 255, 0.98));
+  border: 1px solid var(--rb-border);
+  box-shadow: var(--rb-shadow-card);
+}
+
+.home-page--light .landing-cta-band h2 {
+  color: #1a1a1a;
+}
+
+.home-page--light .landing-cta-band p {
+  color: var(--rb-text-muted);
+}
+
+.home-page--light .landing-hero-cta .btn-cta-primary {
+  background: linear-gradient(180deg, #f5d565, var(--rb-gold));
+  color: #1a1a1a;
+  box-shadow: 0 4px 16px rgba(184, 134, 11, 0.25);
+}
+
+.home-page--light .landing-hero-cta .btn-cta-neon,
+.home-page--light .btn-cta-neon {
+  background: var(--rb-maroon);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(155, 27, 48, 0.25);
+}
+
+/* Footer — light variant on home only */
+.home-page--light .landing-footer {
+  background: linear-gradient(180deg, #fff 0%, #f3efe8 100%);
+  color: var(--rb-text-muted);
+  border-top: 1px solid var(--rb-border);
+}
+
+.home-page--light .landing-footer__glow {
+  background: radial-gradient(ellipse 70% 100% at 50% 0%, rgba(240, 192, 64, 0.15), transparent 70%);
+}
+
+.home-page--light .landing-footer__tagline,
+.home-page--light .landing-footer__hint {
+  color: var(--rb-text-muted);
+}
+
+.home-page--light .landing-footer__badge {
+  color: var(--rb-text);
+  background: #faf8f5;
+  border-color: var(--rb-border);
+}
+
+.home-page--light .landing-footer__heading {
+  color: #1a1a1a;
+}
+
+.home-page--light .landing-footer__col a {
+  color: var(--rb-text-muted);
+}
+
+.home-page--light .landing-footer__col a:hover {
+  color: var(--rb-gold);
+}
+
+.home-page--light .landing-footer__ribbon {
+  background: #faf8f5;
+  border-color: var(--rb-border);
+}
+
+.home-page--light .landing-footer__ribbon span {
+  color: var(--rb-text-muted);
+}
+
+.home-page--light .landing-footer-bottom {
+  border-top-color: var(--rb-border);
+}
+
+.home-page--light .landing-footer__copy,
+.home-page--light .landing-footer__disclaimer {
+  color: var(--rb-text-muted);
+}
+
+/* Dashboard embed inherits light theme */
+.rb-dashboard-home-embed.home-embed--light {
+  --rb-bg: #f7f4ef;
+  --rb-bg-card: #ffffff;
+  --rb-border: rgba(180, 140, 40, 0.22);
+  --rb-gold: #b8860b;
+  --rb-neon: #2e7d32;
+  --rb-text: #1c1c22;
+  --rb-text-muted: #5a5a66;
+  --rb-maroon: #9b1b30;
+  color: var(--rb-text);
+  background: var(--rb-bg);
+  background-image: linear-gradient(180deg, #faf8f5 0%, #f3efe8 100%);
+  border-color: var(--rb-border);
+}
+
+.rb-dashboard-home-embed.home-embed--light a:not(.btn-cta) {
+  color: var(--rb-gold);
+}
+
+/* Bento page heroes — banner + dark left overlay from landing-bento.css; typography only here */
+.home-page--light .page-hero {
+  border-bottom: 1px solid var(--rb-border);
+  min-height: min(52vh, 520px);
+}
+
+.home-page--light .page-hero__glow {
+  background: radial-gradient(circle, rgba(240, 192, 64, 0.12), transparent 70%);
+}
+
+.home-page--light .page-hero h1 {
+  color: #fff;
+  max-width: 28ch;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  text-shadow: none;
+}
+
+.home-page--light .page-hero h1 em {
+  color: var(--rb-gold);
+  font-style: normal;
+}
+
+.home-page--light .page-hero__lead {
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: none;
+}
+
+.home-page--light .page-hero__eyebrow {
+  color: var(--rb-gold);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--rb-border);
+}
+
+/* Terms hero image matches Privacy (landing-bento override) */
+.home-page--light.bento-page--terms .page-hero__bg {
+  background-image:
+    linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.75) 45%, rgba(125, 0, 28, 0.35) 100%),
+    url("../images/pages/privacy-policy/Privacy%20Policy%20Main%20Banner%20-%201.webp");
+}
+
+/* Blogs & categories — same dark overlay as home hero readability */
+.home-page--light .landing-hero {
+  border-bottom: 1px solid var(--rb-border);
+}
+
+.home-page--light .landing-hero img {
+  opacity: 1;
+}
+
+.home-page--light .landing-hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    transparent 100%
+  ) !important;
+}
+
+.home-page--light .landing-hero h1 {
+  color: #fff;
+  text-shadow: none;
+}
+
+.home-page--light .landing-hero .hero-lead {
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: none;
+}
+
+/* Live Wins ticker — same pattern as home.html (below every hero) */
+.home-page--light .winners-ticker-wrap {
+  padding: 14px 0;
+  background: linear-gradient(90deg, #fff 0%, #fff9ee 50%, #fff 100%);
+  border-block: 1px solid rgba(180, 140, 40, 0.2);
+  overflow: hidden;
+}
+
+.home-page--light .winners-ticker-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.home-page--light .winners-ticker-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #9b1b30, #c10930);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 100px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(155, 27, 48, 0.25);
+}
+
+.home-page--light .winners-ticker-label i {
+  font-size: 12px;
+}
+
+.home-page--light .winners-ticker-viewport {
+  flex: 1;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+
+.home-page--light .winners-ticker {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: marketing-ticker-scroll 34s linear infinite;
+}
+
+@keyframes marketing-ticker-scroll {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.home-page--light .win-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.28);
+  border-radius: 100px;
+  font-size: 13px;
+  color: #5a5a66;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(28, 24, 16, 0.06);
+}
+
+.home-page--light .win-chip strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.home-page--light .win-chip__amt {
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.home-page--light .win-chip__game {
+  color: #9b1b30;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.home-page--light .landing-hero-cta .btn-cta-secondary,
+.home-page--light .landing-cta-band .btn-cta-secondary,
+.home-page--light .page-hero__actions .btn-cta-secondary {
+  border-color: rgba(155, 27, 48, 0.35);
+  background: linear-gradient(145deg, #b31f3c 0%, #9b1b30 60%, #7f1527 100%);
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(155, 27, 48, 0.25);
+}
+
+/* Content cards & grids (blogs, categories) */
+.home-page--light .landing-content-card {
+  background: #fff;
+  border: 1px solid var(--rb-border);
+  box-shadow: var(--rb-shadow-card);
+}
+
+.home-page--light .landing-content-card h2 {
+  color: #1a1a1a;
+  border-bottom-color: var(--rb-gold);
+}
+
+.home-page--light .landing-content-card h3 {
+  color: #1a1a1a;
+}
+
+.home-page--light .landing-content-card p {
+  color: var(--rb-text-muted);
+}
+
+.home-page--light .landing-grid-card {
+  border: 1px solid var(--rb-border);
+  box-shadow: var(--rb-shadow-card);
+}
+
+.home-page--light .landing-grid-card .card-img {
+  background: linear-gradient(135deg, #fff4d6 0%, #e8c96a 55%, #b8860b 100%);
+  color: #1a1a1a;
+}
+
+.home-page--light .landing-grid-card h3 {
+  color: #1a1a1a;
+}
+
+.home-page--light .landing-grid-card .card-body p {
+  color: var(--rb-text-muted);
+}
+
+.home-page--light .landing-grid-card a {
+  color: var(--rb-maroon);
+  font-weight: 600;
+}
+
+.home-page--light .landing-grid-card a:hover {
+  color: var(--rb-gold);
+}
+
+@media (max-width: 767px) {
+  .home-page--light .landing-hero-overlay {
+    background: linear-gradient(180deg, rgba(255, 252, 248, 0.97) 0%, rgba(255, 252, 248, 0.75) 100%);
+  }
+}

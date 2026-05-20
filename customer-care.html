@@ -3,21 +3,249 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Customer Care | Reddy Book Club Support</title>
-  <meta name="description" content="Contact Reddy Book Club customer care for login, registration, payments, and account help." />
+  <title>Reddy Book Customer Care: Get Help with Your Reddy Book Club Account</title>
+  <meta name="description" content="Contact Reddy Book customer care for Reddy Book Club cricket ID, login, registration, deposit, withdrawal, APK, and account support help." />
   <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
   <link href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
   <link href="assets/css/common_style.css" rel="stylesheet" />
   <link href="assets/css/landing.css" rel="stylesheet" />
-  <link href="assets/css/landing-dark.css" rel="stylesheet" />
-<link href="assets/css/landing-footer.css" rel="stylesheet" />
+  <link href="assets/css/landing-bento.css" rel="stylesheet" />
+  <link href="assets/css/landing-home-light.css" rel="stylesheet" />
+  <link href="assets/css/landing-header.css" rel="stylesheet" />
+<link href="assets/css/landing-responsive.css" rel="stylesheet" />
   <link href="assets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/auth-modal.css" rel="stylesheet" />
-  <link href="assets/css/landing-bento.css" rel="stylesheet" />
+  <link href="assets/css/landing-footer.css" rel="stylesheet" />
+  <link href="assets/css/home-sections.css" rel="stylesheet" />
+  <style>
+    body, button, input, select, textarea {
+      font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .bento-page--support .page-hero h1,
+    .bento-page--support .page-hero__lead {
+      color: #fff;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    .bento-wrap { max-width: 1240px; padding-top: 40px; }
+
+    .privacy-reader-card {
+      padding: 0;
+      background: var(--rb-bg-card-solid, #ffffff);
+      border: 1px solid var(--rb-border);
+      border-radius: 16px;
+      box-shadow: var(--rb-shadow-card);
+      overflow: hidden;
+    }
+
+    .privacy-reader-card::before { display: none; }
+
+    .privacy-inline-banner-container {
+      width: 100%;
+      border-bottom: 1px solid var(--rb-border);
+      overflow: hidden;
+    }
+
+    .privacy-inline-banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      max-height: 380px;
+      min-height: 280px;
+    }
+
+    .privacy-sections { padding: 40px; }
+
+    .privacy-section {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid rgba(180, 140, 40, 0.12);
+      scroll-margin-top: 120px;
+    }
+
+    .privacy-section:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .privacy-section h2,
+    .privacy-section h3 {
+      font-size: 1.5rem;
+      color: var(--rb-text) !important;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .privacy-section h3 {
+      font-size: 1.05rem;
+      margin-top: 14px;
+    }
+
+    .privacy-section p {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: var(--rb-text-muted);
+      margin-bottom: 16px;
+    }
+
+    .privacy-section strong { color: var(--rb-text) !important; }
+
+    .custom-bento-list {
+      list-style: none;
+      padding-left: 0 !important;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .custom-bento-list li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 13.5px;
+      color: var(--rb-text-muted);
+      line-height: 1.5;
+    }
+
+    .custom-bento-list li::before {
+      content: "➔";
+      position: absolute;
+      left: 0;
+      color: var(--rb-gold);
+      font-weight: bold;
+    }
+
+    .privacy-notice-box {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    .gold-notice {
+      background: rgba(184, 134, 11, 0.05);
+      border-left: 4px solid var(--rb-gold);
+      color: var(--rb-text);
+    }
+
+    .maroon-notice {
+      background: rgba(155, 27, 48, 0.04);
+      border-left: 4px solid var(--rb-maroon);
+      color: var(--rb-text);
+    }
+
+    .support-help-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 14px 0;
+    }
+
+    .support-help-card {
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(180, 140, 40, 0.18);
+      background: #fffaf5;
+    }
+
+    .support-help-card i {
+      font-size: 1.2rem;
+      color: #b8860b;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .support-help-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #1a1a1a;
+      font-size: 13px;
+    }
+
+    .support-help-card p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .brand-clarification-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .brand-chip {
+      background: #faf8f5;
+      border: 1px solid rgba(180, 140, 40, 0.18);
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: var(--rb-text-muted);
+    }
+
+    .warning-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 10px;
+      margin: 12px 0;
+    }
+
+    .warning-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(155, 27, 48, 0.12);
+      background: #fff;
+      font-size: 13px;
+      color: var(--rb-text-muted);
+      line-height: 1.45;
+    }
+
+    .warning-item i {
+      color: var(--rb-maroon);
+      margin-top: 2px;
+    }
+
+    .privacy-conclusion-card {
+      background: linear-gradient(135deg, rgba(184, 134, 11, 0.03) 0%, rgba(155, 27, 48, 0.02) 100%);
+      border: 1px solid rgba(180, 140, 40, 0.2);
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 8px;
+    }
+
+    .privacy-conclusion-card h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--rb-text);
+      margin-bottom: 12px;
+    }
+
+    .privacy-conclusion-card p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--rb-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .privacy-conclusion-card p:last-of-type { margin-bottom: 0; }
+
+    @media (max-width: 768px) {
+      .privacy-sections { padding: 24px 18px; }
+    }
+  </style>
 </head>
-<body class="landing-page bento-page bento-page--support">
+<body class="landing-page bento-page bento-page--support home-page--light">
   <div class="landing-disclaimer">18+ | Play Responsibly | This site is for entertainment where legally permitted</div>
 
   <header class="landing-header">
@@ -48,42 +276,48 @@
       <li><a href="login.html">Login</a></li>
       <li><a href="register.html">Register</a></li>
       <li><a href="about-us.html">About</a></li>
-      <li><a href="customer-care.html" class="active">Support</a></li>
       <li><a href="blogs.html">Blogs</a></li>
       <li><a href="categories.html">Categories</a></li>
       <li><a href="privacy-policy.html">Privacy</a></li>
       <li><a href="terms-and-conditions.html">Terms</a></li>
       <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
+      <li><a href="customer-care.html" class="active">Customer Care</a></li>
     </ul></div>
   </nav>
 
   <section class="page-hero" aria-labelledby="page-hero-title">
-    <div class="page-hero__bg" role="img" aria-label="Customer Care | Reddy Book Club Support"></div>
+    <div class="page-hero__bg" role="img" aria-label="Reddy Book Customer Care: Get Help with Your Reddy Book Club Account"></div>
     <div class="page-hero__glow" aria-hidden="true"></div>
     <div class="page-hero__inner">
       <p class="page-hero__eyebrow"><span class="pulse" aria-hidden="true"></span> 24/7 support</p>
-      <h1 id="page-hero-title">Customer care for your <em>account</em></h1>
-      <p class="page-hero__lead">Help with cricket ID, login, registration, deposits, withdrawals, mobile access, and account safety — through official Reddy Book Club channels only.</p>
+      <h1 id="page-hero-title">Reddy Book Customer Care: Get Help with Your Reddy Book Club Account</h1>
+      <p class="page-hero__lead">Contact Reddy Book customer care for Reddy Book Club cricket ID, login, registration, deposit, withdrawal, APK, and account support help.</p>
       <div class="page-hero__chips">
-        <div class="page-hero__chip"><i class="bi bi-chat-dots" aria-hidden="true"></i> <strong>Get Cricket ID</strong> button</div>
-        <div class="page-hero__chip"><i class="bi bi-credit-card" aria-hidden="true"></i> <strong>Payments</strong> help</div>
-        <div class="page-hero__chip"><i class="bi bi-shield-lock" aria-hidden="true"></i> <strong>Never share</strong> OTP or PIN</div>
+        <div class="page-hero__chip"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i> <strong>Get Cricket ID</strong> support</div>
+        <div class="page-hero__chip"><i class="bi bi-credit-card-fill" aria-hidden="true"></i> <strong>Payment</strong> help</div>
+        <div class="page-hero__chip"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> <strong>Never share</strong> OTP or PIN</div>
       </div>
-      <div class="page-hero__actions"><a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
+      <div class="page-hero__actions">
+        <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
         <a href="login.html" class="btn-cta btn-cta-neon">Login Help</a>
-        <a href="index.html" class="btn-ghost">Dashboard →</a></div>
+        <a href="responsible-gaming.html" class="btn-ghost">Responsible Gaming →</a>
+      </div>
     </div>
   </section>
 
   <div class="winners-ticker-wrap" aria-hidden="true">
     <div class="winners-ticker-row">
-      <span class="winners-ticker-label">Live Wins</span>
+      <span class="winners-ticker-label"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Live Wins</span>
       <div class="winners-ticker-viewport">
         <div class="winners-ticker">
-          <span><strong>Rahul M.</strong> won ₹42,500 on IPL</span>
-          <span><strong>Priya S.</strong> won ₹18,200 on Live Casino</span>
-          <span><strong>Amit K.</strong> won ₹95,000 on Cricket</span>
-          <span><strong>Vikram D.</strong> won ₹31,400 on Football</span>
+          <div class="win-chip"><span class="win-chip__amt">₹42,500</span> <strong>Rahul M.</strong> <span class="win-chip__game">· IPL</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹18,200</span> <strong>Priya S.</strong> <span class="win-chip__game">· Live Casino</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹95,000</span> <strong>Amit K.</strong> <span class="win-chip__game">· Cricket</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹31,400</span> <strong>Vikram D.</strong> <span class="win-chip__game">· Football</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹42,500</span> <strong>Rahul M.</strong> <span class="win-chip__game">· IPL</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹18,200</span> <strong>Priya S.</strong> <span class="win-chip__game">· Live Casino</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹95,000</span> <strong>Amit K.</strong> <span class="win-chip__game">· Cricket</span></div>
+          <div class="win-chip"><span class="win-chip__amt">₹31,400</span> <strong>Vikram D.</strong> <span class="win-chip__game">· Football</span></div>
         </div>
       </div>
     </div>
@@ -92,73 +326,323 @@
   <main class="landing-main">
     <div class="bento-wrap">
       <div class="bento-grid">
+        <article class="bento-card privacy-reader-card bento-span-12">
+          <div class="privacy-inline-banner-container">
+            <img src="assets/images/pages/customer-care/Customer Care Banner - 2.webp" class="privacy-inline-banner" alt="Reddy Book customer care support" loading="lazy" width="1200" height="400" />
+          </div>
 
-        <article class="bento-card bento-intro bento-span-8">
-          <p class="bento-card__tag">Support</p>
-          <h2>How to contact customer care</h2>
-          <p class="lead">Use the <strong>Get Cricket ID</strong> button or official support on this website. Avoid random phone numbers, Telegram groups, or social media “agents.”</p>
-          <p>Real support solves problems — it never pressures quick deposits or asks for banking passwords.</p>
-        </article>
-        <article class="bento-card bento-highlight bento-span-4">
-          <p class="bento-card__tag">We help with</p>
-          <ul>
-            <li>New cricket ID requests</li>
-            <li>Login &amp; password issues</li>
-            <li>Deposits &amp; withdrawals</li>
-            <li>Mobile / APK questions</li>
-          </ul>
-        </article>
-        <article class="bento-card bento-visual bento-span-5">
-          <div class="bento-visual__img" role="img" aria-label="Customer support"></div>
-          <div class="bento-visual__body">
-            <p class="bento-card__tag">Before you call</p>
-            <h3>Have these ready</h3>
-            <p>Username, error screenshots, transaction ID, amount, date/time, and device type.</p>
+          <div class="privacy-sections">
+            <section id="section-intro" class="privacy-section">
+              <p class="bento-card__tag">Support</p>
+              <h2>Reddy Book Customer Care: Get Help with Your Reddy Book Club Account</h2>
+              <p>Need help with your Reddy Book account? The Reddy Book Club customer care page is here to guide users who need support with cricket ID access, login problems, registration, deposits, withdrawals, mobile access, APK questions, or account safety concerns.</p>
+              <p>If you are a new user, you can click the Get Cricket ID button to connect with support and request account access. If you already have a Reddy Book Club account, customer care can help you understand login issues, payment updates, account restrictions, or support steps.</p>
+              <p>This page explains what Reddy Book customer care can help with, how to contact support safely, what details you should prepare, and what information you should never share with anyone.</p>
+              <div class="privacy-notice-box gold-notice">
+                Reddy Book Club is intended only for eligible adults where access is legally permitted. Sports betting and casino gaming involve financial risk, so use the platform responsibly and only within your personal limits.
+              </div>
+            </section>
+
+            <section id="section-contact" class="privacy-section">
+              <p class="bento-card__tag">Contact</p>
+              <h2>How to Contact Reddy Book Customer Care</h2>
+              <p>The simplest way to reach Reddy Book Club support is to click the Get Cricket ID button or use the official support option shown on the website. This connects you with the website’s support system so your issue can be checked properly.</p>
+              <p>Customer care may help with:</p>
+              <ul class="custom-bento-list">
+                <li>New cricket ID requests</li>
+                <li>Reddy Book Club registration help</li>
+                <li>Reddy Book login issues</li>
+                <li>Forgotten password guidance</li>
+                <li>Deposit confirmation</li>
+                <li>Withdrawal requests</li>
+                <li>Mobile or APK access questions</li>
+                <li>Account access problems</li>
+                <li>Basic platform navigation</li>
+                <li>Responsible gaming support guidance</li>
+              </ul>
+              <p>Always contact support through the official Reddy Book Club website. Avoid random phone numbers, public social media comments, unknown Telegram groups, or copied links claiming to be “official support.”</p>
+              <p>A real support process should help you solve account issues. It should not pressure you to deposit quickly, share banking passwords, or reveal sensitive information.</p>
+            </section>
+
+            <section id="section-help" class="privacy-section">
+              <p class="bento-card__tag">What we help with</p>
+              <h2>What Reddy Book Customer Care Can Help You With</h2>
+              <p>Reddy Book Club support is designed to help users solve practical account problems. Whether you are a beginner or an experienced user, the support team can guide you through common account steps.</p>
+              <div class="support-help-grid">
+                <div class="support-help-card">
+                  <i class="bi bi-person-badge" aria-hidden="true"></i>
+                  <strong>Cricket ID Support</strong>
+                  <p>If you do not have a cricket ID yet, click Get Cricket ID to start the process. A cricket ID is the account access detail used to log in and use available Reddy Book Club features.</p>
+                </div>
+                <div class="support-help-card">
+                  <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i>
+                  <strong>Login Support</strong>
+                  <p>If your Reddy Book login is not working, support can help you check wrong password, expired link, browser error, or outdated login page issues.</p>
+                </div>
+                <div class="support-help-card">
+                  <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                  <strong>Registration Help</strong>
+                  <p>New users may need help with Register or Get Cricket ID. Support can guide you if your form is not submitting or account details have not arrived.</p>
+                </div>
+                <div class="support-help-card">
+                  <i class="bi bi-wallet2" aria-hidden="true"></i>
+                  <strong>Deposit &amp; Withdrawal Help</strong>
+                  <p>Customer care can help with deposit instructions, payment confirmation, withdrawal status, and transaction-related questions.</p>
+                </div>
+              </div>
+              <p>Customer care may guide you on what details are needed, how account setup works, and what to do after you receive your username and password.</p>
+              <p>Do not trust anyone who promises a “winning ID,” “sure-shot account,” or “fixed match access.” A cricket ID gives access to the platform. It does not guarantee profit or special results.</p>
+              <p>Because payments may involve manual checks or third-party payment methods, always keep your transaction proof. Screenshots, UPI references, bank transaction IDs, and timestamps can help support review your issue faster.</p>
+            </section>
+
+            <section id="section-prepare" class="privacy-section">
+              <p class="bento-card__tag">Before you contact</p>
+              <h2>Before You Contact Support: Keep These Details Ready</h2>
+              <p>You can save time by preparing the right details before contacting customer care. Clear information helps the support team understand your issue quickly.</p>
+              <p>Keep these details ready when relevant:</p>
+              <ul class="custom-bento-list">
+                <li>Your username or cricket ID</li>
+                <li>The issue you are facing</li>
+                <li>Date and approximate time of the issue</li>
+                <li>Screenshot of the error message</li>
+                <li>Transaction ID or UPI reference number</li>
+                <li>Deposit or withdrawal amount</li>
+                <li>Payment method used</li>
+                <li>Registered contact number, if applicable</li>
+                <li>Device type, such as Android, iPhone, or desktop</li>
+                <li>Browser name, if the issue is website-related</li>
+              </ul>
+              <p>Do not send unnecessary personal information. Share only what is needed to solve the issue.</p>
+              <div class="privacy-notice-box maroon-notice">
+                <strong>Most importantly, never share your password, OTP, UPI PIN, bank login password, wallet password, full card PIN, or private financial credentials with anyone.</strong>
+              </div>
+            </section>
+
+            <section id="section-login" class="privacy-section">
+              <p class="bento-card__tag">Login help</p>
+              <h2>Reddy Book Login Problems and Customer Care Solutions</h2>
+              <p>Login issues are one of the most common reasons users contact Reddy Book customer care. Many problems can be solved with basic checks.</p>
+              <h3>Wrong Username or Password</h3>
+              <p>Make sure your username and password are typed exactly as provided. Passwords may be case-sensitive. Remove extra spaces if you copied the details from a message.</p>
+              <p>If you forgot your password, contact official support. Do not use unofficial password recovery links.</p>
+              <h3>Login Page Not Opening</h3>
+              <p>If the page does not load, check your internet connection and try another browser. Clear your cache if the website keeps showing an old version.</p>
+              <p>Some login links may change. If your old bookmarked link is not working, return to the official Reddy Book Club website and use the current Login button.</p>
+              <h3>Account Temporarily Restricted</h3>
+              <p>An account may be restricted because of repeated failed login attempts, security checks, payment review, suspicious activity, or eligibility concerns.</p>
+              <p>If this happens, contact customer care and wait for the account review. Do not create another account to bypass the issue.</p>
+              <h3>Remember Me or Saved Password Problems</h3>
+              <p>If your browser saved an old password, delete it and enter the latest details manually. Avoid using “Remember Me” on shared devices.</p>
+            </section>
+
+            <section id="section-register" class="privacy-section">
+              <p class="bento-card__tag">Registration</p>
+              <h2>Help with Registering and Getting a Cricket ID</h2>
+              <p>If you are new to Reddy Book Club, customer care can help you understand how to request your cricket ID. This is useful for users searching terms like reddy book club, reddybook club, reddy anna club, reddy anna book club, reddyanna, book777, or raddybook while trying to find account access.</p>
+              <p>To request a cricket ID, click Get Cricket ID or Register on the official website. Fill in the required details if a form is shown, or follow the support instructions provided through the website.</p>
+              <p>Support may ask for basic account setup information. This should be limited to what is needed for creating or verifying account access. You should not be asked for banking passwords, OTPs, or private payment PINs.</p>
+              <p>After your cricket ID is created, customer care may provide login guidance. Keep your username and password private. Do not forward your account details to friends or public groups.</p>
+            </section>
+
+            <section id="section-deposit" class="privacy-section">
+              <p class="bento-card__tag">Deposits</p>
+              <h2>Deposit Support: What to Do If Funds Are Not Updated</h2>
+              <p>If you made a deposit and your account balance has not updated, do not panic. Payment confirmation can take time depending on the method used, bank status, network traffic, or manual verification.</p>
+              <p>Before contacting customer care, check:</p>
+              <ul class="custom-bento-list">
+                <li>Whether the payment was successful from your bank or wallet</li>
+                <li>Whether the amount was sent to the correct details</li>
+                <li>Whether you used the payment method instructed by support</li>
+                <li>Whether you have a transaction ID or screenshot</li>
+                <li>Whether enough time has passed for basic processing</li>
+              </ul>
+              <p>When you contact support, share the transaction reference, amount, payment method, and time of payment. Do not send sensitive banking passwords or PINs.</p>
+              <p>If someone asks you to make another payment before checking the first one, verify carefully through official support.</p>
+            </section>
+
+            <section id="section-withdrawal" class="privacy-section">
+              <p class="bento-card__tag">Withdrawals</p>
+              <h2>Withdrawal Support: How Customer Care Can Help</h2>
+              <p>Withdrawal questions are another common support topic. Users may contact Reddy Book customer care to check processing time, payment details, minimum withdrawal requirements, failed transfers, or verification steps.</p>
+              <p>Before requesting a withdrawal, make sure your account details are correct. Incorrect UPI ID, bank account number, IFSC, or wallet information can delay processing.</p>
+              <p>If your withdrawal is delayed, contact support with:</p>
+              <ul class="custom-bento-list">
+                <li>Withdrawal amount</li>
+                <li>Request time and date</li>
+                <li>Preferred payment method</li>
+                <li>Registered account details</li>
+                <li>Screenshot or reference number, if available</li>
+              </ul>
+              <p>Withdrawals may be delayed due to payment checks, incorrect details, bank processing, account review, or verification requirements.</p>
+              <p>Avoid sending repeated messages every few minutes. Give support enough information to review the issue properly.</p>
+            </section>
+
+            <section id="section-mobile" class="privacy-section">
+              <p class="bento-card__tag">Mobile &amp; APK</p>
+              <h2>Mobile and Reddy Book Club APK Support</h2>
+              <p>Many users access Reddy Book Club from mobile devices. Customer care can help with mobile login issues, page loading errors, APK questions, and browser problems.</p>
+              <p>Some users search for reddy book club apk or reddybook.club apk. Be careful with APK downloads. Only use mobile app or APK access if the file or link is provided by a verified Reddy Book Club source.</p>
+              <p>Do not download APK files from unknown websites, social media replies, public groups, or copied links. Fake APKs can steal login details, payment information, or personal data.</p>
+              <p>If the mobile page is not working, try these steps first:</p>
+              <ul class="custom-bento-list">
+                <li>Refresh the page</li>
+                <li>Switch between mobile data and Wi-Fi</li>
+                <li>Clear browser cache</li>
+                <li>Try another browser</li>
+                <li>Restart your phone</li>
+                <li>Check whether the login link is current</li>
+              </ul>
+              <p>If the problem continues, contact customer care with your device model and screenshot of the issue.</p>
+            </section>
+
+            <section id="section-safety" class="privacy-section">
+              <p class="bento-card__tag">Account safety</p>
+              <h2>Account Safety: What Support Will Never Ask For</h2>
+              <p>Account safety is one of the most important parts of customer care. A genuine support process should never ask for private financial credentials.</p>
+              <p>Reddy Book Club customer care should not ask for:</p>
+              <ul class="custom-bento-list">
+                <li>Your full bank password</li>
+                <li>UPI PIN</li>
+                <li>OTP</li>
+                <li>Card PIN</li>
+                <li>Wallet password</li>
+                <li>Email password</li>
+                <li>Remote access to your phone</li>
+                <li>Full device control</li>
+                <li>Payment approval on your behalf</li>
+              </ul>
+              <p>If someone asks for these details, stop the conversation and return to the official support route.</p>
+              <p>You should also avoid sharing your account screenshots publicly. Screenshots can contain usernames, balance details, transaction information, or login clues.</p>
+              <p>Keep your Reddy Book Club password private and change it if you think someone else has seen it.</p>
+            </section>
+
+            <section id="section-fake" class="privacy-section">
+              <p class="bento-card__tag">Stay safe</p>
+              <h2>How to Identify Fake Customer Care Links</h2>
+              <p>Fake support pages can look very similar to real ones. Users searching for www.reddy book.com, reddy anna login, reddy kings login, reddy anna book login, or similar terms may land on unrelated or copied pages.</p>
+              <p>Watch for these warning signs:</p>
+              <div class="warning-grid">
+                <div class="warning-item"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><span>Support asks for OTPs or UPI PINs</span></div>
+                <div class="warning-item"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><span>The page has spelling mistakes or strange redirects</span></div>
+                <div class="warning-item"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><span>Someone promises guaranteed winnings</span></div>
+                <div class="warning-item"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><span>A contact asks you to pay extra to “unlock” support</span></div>
+                <div class="warning-item"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><span>You are pushed to deposit urgently</span></div>
+                <div class="warning-item"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><span>The link came from a random public group</span></div>
+                <div class="warning-item"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><span>The website address looks slightly wrong</span></div>
+                <div class="warning-item"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><span>The support person refuses to explain the issue clearly</span></div>
+              </div>
+              <div class="brand-clarification-chips">
+                <span class="brand-chip">www.reddy book.com</span>
+                <span class="brand-chip">reddy anna login</span>
+                <span class="brand-chip">reddy kings login</span>
+                <span class="brand-chip">reddy anna book login</span>
+              </div>
+              <p>Always use the official Reddy Book Club website and support button. If something feels suspicious, pause before sharing details or making payments.</p>
+            </section>
+
+            <section id="section-rg" class="privacy-section">
+              <p class="bento-card__tag">Responsible gaming</p>
+              <h2>Responsible Gaming Support</h2>
+              <p>Customer care can also guide users who want to slow down, take a break, or understand responsible gaming options.</p>
+              <p>Reddy Book Club is for entertainment only. Sports and casino gaming involve risk, and losses are possible. Do not treat gaming as a fixed income source.</p>
+              <p>Contact support or step away from play if:</p>
+              <ul class="custom-bento-list">
+                <li>You are chasing losses</li>
+                <li>You are borrowing money to play</li>
+                <li>You are hiding gaming activity from family</li>
+                <li>You are spending more than planned</li>
+                <li>You are feeling stressed after playing</li>
+                <li>You cannot stop even when you want to</li>
+                <li>Gaming is affecting sleep, work, studies, or relationships</li>
+              </ul>
+              <p>Set a clear budget and time limit before using any sports or casino section. If you feel out of control, stop immediately and speak to someone you trust. Read our <a href="responsible-gaming.html">Responsible Gaming</a> page for more guidance.</p>
+            </section>
+
+            <section id="section-limits" class="privacy-section">
+              <p class="bento-card__tag">Limitations</p>
+              <h2>What Customer Care Cannot Do</h2>
+              <p>A good support page should also be honest about limitations. Customer care can help with account issues, but it cannot control sports results, casino outcomes, bank network delays, or decisions made through your account.</p>
+              <p>Customer care cannot:</p>
+              <ul class="custom-bento-list">
+                <li>Guarantee profits or winnings</li>
+                <li>Reverse valid losses because a user changed their mind</li>
+                <li>Share fixed match tips</li>
+                <li>Bypass eligibility rules</li>
+                <li>Approve underage users</li>
+                <li>Remove risk from betting or casino games</li>
+                <li>Promise instant withdrawals in every case</li>
+                <li>Recover funds sent to fake third-party links</li>
+                <li>Access your bank account for you</li>
+              </ul>
+              <p>This protects both the user and the platform. Support is for guidance, account help, and issue resolution, not guaranteed outcomes.</p>
+            </section>
+
+            <section id="section-when" class="privacy-section">
+              <p class="bento-card__tag">When to contact</p>
+              <h2>Best Time to Contact Reddy Book Customer Care</h2>
+              <p>Customer care should be contacted whenever you face a real account or payment issue that cannot be solved through basic checks.</p>
+              <p>You should contact support if:</p>
+              <ul class="custom-bento-list">
+                <li>You cannot log in after checking your details</li>
+                <li>You have not received your cricket ID</li>
+                <li>Your deposit has not updated</li>
+                <li>Your withdrawal is delayed</li>
+                <li>Your account appears restricted</li>
+                <li>You suspect unauthorised access</li>
+                <li>You downloaded a suspicious APK</li>
+                <li>Your payment details were entered incorrectly</li>
+                <li>You want help with responsible gaming limits</li>
+              </ul>
+              <p>For faster support, keep your message short and clear. Explain the issue, share the required reference details, and avoid sending repeated unrelated messages.</p>
+            </section>
+
+            <div class="privacy-conclusion-card">
+              <p class="bento-card__tag">Summary</p>
+              <h2>Conclusion</h2>
+              <p>The Reddy Book customer care page helps users connect with Reddy Book Club support for cricket ID requests, login problems, registration help, deposits, withdrawals, mobile access, APK questions, and account safety issues.</p>
+              <p>For help, click the Get Cricket ID button or use the official support route shown on the website. Share only the details needed to solve your issue, keep your login information private, and never reveal sensitive banking credentials.</p>
+              <p>Use Reddy Book Club responsibly, only if you are eligible, and only where access is legally permitted.</p>
+            </div>
           </div>
         </article>
-        <article class="bento-card bento-span-7">
-          <p class="bento-card__tag">Topics</p>
-          <h2>What support can do</h2>
-          <div class="bento-tiles">
-            <div class="bento-tile"><i class="bi bi-person-badge"></i><span>Cricket ID</span><p>Setup &amp; access guidance</p></div>
-            <div class="bento-tile"><i class="bi bi-box-arrow-in-right"></i><span>Login</span><p>Failed login troubleshooting</p></div>
-            <div class="bento-tile"><i class="bi bi-pencil-square"></i><span>Register</span><p>Form &amp; ID delivery help</p></div>
-            <div class="bento-tile"><i class="bi bi-wallet2"></i><span>Payments</span><p>Deposit &amp; withdrawal status</p></div>
+
+        <article class="bento-card bento-faq bento-span-12">
+          <div style="padding:18px 20px 8px;">
+            <p class="bento-card__tag">FAQ</p>
+            <h2>Frequently asked questions</h2>
           </div>
-        </article>
-        <article class="bento-card bento-span-6">
-          <p class="bento-card__tag">Login issues</p>
-          <h3>Common login fixes</h3>
-          <ul>
-            <li>Re-type username — check case &amp; spaces</li>
-            <li>Refresh page or try another browser</li>
-            <li>Use latest URL from support</li>
-            <li>Account restricted? Contact care</li>
-          </ul>
-        </article>
-        <article class="bento-card bento-span-6">
-          <p class="bento-card__tag">Never share</p>
-          <h3>Protect your account</h3>
-          <ul>
-            <li>Passwords &amp; OTPs</li>
-            <li>UPI PIN &amp; bank login</li>
-            <li>Full card PIN</li>
-            <li>Wallet passwords</li>
-          </ul>
-        </article>
-        <article class="bento-card bento-faq bento-span-8">
-          <div style="padding:18px 20px 8px;"><p class="bento-card__tag">FAQ</p><h2>Support FAQ</h2></div>
           <div class="landing-faq">
-            <details><summary>How fast are withdrawals?</summary><div class="faq-body"><p>Often hours to one day, depending on agent and payment method.</p></div></details>
-            <details><summary>Deposit not credited?</summary><div class="faq-body"><p>Share UPI/bank reference and screenshot with support for verification.</p></div></details>
-            <details><summary>Is WhatsApp support official?</summary><div class="faq-body"><p>Only use contacts linked from this official website — not random numbers.</p></div></details>
+            <details>
+              <summary>How do I contact Reddy Book customer care?</summary>
+              <div class="faq-body">
+                <p>Click the Get Cricket ID button or use the official support option on the Reddy Book Club website. Avoid random links or unofficial numbers.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Can customer care help me get a cricket ID?</summary>
+              <div class="faq-body">
+                <p>Yes. New users can contact support through the Get Cricket ID or Register option to request account access and receive guidance.</p>
+              </div>
+            </details>
+            <details>
+              <summary>What should I do if my Reddy Book login is not working?</summary>
+              <div class="faq-body">
+                <p>Check your username, password, internet connection, and login link first. If the issue continues, contact official customer care with a screenshot or error details.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Can customer care help with deposits and withdrawals?</summary>
+              <div class="faq-body">
+                <p>Yes. Support can help review deposit updates, withdrawal status, payment references, and account-related transaction questions.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Will Reddy Book support ask for my OTP or UPI PIN?</summary>
+              <div class="faq-body">
+                <p>No. You should never share OTPs, UPI PINs, banking passwords, wallet passwords, or card PINs with anyone claiming to be support.</p>
+              </div>
+            </details>
           </div>
-        </article>
-        <article class="bento-card bento-cta-card bento-span-4">
-          <p class="bento-card__tag">Responsible play</p>
-          <h3>Gaming limits &amp; safety</h3>
-          <p>Read our responsible gaming guidance before you play.</p>
-          <a href="responsible-gaming.html" class="btn-cta btn-cta-secondary">Responsible Gaming</a>
         </article>
       </div>
     </div>
@@ -169,6 +653,7 @@
       <div class="landing-hero-cta" style="justify-content:center;">
         <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
         <a href="login.html" class="btn-cta btn-cta-secondary">Login</a>
+        <a href="responsible-gaming.html" class="btn-cta btn-cta-secondary">Responsible Gaming</a>
       </div>
     </section>
   </main>
@@ -210,7 +695,7 @@
             <h4 class="landing-footer__heading"><i class="bi bi-journal-text" aria-hidden="true"></i> Legal</h4>
             <ul>
               <li><a href="privacy-policy.html">Privacy Policy</a></li>
-              <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+              <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
               <li><a href="responsible-gaming.html">Responsible Gaming</a></li>
               <li><a href="about-us.html">About Us</a></li>
               <li><a href="customer-care.html">Customer Care</a></li>
@@ -226,23 +711,15 @@
           </div>
           <div class="landing-footer__col landing-footer__col--highlight">
             <h4 class="landing-footer__heading"><i class="bi bi-chat-dots" aria-hidden="true"></i> Need help?</h4>
-            <p class="landing-footer__hint">Agents handle deposits, withdrawals, and ID recovery.</p>
+            <p class="landing-footer__hint">Cricket ID, login, payments, and account safety support.</p>
             <ul>
               <li><a href="customer-care.html">Customer care</a></li>
               <li><a href="login.html">Login help</a></li>
               <li><a href="register.html">Registration guide</a></li>
             </ul>
-            <div class="landing-footer__payments" aria-label="Payment methods">
-              <span>UPI</span>
-              <span>Bank</span>
-              <span>Paytm</span>
-              <span>Wallet</span>
-            </div>
+            <a href="register.html" class="landing-footer__help-cta"><i class="bi bi-headset" aria-hidden="true"></i> Get Cricket ID</a>
           </div>
         </div>
-      </div>
-      <div class="landing-footer__ribbon" aria-hidden="true">
-        <span>Cricket</span><span>Football</span><span>Live casino</span><span>In-play</span><span>IPL</span><span>Exchange</span>
       </div>
       <div class="landing-footer-bottom">
         <p class="landing-footer__copy">&copy; 2026 Reddy Book Club. All rights reserved.</p>

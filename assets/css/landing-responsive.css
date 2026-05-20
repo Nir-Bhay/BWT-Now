@@ -1,0 +1,419 @@
+/**
+ * Marketing pages — tablet & mobile only (max-width queries).
+ * Desktop layout is unchanged. Load last on landing pages (not index.html).
+ */
+
+/* —— Global —— */
+@media (max-width: 991px) {
+  .landing-page.bento-page,
+  .landing-page.home-page--light {
+    overflow-x: clip;
+  }
+
+  .landing-header .container {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .landing-header-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .landing-subnav {
+    top: 56px;
+  }
+
+  .landing-subnav .container {
+    padding: 0 12px;
+  }
+
+  .landing-subnav a {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .page-hero,
+  .home-hero {
+    min-height: auto;
+  }
+
+  .page-hero__inner,
+  .home-hero__inner {
+    padding: 40px 16px 48px;
+  }
+
+  .page-hero h1,
+  .home-hero h1 {
+    max-width: none;
+    font-size: clamp(1.45rem, 5.5vw, 2.25rem);
+  }
+
+  .page-hero__lead,
+  .home-hero__lead {
+    max-width: none;
+    margin-bottom: 20px;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  }
+
+  .page-hero__chips,
+  .home-hero__chips {
+    margin-bottom: 20px;
+  }
+
+  .page-hero__chip,
+  .home-hero__chip {
+    flex: 1 1 100%;
+  }
+
+  .page-hero__actions,
+  .home-hero__actions {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .page-hero__actions .btn-cta,
+  .page-hero__actions .btn-ghost,
+  .home-hero__actions .btn-cta,
+  .home-hero__actions .btn-ghost {
+    flex: 1 1 calc(50% - 5px);
+    min-width: 0;
+  }
+
+  .bento-wrap,
+  .home-bento-wrap {
+    padding: 28px 12px 20px;
+  }
+
+  .landing-main {
+    padding: 28px 12px 40px;
+  }
+
+  .landing-cta-band {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 28px 18px;
+  }
+
+  .landing-hero-cta {
+    width: 100%;
+  }
+
+  .landing-section-body {
+    padding: 22px 18px;
+  }
+
+  .landing-section-media {
+    min-height: 200px;
+    border-right: none;
+    border-bottom: 1px solid var(--rb-border, rgba(180, 140, 40, 0.22));
+  }
+
+  .landing-section-card.is-reverse .landing-section-media {
+    border-left: none;
+    border-bottom: 1px solid var(--rb-border, rgba(180, 140, 40, 0.22));
+  }
+
+  .landing-section-media img {
+    min-height: 200px;
+  }
+
+  .landing-icon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .landing-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 24px 16px;
+  }
+
+  .privacy-sections {
+    padding: 28px 20px;
+  }
+
+  .privacy-inline-banner {
+    max-height: 240px;
+    min-height: 0;
+  }
+
+  .privacy-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .home-page--light.landing-page--about .landing-section-media {
+    position: static;
+  }
+
+  .home-page--light.landing-page--about .landing-section-body {
+    padding: 22px 18px;
+  }
+
+  .about-showcase__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-payments-showcase__panels {
+    grid-template-columns: 1fr;
+  }
+
+  .about-payments-panel {
+    border-bottom: 1px solid rgba(180, 140, 40, 0.12);
+    border-right: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-page--light.bento-page--login .login-image-card .bento-figure img,
+  .home-page--light.bento-page--register .register-steps-visual img,
+  .home-page--light.bento-page--register .register-details-layout img {
+    max-height: 280px;
+  }
+
+  .home-page--light.bento-page--register .register-compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light.bento-page--register .register-intro-card__chips {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .landing-nav {
+    display: none;
+  }
+
+  .landing-header a.rules-btn,
+  .landing-header .btn-login,
+  .home-page--light .landing-header a.rules-btn,
+  .home-page--light .landing-header .btn-login {
+    min-height: 36px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .bento-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-tiles[style] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .bento-card {
+    padding: 18px 16px;
+  }
+
+  .bento-steps--5,
+  .bento-steps--4,
+  .bento-steps--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-bonus-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bento-sport-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .landing-hero-cta .btn-cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .landing-grid-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-dual-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section {
+    padding: 0 12px;
+  }
+
+  .home-section__inner {
+    padding: 20px 16px;
+  }
+
+  .home-section--sports .home-sports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-conclusion-card__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-conclusion-card__cta .btn-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .withdrawal-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-sections {
+    padding: 24px 16px;
+  }
+
+  .privacy-section {
+    scroll-margin-top: 96px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .custom-bento-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  .support-help-grid,
+  .warning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .landing-footer__legal-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .winners-ticker-wrap {
+    padding: 12px 0;
+  }
+
+  .winners-ticker-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .winners-ticker-label {
+    align-self: flex-start;
+  }
+
+  .winners-ticker-viewport {
+    width: 100%;
+  }
+
+  .winners-ticker {
+    animation-duration: 28s;
+  }
+
+  .home-strip--live {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .home-strip--live img {
+    max-width: 100%;
+    max-height: 120px;
+  }
+}
+
+@media (max-width: 520px) {
+  .landing-header .logo img {
+    max-height: 36px;
+  }
+
+  .landing-header-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .landing-header-actions .rules-btn,
+  .landing-header-actions .btn-login {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .page-hero__actions,
+  .home-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-hero__actions .btn-cta,
+  .page-hero__actions .btn-ghost,
+  .home-hero__actions .btn-cta,
+  .home-hero__actions .btn-ghost {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .page-hero__eyebrow,
+  .home-hero__eyebrow {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .bento-bonus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-icon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-disclaimer {
+    font-size: 11px;
+    padding: 8px 12px;
+    line-height: 1.4;
+  }
+
+  .privacy-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .privacy-conclusion-card {
+    padding: 20px 16px;
+  }
+
+  .about-trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-offer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .landing-header-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .landing-header-actions .rules-btn,
+  .landing-header-actions .btn-login {
+    width: 100%;
+  }
+}

@@ -38,7 +38,6 @@
   }
 
   document.querySelectorAll(".winners-ticker").forEach((track) => {
-    const items = track.innerHTML;
-    track.innerHTML = items + items;
+    track.innerHTML = track.innerHTML + track.innerHTML;
   });
 })();

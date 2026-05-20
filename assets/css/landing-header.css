@@ -1,0 +1,134 @@
+/* Marketing chrome — exact match to home.html (disclaimer, header, subnav, ticker) */
+
+:root {
+  --home-gold: #d4a017;
+  --home-gold-strong: #b8860b;
+  --home-ink: #151515;
+  --home-muted: #5f5f5f;
+  --home-bg: #ffffff;
+  --home-soft: #fffaf0;
+  --home-line: #f0e0b8;
+}
+
+.home-page--light {
+  font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Disclaimer bar */
+.home-page--light .landing-disclaimer {
+  background: var(--home-ink) !important;
+  color: #f6e5b2 !important;
+  letter-spacing: 0.3px;
+}
+
+/* Main header + subnav strip */
+.home-page--light .landing-header,
+.home-page--light .landing-subnav {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1px solid var(--home-line) !important;
+  backdrop-filter: blur(8px);
+}
+
+.home-page--light .landing-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.home-page--light .landing-header .container {
+  background: transparent !important;
+}
+
+.home-page--light .landing-header .logo img {
+  max-height: 44px;
+  height: auto;
+  width: auto;
+}
+
+.home-page--light .landing-nav a,
+.home-page--light .landing-subnav a {
+  color: var(--home-ink) !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-page--light .landing-nav a.active,
+.home-page--light .landing-subnav a.active,
+.home-page--light .landing-nav a:hover,
+.home-page--light .landing-subnav a:hover {
+  color: var(--home-gold-strong) !important;
+  text-decoration: none;
+}
+
+.home-page--light .landing-subnav a.active {
+  border-bottom-color: var(--home-gold-strong) !important;
+  background: rgba(184, 134, 11, 0.06);
+}
+
+.home-page--light .landing-subnav {
+  border-bottom: 1px solid var(--home-line) !important;
+}
+
+/* Header action buttons — home palette */
+.home-page--light .landing-header a.rules-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid #b9860f !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #1a1405 !important;
+  background: linear-gradient(145deg, #f3cf66 0%, #d8a825 55%, #be8e13 100%) !important;
+  box-shadow: 0 10px 22px rgba(184, 134, 11, 0.28) !important;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.home-page--light .landing-header a.rules-btn:hover {
+  color: #1a1405 !important;
+  text-decoration: none;
+}
+
+.home-page--light .landing-header .btn-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--home-line) !important;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--home-ink) !important;
+  background: #fff !important;
+  box-shadow: 0 8px 18px rgba(26, 20, 5, 0.08);
+  text-decoration: none;
+  text-transform: none;
+}
+
+.home-page--light .landing-header .btn-login:hover {
+  color: var(--home-ink) !important;
+  text-decoration: none;
+}
+
+.home-page--light .landing-header .btn-login.btn-accent {
+  background: var(--home-ink) !important;
+  color: #fff !important;
+  border-color: var(--home-ink) !important;
+  box-shadow: 0 10px 22px rgba(21, 21, 21, 0.2);
+}
+
+.home-page--light .landing-header .btn-login.btn-accent:hover {
+  color: #fff !important;
+}
+
+@media (max-width: 767px) {
+  .home-page--light .landing-nav {
+    display: none;
+  }
+}
