@@ -1,0 +1,99 @@
+/* Marketing pages — preserve source artwork aspect ratio (portrait cards + wide banners) */
+
+.home-page--light .home-intro-grid__figure img,
+.home-page--light .home-operates-grid__figure img,
+.home-page--light .home-withdrawal-grid__figure img,
+.home-page--light .home-login-points img,
+.home-page--light .home-login-visual img,
+.home-page--light .home-id-gallery img,
+.home-page--light .home-sports-hero img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+  object-position: top center;
+  background: #fff;
+}
+
+.home-page--light.bento-page--login .login-intro-card__figure img,
+.home-page--light.bento-page--login .login-paired-block__figure img,
+.home-page--light.bento-page--login .login-mobile-card__figure img,
+.home-page--light.bento-page--login .login-image-card .bento-figure img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+  object-position: top center;
+  background: #fff;
+}
+
+.home-page--light.bento-page--register .register-intro-card__figure img,
+.home-page--light.bento-page--register .register-steps-layout__figure img,
+.home-page--light.bento-page--register .register-details-layout figure img,
+.home-page--light.bento-page--register .register-apk-paired__figure img,
+.home-page--light.bento-page--register .register-troubleshoot-layout figure img,
+.home-page--light.bento-page--register .register-why-layout figure img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+  object-position: top center;
+  background: #fff;
+}
+
+.home-page--light .bento-figure img,
+.home-page--light .bento-media img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: top center;
+  background: #fff;
+}
+
+.home-page--light .privacy-inline-banner,
+.home-page--light .about-payments-showcase__hero img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.home-page--light .about-showcase__banner img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.home-page--light .home-id-gallery {
+  display: block;
+  overflow: visible;
+}
+
+.home-page--light .home-login-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.home-page--light .landing-page-hero {
+  overflow: hidden;
+}
+
+.home-page--light .landing-page-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

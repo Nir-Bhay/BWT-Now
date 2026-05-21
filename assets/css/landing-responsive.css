@@ -134,8 +134,9 @@
   }
 
   .privacy-inline-banner {
-    max-height: 240px;
+    max-height: none;
     min-height: 0;
+    object-fit: contain;
   }
 
   .privacy-grid-2x2 {

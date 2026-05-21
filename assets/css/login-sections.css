@@ -48,9 +48,15 @@
 
 .home-page--light.bento-page--login .login-intro-card__layout {
   display: grid;
-  grid-template-columns: 1fr minmax(250px, 320px);
-  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 22px;
   align-items: start;
+}
+
+.home-page--light.bento-page--login .login-intro-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .home-page--light.bento-page--login .login-intro-card__highlight {
@@ -130,6 +136,121 @@
   color: #b8860b;
 }
 
+/* TOC links inside intro card text column — fills the previously empty space */
+.home-page--light.bento-page--login .login-intro-card__toc {
+  margin-top: 14px;
+  padding: 18px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #fff 0%, #fff8eb 100%);
+  border: 1px solid rgba(180, 140, 40, 0.22);
+  box-shadow: 0 4px 14px rgba(28, 24, 16, 0.04);
+}
+
+.home-page--light.bento-page--login .login-intro-card__toc-title {
+  margin: 0 0 12px;
+  font-weight: 800;
+  font-size: 13px;
+  color: #b8860b !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-page--light.bento-page--login .login-intro-card__toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.home-page--light.bento-page--login .login-intro-card__toc-grid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.2);
+  color: #5a5a66 !important;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-page--light.bento-page--login .login-intro-card__toc-grid a:hover {
+  transform: translateY(-2px);
+  border-color: #b8860b;
+  color: #1a1a1a !important;
+  box-shadow: 0 6px 16px rgba(28, 24, 16, 0.08);
+}
+
+.home-page--light.bento-page--login .login-intro-card__toc-grid i {
+  color: #b8860b;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Upgraded intro aside — bigger image + iconed list + CTA */
+.home-page--light.bento-page--login .login-intro-card__figure img {
+  height: 260px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.home-page--light.bento-page--login .login-intro-card__panel h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.home-page--light.bento-page--login .login-intro-card__panel h3 i {
+  color: #b8860b;
+}
+
+.home-page--light.bento-page--login .login-intro-card__panel ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.home-page--light.bento-page--login .login-intro-card__panel li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #5a5a66;
+}
+
+.home-page--light.bento-page--login .login-intro-card__panel li i {
+  color: #b8860b;
+  font-size: 14px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.home-page--light.bento-page--login .login-intro-card__cta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.home-page--light.bento-page--login .btn-cta--sm,
+.home-page--light.bento-page--login .btn-ghost--sm {
+  padding: 8px 14px !important;
+  font-size: 12.5px !important;
+  border-radius: 10px !important;
+}
+
 /* Important Card 2: Step Guide */
 .home-page--light.bento-page--login .login-step-guide-card {
   background: linear-gradient(145deg, #fff 0%, #fffaf2 100%);
@@ -171,6 +292,97 @@
 
 .home-page--light.bento-page--login .login-step p:last-child {
   margin-bottom: 0;
+}
+
+/* Step-guide sidebar: image + speed-up tips card */
+.home-page--light.bento-page--login .login-step-guide-card__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 16px;
+}
+
+.home-page--light.bento-page--login .login-step-tips {
+  padding: 16px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #fff 0%, #fff8eb 100%);
+  border: 1px solid rgba(180, 140, 40, 0.22);
+  box-shadow: 0 4px 14px rgba(28, 24, 16, 0.05);
+}
+
+.home-page--light.bento-page--login .login-step-tips__title {
+  margin: 0 0 12px;
+  font-weight: 800;
+  font-size: 13px;
+  color: #b8860b !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-page--light.bento-page--login .login-step-tips ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.home-page--light.bento-page--login .login-step-tips li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.16);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #5a5a66;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.home-page--light.bento-page--login .login-step-tips li:hover {
+  border-color: rgba(180, 140, 40, 0.4);
+  transform: translateY(-1px);
+}
+
+.home-page--light.bento-page--login .login-step-tips li i {
+  color: #b8860b;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.home-page--light.bento-page--login .login-step-tips__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(180, 140, 40, 0.3);
+}
+
+.home-page--light.bento-page--login .login-step-tips__stat {
+  text-align: center;
+  padding: 8px 4px;
+}
+
+.home-page--light.bento-page--login .login-step-tips__stat strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: #b8860b;
+  margin-bottom: 2px;
+}
+
+.home-page--light.bento-page--login .login-step-tips__stat span {
+  font-size: 10.5px;
+  color: #8a7d5e;
+  line-height: 1.3;
+  display: block;
 }
 
 /* Important Card 3: After Login */
@@ -345,6 +557,75 @@
   font-size: 14px;
 }
 
+.home-page--light.bento-page--login .login-mobile-card__checklist {
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(160deg, #fff 0%, #fff8eb 100%);
+  border: 1px solid rgba(180, 140, 40, 0.22);
+}
+
+.home-page--light.bento-page--login .login-mobile-card__checklist-title {
+  margin: 0 0 10px;
+  font-weight: 800;
+  font-size: 12px;
+  color: #b8860b !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-page--light.bento-page--login .login-mobile-card__checklist ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.home-page--light.bento-page--login .login-mobile-card__checklist li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #5a5a66;
+}
+
+.home-page--light.bento-page--login .login-mobile-card__checklist li i {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff6e0, #fff);
+  border: 1px solid rgba(180, 140, 40, 0.32);
+  color: #b8860b;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.home-page--light.bento-page--login .login-mobile-card__hint {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(184, 134, 11, 0.06), #fff);
+  border-left: 3px solid #b8860b;
+  font-size: 12px;
+  color: #5a5a66;
+  line-height: 1.5;
+}
+
+.home-page--light.bento-page--login .login-mobile-card__hint i {
+  color: #b8860b;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
 /* Combined Payments + Responsible card */
 .home-page--light.bento-page--login .login-money-card {
   background: linear-gradient(145deg, #fff 0%, #fffaf2 100%);
@@ -358,46 +639,260 @@
 }
 
 .home-page--light.bento-page--login .login-money-card__responsible {
-  border: 1px solid rgba(155, 27, 48, 0.2);
-  border-radius: 12px;
-  padding: 14px;
+  border: 1px solid rgba(155, 27, 48, 0.22);
+  border-radius: 16px;
+  padding: 20px;
   background: linear-gradient(145deg, #fff7f9 0%, #fff 100%);
+  box-shadow: 0 6px 20px rgba(155, 27, 48, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .home-page--light.bento-page--login .login-money-card__responsible .bento-card__tag {
-  margin-bottom: 6px;
-  color: #9b1b30;
+  margin: 0;
+  color: #9b1b30 !important;
 }
 
-.home-page--light.bento-page--login .login-money-card__gallery {
-  margin: 12px 0 18px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+.home-page--light.bento-page--login .login-money-card__responsible-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.home-page--light.bento-page--login .login-money-card__gallery img {
-  width: 100%;
-  min-width: 0;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  display: block;
+.home-page--light.bento-page--login .login-money-card__responsible-badge {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 12px;
+  background: linear-gradient(145deg, #9b1b30, #c5314c);
+  color: #fff;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.home-page--light.bento-page--login .login-money-card__responsible h3 {
+  margin: 2px 0 0 !important;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.home-page--light.bento-page--login .login-money-card__responsible-lead {
+  margin: 6px 0 4px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.home-page--light.bento-page--login .login-money-card__rules {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 6px;
+  display: grid;
+  gap: 8px;
+}
+
+.home-page--light.bento-page--login .login-money-card__rules li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(155, 27, 48, 0.14);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #5a5a66;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.home-page--light.bento-page--login .login-money-card__rules li:hover {
+  transform: translateX(2px);
+  border-color: rgba(155, 27, 48, 0.36);
+}
+
+.home-page--light.bento-page--login .login-money-card__rules li i {
+  color: #9b1b30;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.home-page--light.bento-page--login .login-money-card__warning {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(155, 27, 48, 0.06);
+  border-left: 3px solid #9b1b30;
+  font-size: 12px;
+  color: #5a5a66;
+  line-height: 1.5;
+}
+
+.home-page--light.bento-page--login .login-money-card__warning i {
+  color: #9b1b30;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.home-page--light.bento-page--login .login-money-card__responsible-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #9b1b30;
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 700;
+  align-self: flex-start;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.home-page--light.bento-page--login .login-money-card__responsible-link:hover {
+  transform: translateY(-2px);
+  background: #7d142a;
+}
+
+/* Image + paragraph paired blocks */
+.home-page--light.bento-page--login .login-paired-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 20px;
+  align-items: start;
+  margin-top: 12px;
+}
+
+.home-page--light.bento-page--login .login-paired-block--figure-first {
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+}
+
+.home-page--light.bento-page--login .login-paired-block__content > p:first-child {
+  margin-top: 0;
+}
+
+.home-page--light.bento-page--login .login-paired-block__figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
   border: 1px solid rgba(180, 140, 40, 0.2);
-  box-shadow: 0 4px 14px rgba(28, 24, 16, 0.08);
-  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(28, 24, 16, 0.08);
+}
+
+.home-page--light.bento-page--login .login-paired-block__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 460px;
+  object-fit: contain;
   object-position: top center;
   background: #fff;
 }
 
+.home-page--light.bento-page--login .login-safety-card,
+.home-page--light.bento-page--login .login-why-card {
+  background: linear-gradient(145deg, #fff 0%, #fffaf2 100%);
+}
+
 .home-page--light.bento-page--login .login-money-card__checks {
-  margin: 0 0 10px;
-  padding-left: 1.1rem;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 8px 0 14px;
+  display: grid;
+  gap: 8px;
 }
 
 .home-page--light.bento-page--login .login-money-card__checks li {
-  margin-bottom: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(180, 140, 40, 0.18);
   color: #555561;
+  font-size: 13px;
+  line-height: 1.5;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.home-page--light.bento-page--login .login-money-card__checks li:hover {
+  border-color: rgba(180, 140, 40, 0.42);
+  transform: translateX(2px);
+}
+
+.home-page--light.bento-page--login .login-money-card__checks li i {
+  color: #b8860b;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.home-page--light.bento-page--login .login-money-card__methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 14px;
+}
+
+.home-page--light.bento-page--login .login-money-card__methods span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  background: linear-gradient(145deg, #fff6e0, #fff);
+  border: 1px solid rgba(180, 140, 40, 0.28);
+  color: #5b4d32;
+}
+
+.home-page--light.bento-page--login .login-money-card__methods i {
+  color: #b8860b;
+  font-size: 14px;
+}
+
+.home-page--light.bento-page--login .login-money-card__metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 12px 0 4px;
+}
+
+.home-page--light.bento-page--login .login-money-card__metric {
+  text-align: center;
+  padding: 12px 8px;
+  border-radius: 12px;
+  background: linear-gradient(160deg, #fff 0%, #fff8eb 100%);
+  border: 1px solid rgba(180, 140, 40, 0.2);
+}
+
+.home-page--light.bento-page--login .login-money-card__metric strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: #b8860b;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.home-page--light.bento-page--login .login-money-card__metric span {
+  font-size: 11px;
+  color: #8a7d5e;
+  line-height: 1.3;
+}
+
+@media (max-width: 600px) {
+  .home-page--light.bento-page--login .login-money-card__metrics {
+    grid-template-columns: 1fr;
+  }
 }
 
 .home-page--light.bento-page--login .login-troubleshoot-card ul {
@@ -413,7 +908,9 @@
 @media (max-width: 900px) {
   .home-page--light.bento-page--login .login-intro-card__layout,
   .home-page--light.bento-page--login .login-mobile-card__layout,
-  .home-page--light.bento-page--login .login-money-card__layout {
+  .home-page--light.bento-page--login .login-money-card__layout,
+  .home-page--light.bento-page--login .login-paired-block,
+  .home-page--light.bento-page--login .login-paired-block--figure-first {
     grid-template-columns: 1fr;
   }
 
@@ -424,11 +921,6 @@
   .home-page--light.bento-page--login .login-mobile-card__chips {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  .home-page--light.bento-page--login .login-money-card__gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
   }
 
   .home-page--light.bento-page--login .login-access-grid {
@@ -443,10 +935,5 @@
 @media (max-width: 767px) {
   .home-page--light.bento-page--login .login-step {
     grid-template-columns: 1fr;
-  }
-
-  .home-page--light.bento-page--login .login-money-card__gallery {
-    grid-template-columns: 1fr;
-    gap: 14px;
   }
 }

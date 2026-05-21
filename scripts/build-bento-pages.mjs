@@ -8,6 +8,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { renderLandingFooter } from "./landing-footer.mjs";
 import { renderMarketingChrome } from "./marketing-chrome.mjs";
+import { renderMarketingHeadMeta } from "./marketing-head.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -59,10 +60,7 @@ function renderShell(page) {
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>${title}</title>
-  <meta name="description" content="${description}" />
-  <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
+  ${renderMarketingHeadMeta({ title, description })}
   <link href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="${fontUrl}" rel="stylesheet" />
   <style>
@@ -78,9 +76,10 @@ function renderShell(page) {
   <link href="assets/css/landing-home-light.css" rel="stylesheet" />
   <link href="assets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/auth-modal.css" rel="stylesheet" />
-  ${extraHead}
   <link href="assets/css/landing-header.css" rel="stylesheet" />
   <link href="assets/css/landing-responsive.css" rel="stylesheet" />
+  <link href="assets/css/marketing-images.css" rel="stylesheet" />
+  ${extraHead}
 </head>
 <body class="${bClass}">
 ${chrome}
