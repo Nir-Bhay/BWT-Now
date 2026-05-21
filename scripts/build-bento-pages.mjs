@@ -10,6 +10,8 @@ import { renderLandingFooter } from "./landing-footer.mjs";
 import { renderMarketingChrome } from "./marketing-chrome.mjs";
 import { renderMarketingHeadMeta } from "./marketing-head.mjs";
 
+import { pageFilePath } from "./paths.mjs";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 
@@ -1602,7 +1604,7 @@ const PAGES = [
 
 for (const page of PAGES) {
   const html = renderShell(page);
-  const out = path.join(ROOT, page.file);
+  const out = pageFilePath(ROOT, page.file);
   fs.writeFileSync(out, html, "utf8");
   console.log("Wrote", page.file);
 }

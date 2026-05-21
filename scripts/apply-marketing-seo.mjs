@@ -7,15 +7,17 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { MARKETING_PAGE_SEO, renderMarketingHeadMeta } from "./marketing-head.mjs";
 
+import { pageFilePath } from "./paths.mjs";
+
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 for (const [file, seo] of Object.entries(MARKETING_PAGE_SEO)) {
-  const fp = path.join(ROOT, file);
+  const fp = pageFilePath(ROOT, file);
   let html = fs.readFileSync(fp, "utf8");
 
   const metaBlock = renderMarketingHeadMeta(seo);
   html = html.replace(
-    /<meta charset="utf-8"\s*\/>\s*[\s\S]*?<link rel="icon" href="assets\/favicon\.ico"\s*\/>/,
+    /<meta charset="utf-8"\s*\/>\s*[\s\S]*?<link rel="icon" href="(?:\/)?assets\/favicon\.ico"\s*\/>/,
     `<meta charset="utf-8" />\n  ${metaBlock.trim()}`
   );
 

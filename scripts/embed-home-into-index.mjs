@@ -6,10 +6,12 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import { pageFilePath } from "./paths.mjs";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 
-const homePath = path.join(root, "home.html");
+const homePath = pageFilePath(root, "home.html");
 const indexPath = path.join(root, "index.html");
 const partialPath = path.join(root, "partials", "dashboard-home-embed.html");
 

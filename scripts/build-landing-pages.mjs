@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { renderLandingFooter } from "./landing-footer.mjs";
+import { pageFilePath } from "./paths.mjs";
 import {
   AUTH_MODAL_HTML,
   AUTH_HEAD_LINKS,
@@ -671,7 +672,7 @@ for (const cfg of PAGE_CONFIG) {
     extraClass,
   });
 
-  const outPath = path.join(ROOT, cfg.file);
+  const outPath = pageFilePath(ROOT, cfg.file);
   fs.writeFileSync(outPath, html, "utf8");
   console.log("Wrote", cfg.file);
 }

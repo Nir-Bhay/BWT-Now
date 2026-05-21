@@ -1,25 +1,13 @@
 /**
  * Shared top chrome (disclaimer + header + subnav) — must match home.html exactly.
  */
+import { MARKETING_NAV, MARKETING_SUBNAV_EXTRA, BET_ROUTE, pageHref } from "./paths.mjs";
 
-export const MARKETING_NAV = [
-  { href: "home.html", label: "Home" },
-  { href: "login.html", label: "Login" },
-  { href: "register.html", label: "Register" },
-  { href: "about-us.html", label: "About" },
-  { href: "customer-care.html", label: "Support" },
-  { href: "blogs.html", label: "Blogs" },
-  { href: "categories.html", label: "Categories" },
-];
+export { MARKETING_NAV, MARKETING_SUBNAV_EXTRA };
 
-export const MARKETING_SUBNAV_EXTRA = [
-  { href: "privacy-policy.html", label: "Privacy" },
-  { href: "terms-and-conditions.html", label: "Terms" },
-  { href: "responsible-gaming.html", label: "Responsible Gaming" },
-];
-
-function navLinkAttrs(href, active) {
-  const activeClass = href === active ? ' class="active"' : "";
+function navLinkAttrs(href, activePage) {
+  const activeHref = activePage.includes(".html") ? pageHref(activePage) : activePage;
+  const activeClass = href === activeHref ? ' class="active"' : "";
   return `href="${href}" target="_blank" rel="noopener noreferrer"${activeClass}`;
 }
 
@@ -39,7 +27,7 @@ export function renderMarketingChrome(activePage) {
 
     <header class="landing-header">
     <div class="container">
-      <a href="home.html" class="logo"><img src="https://speedcdn.io/assets/logos/reddybook.live.png"
+      <a href="/" class="logo"><img src="https://speedcdn.io/assets/logos/reddybook.live.png"
           alt="Reddy Book Club" /></a>
       <nav>
         <ul class="landing-nav">
@@ -47,7 +35,7 @@ ${mainNav}
         </ul>
       </nav>
       <div class="landing-header-actions">
-        <a href="index.html" class="rules-btn">Bet Now</a>
+        <a href="${BET_ROUTE}" class="rules-btn">Bet Now</a>
         <a href="javascript:void(0)" class="btn-login btn-accent" data-auth-open="signup">Signup</a>
         <a href="javascript:void(0)" class="btn-login" data-auth-open="login">Login</a>
       </div>
@@ -96,9 +84,9 @@ export const MARKETING_HEAD_LINKS = `  <link href="https://fonts.googleapis.com/
       font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
     }
   </style>
-  <link href="assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="assets/css/common_style.css" rel="stylesheet" />
-  <link href="assets/css/landing.css" rel="stylesheet" />
-  <link href="assets/css/landing-footer.css" rel="stylesheet" />
-  <link href="assets/css/landing-home-light.css" rel="stylesheet" />
-  <link href="assets/css/landing-header.css" rel="stylesheet" />`;
+  <link href="/assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="/assets/css/common_style.css" rel="stylesheet" />
+  <link href="/assets/css/landing.css" rel="stylesheet" />
+  <link href="/assets/css/landing-footer.css" rel="stylesheet" />
+  <link href="/assets/css/landing-home-light.css" rel="stylesheet" />
+  <link href="/assets/css/landing-header.css" rel="stylesheet" />`;

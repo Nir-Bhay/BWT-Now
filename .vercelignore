@@ -4,4 +4,14 @@ Reddybookclubs(com)-20260519T042930Z-3-001
 fullpage.png
 clone.js
 clint requi
+SKILL.md
+DESIGN.md
+ReddyBook.md
+README.md
+partials/
+scripts/
+package.json
+package-lock.json
+.cursorignore
+.gitignore
 *.log

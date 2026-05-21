@@ -9,7 +9,7 @@ export const SITE_URL = "https://bwt-now.vercel.app";
 export const MARKETING_VIEWPORT =
   '<meta name="viewport" content="width=device-width, initial-scale=1" />';
 
-export const MARKETING_FAVICON = '<link rel="icon" href="assets/favicon.ico" />';
+export const MARKETING_FAVICON = '<link rel="icon" href="/assets/favicon.ico" />';
 
 /** @type {Record<string, { title: string, description: string, path: string, ogImage: string, keywords: string }>} */
 export const MARKETING_PAGE_SEO = {

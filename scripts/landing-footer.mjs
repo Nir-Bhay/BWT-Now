@@ -1,30 +1,12 @@
 /**
  * Shared premium footer for all Reddy Book Club landing pages.
  */
-
-const QUICK_LINKS = [
-  { href: "home.html", label: "Home" },
-  { href: "login.html", label: "Login" },
-  { href: "register.html", label: "Register" },
-  { href: "about-us.html", label: "About" },
-  { href: "customer-care.html", label: "Support" },
-  { href: "blogs.html", label: "Blogs" },
-  { href: "categories.html", label: "Categories" },
-];
-
-const LEGAL_LINKS = [
-  { href: "privacy-policy.html", label: "Privacy Policy" },
-  { href: "terms-and-conditions.html", label: "Terms & Conditions" },
-  { href: "responsible-gaming.html", label: "Responsible Gaming" },
-  { href: "about-us.html", label: "About Us" },
-  { href: "customer-care.html", label: "Customer Care" },
-];
-
-const ACCOUNT_LINKS = [
-  { href: "login.html", label: "Login" },
-  { href: "register.html", label: "Register" },
-  { href: "index.html", label: "Betting Dashboard" },
-];
+import {
+  FOOTER_QUICK_LINKS,
+  FOOTER_LEGAL_LINKS,
+  FOOTER_ACCOUNT_LINKS,
+  BET_ROUTE,
+} from "./paths.mjs";
 
 function linkList(items) {
   return items.map((l) => `<li><a href="${l.href}">${l.label}</a></li>`).join("\n              ");
@@ -36,7 +18,7 @@ export function renderLandingFooter(year = new Date().getFullYear()) {
     <div class="container">
       <div class="landing-footer__main">
         <div class="landing-footer__brand">
-          <a href="home.html" class="landing-footer__logo">
+          <a href="/" class="landing-footer__logo">
             <img src="https://speedcdn.io/assets/logos/reddybook.live.png" alt="Reddy Book Club" width="168" height="42" loading="lazy" />
           </a>
           <p class="landing-footer__tagline">Cricket IDs, live sports markets, and casino play — onboarded through verified agents with fast login and round-the-clock support.</p>
@@ -47,27 +29,27 @@ export function renderLandingFooter(year = new Date().getFullYear()) {
             <span class="landing-footer__badge"><i class="bi bi-headset" aria-hidden="true"></i> 24/7 care</span>
           </div>
           <div class="landing-footer__actions">
-            <a href="register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
-            <a href="index.html" class="btn-ghost">Open dashboard →</a>
+            <a href="/register" class="btn-cta btn-cta-primary">Get Cricket ID</a>
+            <a href="${BET_ROUTE}" class="btn-ghost">Open dashboard →</a>
           </div>
         </div>
         <div class="landing-footer__nav">
           <div class="landing-footer__col">
             <h4 class="landing-footer__heading"><i class="bi bi-compass" aria-hidden="true"></i> Explore</h4>
             <ul>
-              ${linkList(QUICK_LINKS)}
+              ${linkList(FOOTER_QUICK_LINKS)}
             </ul>
           </div>
           <div class="landing-footer__col">
             <h4 class="landing-footer__heading"><i class="bi bi-journal-text" aria-hidden="true"></i> Legal</h4>
             <ul>
-              ${linkList(LEGAL_LINKS)}
+              ${linkList(FOOTER_LEGAL_LINKS)}
             </ul>
           </div>
           <div class="landing-footer__col">
             <h4 class="landing-footer__heading"><i class="bi bi-person-badge" aria-hidden="true"></i> Account</h4>
             <ul>
-              ${linkList(ACCOUNT_LINKS)}
+              ${linkList(FOOTER_ACCOUNT_LINKS)}
             </ul>
           </div>
         </div>
@@ -75,9 +57,9 @@ export function renderLandingFooter(year = new Date().getFullYear()) {
       <div class="landing-footer-bottom">
         <p class="landing-footer__copy">&copy; ${year} Reddy Book Club. All rights reserved.</p>
         <nav class="landing-footer__legal-nav" aria-label="Footer legal">
-          <a href="privacy-policy.html">Privacy</a>
-          <a href="terms-and-conditions.html">Terms</a>
-          <a href="responsible-gaming.html">Responsible gaming</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms-and-conditions">Terms</a>
+          <a href="/responsible-gaming">Responsible gaming</a>
         </nav>
         <p class="landing-footer__disclaimer">Play responsibly · Entertainment only where legally permitted</p>
       </div>

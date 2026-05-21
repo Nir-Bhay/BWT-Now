@@ -8,47 +8,47 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/home.html"
+      "destination": "/pages/home.html"
     },
     {
       "source": "/home",
-      "destination": "/home.html"
+      "destination": "/pages/home.html"
     },
     {
       "source": "/login",
-      "destination": "/login.html"
+      "destination": "/pages/login.html"
     },
     {
       "source": "/register",
-      "destination": "/register.html"
+      "destination": "/pages/register.html"
     },
     {
       "source": "/about-us",
-      "destination": "/about-us.html"
+      "destination": "/pages/about-us.html"
     },
     {
       "source": "/customer-care",
-      "destination": "/customer-care.html"
+      "destination": "/pages/customer-care.html"
     },
     {
       "source": "/privacy-policy",
-      "destination": "/privacy-policy.html"
+      "destination": "/pages/privacy-policy.html"
     },
     {
       "source": "/terms-and-conditions",
-      "destination": "/terms-and-conditions.html"
+      "destination": "/pages/terms-and-conditions.html"
     },
     {
       "source": "/responsible-gaming",
-      "destination": "/responsible-gaming.html"
+      "destination": "/pages/responsible-gaming.html"
     },
     {
       "source": "/blogs",
-      "destination": "/blogs.html"
+      "destination": "/pages/blogs.html"
     },
     {
       "source": "/categories",
-      "destination": "/categories.html"
+      "destination": "/pages/categories.html"
     },
     {
       "source": "/bet",

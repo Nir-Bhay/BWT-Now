@@ -2,6 +2,22 @@
 
 Static Reddy Book Club site — marketing landing pages + mirrored betting UI.
 
+## Project layout
+
+```
+site-clone/
+├── index.html          # Betting dashboard (root entry)
+├── 404.html
+├── pages/              # All marketing pages
+│   ├── home.html
+│   ├── login.html
+│   ├── register.html
+│   └── ...
+├── assets/             # CSS, JS, images
+├── js/                 # site-logic.js
+└── vercel.json         # Clean URL rewrites
+```
+
 ## Local preview
 
 ```bash
@@ -9,7 +25,8 @@ npm run build
 npm start
 ```
 
-Open http://localhost:3000/home.html (or `/` when using Vercel dev).
+Open http://localhost:3000/ (home) or http://localhost:3000/bet (dashboard).
+Local rewrites are configured in `serve.json`.
 
 ## Deploy on Vercel
 
@@ -29,10 +46,10 @@ Open http://localhost:3000/home.html (or `/` when using Vercel dev).
 | `/login`, `/register`, `/about-us` | Landing pages |
 | `/blogs`, `/categories` | Grid pages |
 | `/privacy-policy`, `/terms-and-conditions`, `/responsible-gaming` | Legal |
-| `/index.html` or `/bet` | Betting UI mirror |
+| `/bet` or `/index.html` | Betting UI mirror |
 | `/inplay`, `/sports/*` | Betting UI (rewritten to `index.html`) |
 
-All asset paths are relative (`assets/`, `js/`) so CSS, images, and scripts work on Vercel without extra config.
+All asset paths use root-relative URLs (`/assets/`, `/js/`) so CSS, images, and scripts work from any page depth.
 
 ## Regenerate HTML from content
 
@@ -40,4 +57,4 @@ All asset paths are relative (`assets/`, `js/`) so CSS, images, and scripts work
 npm run build:pages
 ```
 
-Requires `ReddyBook.md` in the project root.
+Requires `ReddyBook.md` in the project root. Output is written to `pages/`.

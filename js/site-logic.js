@@ -9,7 +9,7 @@
   var APK_DISMISSED_KEY = "reddybook_apk_dismissed";
   /** Fixed banner for login + signup (Login - Deposits, Withdrawals, and Verification (3)) */
   var AUTH_BANNER_SRC =
-    "assets/images/reddybook-banners/15-login---deposits-withdrawals-and-verification-3.webp";
+    "assets/images/pages/login/Login - Deposits, Withdrawals, and Verification (3).webp";
 
   function ready(fn) {
     if (document.readyState === "loading") {
@@ -354,13 +354,13 @@
     if (!qs('link[href*="auth-modal.css"]')) {
       var authCss = document.createElement("link");
       authCss.rel = "stylesheet";
-      authCss.href = "assets/css/auth-modal.css";
+      authCss.href = "/assets/css/auth-modal.css";
       document.head.appendChild(authCss);
     }
     if (isLandingPage() && !qs('link[href*="bootstrap.min.css"]')) {
       var bsCss = document.createElement("link");
       bsCss.rel = "stylesheet";
-      bsCss.href = "assets/css/bootstrap/css/bootstrap.min.css";
+      bsCss.href = "/assets/css/bootstrap/css/bootstrap.min.css";
       document.head.appendChild(bsCss);
     }
   }
@@ -394,21 +394,21 @@
   function upgradeLandingAuthLinks() {
     if (!isLandingPage()) return;
 
-    qsa('.landing-header-actions a[href="register.html"]').forEach(function (a) {
+    qsa('.landing-header-actions a[href="/register"], .landing-header-actions a[href="register.html"]').forEach(function (a) {
       a.setAttribute("href", "javascript:void(0)");
       a.setAttribute("data-auth-open", "signup");
     });
-    qsa('.landing-header-actions a[href="login.html"]').forEach(function (a) {
+    qsa('.landing-header-actions a[href="/login"], .landing-header-actions a[href="login.html"]').forEach(function (a) {
       a.setAttribute("href", "javascript:void(0)");
       a.setAttribute("data-auth-open", "login");
     });
 
-    qsa('a.btn-cta[href="register.html"]').forEach(function (a) {
+    qsa('a.btn-cta[href="/register"], a.btn-cta[href="register.html"]').forEach(function (a) {
       if (a.closest("footer")) return;
       a.setAttribute("href", "javascript:void(0)");
       a.setAttribute("data-auth-open", "signup");
     });
-    qsa('a.btn-cta[href="login.html"]').forEach(function (a) {
+    qsa('a.btn-cta[href="/login"], a.btn-cta[href="login.html"]').forEach(function (a) {
       if (a.closest("footer")) return;
       var label = (a.textContent || "").trim().toLowerCase();
       if (label.indexOf("login") === -1 && label.indexOf("log in") === -1) return;
@@ -434,7 +434,7 @@
     applyAuthUI();
     hideModal(qs(".login-popup"));
     if (isLandingPage()) {
-      window.location.href = "index.html";
+      window.location.href = "/bet";
     }
   }
 
@@ -589,7 +589,7 @@
         landingLogin.style.display = "";
         landingLogin.textContent = "Dashboard";
         landingLogin.removeAttribute("data-auth-open");
-        landingLogin.href = "index.html";
+        landingLogin.href = "/bet";
         landingLogin.classList.add("rb-auth-dashboard-link");
         landingLogin.dataset.authBound = "";
       }
@@ -1123,40 +1123,40 @@
   /* ── Promo / ad images from Reddybookclubs asset pack ── */
 
   var PROMO_BANNERS = [
-    "assets/images/reddybook-banners/01-about-us-banner---2.webp",
-    "assets/images/reddybook-banners/02-about-us-main-banner---1.webp",
-    "assets/images/reddybook-banners/03-customer-care-banner---2.webp",
-    "assets/images/reddybook-banners/04-customer-care-main-banner---1.webp",
-    "assets/images/reddybook-banners/05-homepage---how-do-reddybook-bonuses-and-promotions-work.webp",
-    "assets/images/reddybook-banners/06-homepage---how-reddybook-club-operates.webp",
-    "assets/images/reddybook-banners/07-homepage---important-points-to-remember.webp",
-    "assets/images/reddybook-banners/08-homepage---live-betting-experience.webp",
-    "assets/images/reddybook-banners/09-homepage---reddybook-login-process_-enter-your-id-and-start-.webp",
-    "assets/images/reddybook-banners/10-homepage---things-to-keep-in-mind-before-you-get-a-reddy-boo.webp",
-    "assets/images/reddybook-banners/11-homepage---what-is-reddybook_-complete-guide-to-betting-logi.webp",
-    "assets/images/reddybook-banners/12-homepage---withdrawal-process-step-by-step_-login-to-your-ac.webp",
-    "assets/images/reddybook-banners/13-homepage-banner.webp",
-    "assets/images/reddybook-banners/14-login---deposits-withdrawals-and-verification-2.webp",
-    "assets/images/reddybook-banners/15-login---deposits-withdrawals-and-verification-3.webp",
-    "assets/images/reddybook-banners/16-login---deposits-withdrawals-and-verification.webp",
-    "assets/images/reddybook-banners/17-login---how-to-login-to-your-reddy-book-club-account.webp",
-    "assets/images/reddybook-banners/18-login---reddy-book-club-login-on-mobile.webp",
-    "assets/images/reddybook-banners/19-login---reddy-book-login_-access-your-reddy-book-club-cricke.webp",
-    "assets/images/reddybook-banners/20-login-page-banner.webp",
-    "assets/images/reddybook-banners/21-privacy-policy-banner---2.webp",
-    "assets/images/reddybook-banners/22-privacy-policy-main-banner---1.webp",
-    "assets/images/reddybook-banners/23-register---common-registration-problems-and-simple-fixes.webp",
-    "assets/images/reddybook-banners/24-register---how-to-register-on-reddy-book-club.webp",
-    "assets/images/reddybook-banners/25-register---reddy-book-registration_-get-your-reddy-book-club.webp",
-    "assets/images/reddybook-banners/26-register---what-about-the-reddy-book-club-apk-2.webp",
-    "assets/images/reddybook-banners/27-register---what-about-the-reddy-book-club-apk.webp",
-    "assets/images/reddybook-banners/28-register---what-details-may-be-needed-during-registration.webp",
-    "assets/images/reddybook-banners/29-register---why-register-with-reddy-book-club.webp",
-    "assets/images/reddybook-banners/30-register-page-banner.webp",
-    "assets/images/reddybook-banners/31-responsible-gaming-banner---2.webp",
-    "assets/images/reddybook-banners/32-responsible-gaming-main-banner---1.webp",
-    "assets/images/reddybook-banners/33-t-c-banner---2.webp",
-    "assets/images/reddybook-banners/34-t-c-main-banner---1.webp",
+    "assets/images/pages/about-us/About Us Banner - 2.webp",
+    "assets/images/pages/about-us/About Us Main Banner - 1.webp",
+    "assets/images/pages/customer-care/Customer Care Banner - 2.webp",
+    "assets/images/pages/customer-care/Customer Care Main Banner - 1.webp",
+    "assets/images/pages/home/Homepage - How Do ReddyBook Bonuses and Promotions Work.webp",
+    "assets/images/pages/home/Homepage - How ReddyBook Club Operates.webp",
+    "assets/images/pages/home/Homepage - Important Points to Remember.webp",
+    "assets/images/pages/home/Homepage - Live Betting Experience.webp",
+    "assets/images/pages/home/Homepage - ReddyBook Login Process_ Enter Your ID and Start Betting.webp",
+    "assets/images/pages/home/Homepage - Things to Keep in Mind Before You Get a Reddy Book new  ID.webp",
+    "assets/images/pages/home/Homepage - What is ReddyBook_ Complete Guide to Betting, Login & Registration.webp",
+    "assets/images/pages/home/Homepage - Withdrawal Process Step-by-Step_ Login to Your Account.webp",
+    "assets/images/pages/home/Homepage Banner.webp",
+    "assets/images/pages/login/Login - Deposits, Withdrawals, and Verification (2).webp",
+    "assets/images/pages/login/Login - Deposits, Withdrawals, and Verification (3).webp",
+    "assets/images/pages/login/Login - Deposits, Withdrawals, and Verification.webp",
+    "assets/images/pages/login/Login - How to Login to Your Reddy Book Club Account.webp",
+    "assets/images/pages/login/Login - Reddy Book Club Login on Mobile.webp",
+    "assets/images/pages/login/Login - Reddy Book Login_ Access Your Reddy Book Club Cricket ID Safely.webp",
+    "assets/images/pages/login/Login Page Banner.webp",
+    "assets/images/pages/privacy-policy/Privacy Policy Banner - 2.webp",
+    "assets/images/pages/privacy-policy/Privacy Policy Main Banner - 1.webp",
+    "assets/images/pages/register/Register - Common Registration Problems and Simple Fixes.webp",
+    "assets/images/pages/register/Register - How to Register on Reddy Book Club.webp",
+    "assets/images/pages/register/Register - Reddy Book Registration_ Get Your Reddy Book Club Cricket ID.webp",
+    "assets/images/pages/register/Register - What About the Reddy Book Club APK (2).webp",
+    "assets/images/pages/register/Register - What About the Reddy Book Club APK.webp",
+    "assets/images/pages/register/Register - What Details May Be Needed During Registration.webp",
+    "assets/images/pages/register/Register - Why Register with Reddy Book Club.webp",
+    "assets/images/pages/register/Register Page banner.webp",
+    "assets/images/pages/responsible-gaming/Responsible Gaming Banner - 2.webp",
+    "assets/images/pages/responsible-gaming/Responsible Gaming Main Banner - 1.webp",
+    "assets/images/pages/terms/T&C Banner - 2.webp",
+    "assets/images/pages/terms/T&C Main Banner - 1.webp",
   ];
 
   function shuffleArray(arr) {

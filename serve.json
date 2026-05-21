@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/pages/home.html" },
+    { "source": "/home", "destination": "/pages/home.html" },
+    { "source": "/login", "destination": "/pages/login.html" },
+    { "source": "/register", "destination": "/pages/register.html" },
+    { "source": "/about-us", "destination": "/pages/about-us.html" },
+    { "source": "/customer-care", "destination": "/pages/customer-care.html" },
+    { "source": "/privacy-policy", "destination": "/pages/privacy-policy.html" },
+    { "source": "/terms-and-conditions", "destination": "/pages/terms-and-conditions.html" },
+    { "source": "/responsible-gaming", "destination": "/pages/responsible-gaming.html" },
+    { "source": "/blogs", "destination": "/pages/blogs.html" },
+    { "source": "/categories", "destination": "/pages/categories.html" },
+    { "source": "/bet", "destination": "/index.html" }
+  ]
+}
