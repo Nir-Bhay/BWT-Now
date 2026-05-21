@@ -1,0 +1,671 @@
+/**
+ * Marketing pages — additional mobile-only responsive rules.
+ * Loaded LAST on every marketing page so it always wins the cascade.
+ * Desktop layout (≥ 1025px) is intentionally untouched.
+ *
+ * Breakpoints:
+ *   1024 → tablet / small laptop
+ *    900 → large phone landscape / small tablet portrait
+ *    767 → phone landscape / tablet portrait
+ *    600 → most phones
+ *    480 → narrow phones
+ *    360 → very narrow phones
+ */
+
+/* ╔════════════════════════════════════════════════════════════╗
+   ║  Tablet (≤ 1024 px) — collapse inner two-column layouts    ║
+   ╚════════════════════════════════════════════════════════════╝ */
+@media (max-width: 1024px) {
+
+  /* Home — bento cards that have inner 2-col grids */
+  .home-page--light .home-intro-grid,
+  .home-page--light .home-operates-grid,
+  .home-page--light .home-withdrawal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light .home-intro-grid__figure,
+  .home-page--light .home-operates-grid__figure,
+  .home-page--light .home-withdrawal-grid__figure {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* Home — login two-row split (image row + tips block) */
+  .home-section--login .home-login-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section--login .home-login-grid__figure {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .home-section--login .home-login-tips-block__body {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section--login .home-login-tips-block__figure {
+    max-width: 280px;
+    margin: 0 auto;
+    order: -1;
+  }
+
+  /* Login — every 2-col card layout */
+  .home-page--light.bento-page--login .login-intro-card__layout,
+  .home-page--light.bento-page--login .login-mobile-card__layout,
+  .home-page--light.bento-page--login .login-money-card__layout,
+  .home-page--light.bento-page--login .login-paired-block,
+  .home-page--light.bento-page--login .login-paired-block--figure-first {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .home-page--light.bento-page--login .login-intro-card__panel,
+  .home-page--light.bento-page--login .login-mobile-card__panel,
+  .home-page--light.bento-page--login .login-step-guide-card__sidebar {
+    position: static;
+  }
+
+  .home-page--light.bento-page--login .login-intro-card__figure,
+  .home-page--light.bento-page--login .login-mobile-card__figure,
+  .home-page--light.bento-page--login .login-paired-block__figure {
+    max-width: 380px;
+    margin: 0 auto 12px;
+  }
+
+  /* Register — full mobile collapse */
+  .home-page--light.bento-page--register .register-intro-card__layout,
+  .home-page--light.bento-page--register .register-steps-layout,
+  .home-page--light.bento-page--register .register-details-layout,
+  .home-page--light.bento-page--register .register-trust-card__layout,
+  .home-page--light.bento-page--register .register-troubleshoot-layout,
+  .home-page--light.bento-page--register .register-why-layout,
+  .home-page--light.bento-page--register .register-mobile-layout,
+  .home-page--light.bento-page--register .register-compare-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .home-page--light.bento-page--register .register-steps-visual {
+    position: static;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  .home-page--light.bento-page--register .register-details-layout figure,
+  .home-page--light.bento-page--register .register-why-layout figure {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* About */
+  .home-page--light.landing-page--about .about-showcase__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Privacy / Terms / Responsible — collapse the 2x2 grid early so the cards have breathing room */
+  .home-page--light .privacy-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ╔════════════════════════════════════════════════════════════╗
+   ║  Large phone / small tablet (≤ 900 px)                      ║
+   ╚════════════════════════════════════════════════════════════╝ */
+@media (max-width: 900px) {
+
+  /* Reduce bento gap so cards have more breathing room */
+  .bento-grid,
+  .home-bento {
+    gap: 14px;
+  }
+
+  /* Page hero overall padding */
+  .page-hero__inner,
+  .home-hero__inner {
+    padding: 36px 16px 40px;
+  }
+
+  /* All bento cards reduce padding */
+  .home-page--light .bento-card {
+    padding: 20px 18px;
+  }
+
+  /* TOC grid → 2-col first then 1-col further down */
+  .home-page--light.bento-page--login .login-intro-card__toc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Step tips stat row keeps 3 cols on tablet */
+  .home-page--light.bento-page--login .login-step-tips__stats,
+  .home-page--light.bento-page--register .register-steps-extra__stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Money card metrics — 3 → 1 to avoid cramping */
+  .home-page--light.bento-page--login .login-money-card__metrics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Custom bento list - 2-col on tablet */
+  .custom-bento-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* Privacy 2x2 already collapsed; warning grid 2-col */
+  .warning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Brand chips wrap naturally; no fix needed */
+}
+
+/* ╔════════════════════════════════════════════════════════════╗
+   ║  Phone (≤ 767 px) — single column everywhere               ║
+   ╚════════════════════════════════════════════════════════════╝ */
+@media (max-width: 767px) {
+
+  /* Headings scale down */
+  .home-page--light .bento-card h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .home-page--light .bento-card h3 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .home-page--light .bento-card h4 {
+    font-size: 1rem;
+  }
+
+  .home-page--light .bento-card p,
+  .home-page--light .bento-card li {
+    font-size: 13.5px;
+  }
+
+  /* Home intro/quick-facts side-by-side → stack */
+  .home-page--light .bento-intro,
+  .home-page--light .bento-highlight {
+    grid-column: span 12;
+  }
+
+  /* Home sections inner padding */
+  .home-page--light .home-section__inner {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  /* Login intro — TOC, panel chips, CTA */
+  .home-page--light.bento-page--login .login-intro-card__toc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light.bento-page--login .login-intro-card__panel ul {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light.bento-page--login .login-intro-card__chips {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-page--light.bento-page--login .login-intro-card__chips span {
+    justify-content: center;
+  }
+
+  .home-page--light.bento-page--login .login-intro-card__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-page--light.bento-page--login .login-intro-card__cta .btn-cta,
+  .home-page--light.bento-page--login .login-intro-card__cta .btn-ghost {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Login step tips — 1 col stats, smaller text */
+  .home-page--light.bento-page--login .login-step-tips__stats,
+  .home-page--light.bento-page--register .register-steps-extra__stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home-page--light.bento-page--login .login-step__n,
+  .home-page--light.bento-page--login .login-mobile-card__step i,
+  .home-page--light.bento-page--register .register-step__n,
+  .home-page--light.bento-page--register .register-mobile-step i {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .home-page--light.bento-page--login .login-step,
+  .home-page--light.bento-page--register .register-step {
+    grid-template-columns: 28px 1fr;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  /* Mobile card — chips column, checklist already grid */
+  .home-page--light.bento-page--login .login-mobile-card__chips {
+    flex-direction: column;
+  }
+
+  .home-page--light.bento-page--login .login-mobile-card__chips span {
+    justify-content: flex-start;
+  }
+
+  /* Money card — methods + checks + metrics */
+  .home-page--light.bento-page--login .login-money-card__methods {
+    flex-direction: column;
+  }
+
+  .home-page--light.bento-page--login .login-money-card__methods span {
+    justify-content: center;
+  }
+
+  .home-page--light.bento-page--login .login-money-card__metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light.bento-page--login .login-money-card__responsible-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Money card responsible head badge smaller */
+  .home-page--light.bento-page--login .login-money-card__responsible-badge {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  /* Login danger list */
+  .home-page--light.bento-page--login .login-danger-list {
+    gap: 6px;
+  }
+
+  /* Login access grid → 1 col already in responsive but re-affirm */
+  .home-page--light.bento-page--login .login-access-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light.bento-page--login .login-troubleshoot-card ul {
+    columns: 1;
+  }
+
+  /* Register — mobile tips chips column */
+  .home-page--light.bento-page--register .register-mobile-tips {
+    flex-direction: column;
+  }
+
+  .home-page--light.bento-page--register .register-mobile-tips span {
+    justify-content: flex-start;
+  }
+
+  .home-page--light.bento-page--register .register-access-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light.bento-page--register .register-compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* APK panel stays stacked (already is via container) */
+  .home-page--light.bento-page--register .register-apk-paired__figure img {
+    max-height: 240px;
+  }
+
+  /* Privacy / legal cards */
+  .home-page--light .privacy-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light .grid-item-header h3 {
+    font-size: 0.95rem !important;
+  }
+
+  .home-page--light .privacy-warning-box {
+    padding: 14px;
+  }
+
+  .home-page--light .warning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page--light .privacy-conclusion-card {
+    padding: 22px 18px;
+  }
+
+  /* Custom bento list → 1 col */
+  .custom-bento-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Page hero chips */
+  .page-hero__chip,
+  .home-hero__chip {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+  }
+
+  /* CTA bands full-width buttons */
+  .landing-cta-band .landing-hero-cta {
+    flex-direction: column;
+  }
+
+  .landing-cta-band .landing-hero-cta .btn-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Footer columns stack */
+  .landing-footer__nav {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  /* FAQ details */
+  .landing-faq details summary {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .landing-faq details .faq-body p {
+    font-size: 13px;
+  }
+
+  /* About page */
+  .home-page--light.landing-page--about .about-stat-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .home-page--light.landing-page--about .about-offer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ╔════════════════════════════════════════════════════════════╗
+   ║  Small phone (≤ 600 px)                                    ║
+   ╚════════════════════════════════════════════════════════════╝ */
+@media (max-width: 600px) {
+
+  /* Containers / paddings */
+  .bento-wrap,
+  .home-bento-wrap {
+    padding: 20px 10px 16px;
+  }
+
+  .landing-main {
+    padding: 20px 10px 32px;
+  }
+
+  .home-page--light .bento-card {
+    padding: 18px 14px;
+    border-radius: 12px;
+  }
+
+  .home-page--light .bento-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .home-page--light .home-section__inner {
+    padding: 18px 14px;
+  }
+
+  /* Stat rows go 1-col */
+  .home-page--light.bento-page--login .login-step-tips__stats,
+  .home-page--light.bento-page--register .register-steps-extra__stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .home-page--light.bento-page--login .login-step-tips__stat strong,
+  .home-page--light.bento-page--register .register-steps-extra__stats strong {
+    font-size: 13px;
+  }
+
+  .home-page--light.bento-page--login .login-step-tips__stat span,
+  .home-page--light.bento-page--register .register-steps-extra__stats span {
+    font-size: 10px;
+  }
+
+  /* Hero buttons + text */
+  .page-hero h1,
+  .home-hero h1 {
+    font-size: clamp(1.3rem, 6vw, 1.85rem);
+  }
+
+  .page-hero__lead,
+  .home-hero__lead {
+    font-size: 0.95rem;
+  }
+
+  /* Warning grid */
+  .warning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer columns single col */
+  .landing-footer__nav {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Brand chips wrap tightly */
+  .brand-clarification-chips {
+    gap: 6px;
+  }
+
+  .brand-chip {
+    font-size: 11.5px;
+    padding: 6px 11px;
+  }
+
+  /* Login step-tips block keeps stats but tighter */
+  .home-page--light.bento-page--login .login-step-tips__stats {
+    padding-top: 10px;
+  }
+
+  /* Privacy 2x2 items - smaller padding */
+  .privacy-grid-item {
+    padding: 14px 14px 12px;
+  }
+
+  .grid-item-header i {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+  }
+
+  /* Cards inside lists use smaller padding */
+  .custom-bento-list li {
+    padding: 11px 12px 11px 38px;
+    font-size: 13px;
+  }
+
+  .custom-bento-list li::before {
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    font-size: 11px;
+  }
+}
+
+/* ╔════════════════════════════════════════════════════════════╗
+   ║  Narrow phone (≤ 480 px)                                   ║
+   ╚════════════════════════════════════════════════════════════╝ */
+@media (max-width: 480px) {
+
+  .bento-wrap,
+  .home-bento-wrap,
+  .landing-main {
+    padding: 18px 8px 28px;
+  }
+
+  .home-page--light .bento-card {
+    padding: 16px 12px;
+  }
+
+  .home-page--light .bento-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .home-page--light .bento-card h3 {
+    font-size: 1rem;
+  }
+
+  .home-page--light .bento-card p,
+  .home-page--light .bento-card li {
+    font-size: 13px;
+  }
+
+  .page-hero__inner,
+  .home-hero__inner {
+    padding: 28px 12px 32px;
+  }
+
+  /* Force every stat row to a single column */
+  .home-page--light.bento-page--login .login-step-tips__stats,
+  .home-page--light.bento-page--register .register-steps-extra__stats,
+  .home-page--light.bento-page--login .login-money-card__metrics {
+    grid-template-columns: 1fr;
+  }
+
+  /* Step / mobile step layout: smaller number badge */
+  .home-page--light.bento-page--login .login-step h4,
+  .home-page--light.bento-page--register .register-step h4 {
+    font-size: 0.9rem;
+  }
+
+  /* TOC links full width */
+  .home-page--light.bento-page--login .login-intro-card__toc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero chips text */
+  .page-hero__chip,
+  .home-hero__chip {
+    font-size: 12px;
+  }
+
+  /* Winners ticker chips smaller */
+  .win-chip {
+    font-size: 11.5px;
+    padding: 6px 10px;
+  }
+
+  .winners-ticker-label {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  /* Conclusion card body */
+  .privacy-conclusion-card {
+    padding: 18px 14px;
+  }
+
+  /* Sections inside legal pages */
+  .privacy-section h2 {
+    font-size: 1.15rem;
+  }
+
+  .privacy-section h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ╔════════════════════════════════════════════════════════════╗
+   ║  Very narrow (≤ 360 px) — final fallback                   ║
+   ╚════════════════════════════════════════════════════════════╝ */
+@media (max-width: 360px) {
+
+  .home-page--light .bento-card {
+    padding: 14px 10px;
+  }
+
+  .home-page--light .bento-card h2 {
+    font-size: 1.05rem;
+  }
+
+  .home-page--light .bento-card p,
+  .home-page--light .bento-card li {
+    font-size: 12.5px;
+  }
+
+  .landing-cta-band {
+    padding: 22px 14px;
+  }
+
+  /* Step numbers extra small */
+  .home-page--light.bento-page--login .login-step__n,
+  .home-page--light.bento-page--register .register-step__n {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+
+  /* Header smaller logo */
+  .landing-header .logo img {
+    max-height: 30px;
+  }
+
+  /* Disclaimer one-liner truncate guard */
+  .landing-disclaimer {
+    font-size: 10.5px;
+    padding: 6px 10px;
+  }
+}
+
+/* ╔════════════════════════════════════════════════════════════╗
+   ║  Touch device tweaks (regardless of width)                  ║
+   ╚════════════════════════════════════════════════════════════╝ */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Disable hover-lift transforms on touch */
+  .privacy-grid-item:hover,
+  .custom-bento-list li:hover,
+  .warning-item:hover,
+  .brand-chip:hover,
+  .login-step-tips li:hover,
+  .login-money-card__checks li:hover,
+  .login-money-card__rules li:hover,
+  .home-section--login .home-login-tips li:hover,
+  .login-intro-card__toc-grid a:hover {
+    transform: none !important;
+    box-shadow: 0 2px 10px rgba(28, 24, 16, 0.04) !important;
+  }
+
+  /* Larger tap targets for links and chips */
+  .landing-footer__nav a,
+  .landing-subnav a {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* ╔════════════════════════════════════════════════════════════╗
+   ║  Long-word break safety                                    ║
+   ╚════════════════════════════════════════════════════════════╝ */
+@media (max-width: 600px) {
+  .home-page--light .bento-card,
+  .home-page--light .home-section__inner,
+  .privacy-grid-item,
+  .warning-item,
+  .custom-bento-list li,
+  .brand-chip {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* Buttons: prevent text overflow */
+  .btn-cta,
+  .btn-ghost {
+    word-break: break-word;
+  }
+}

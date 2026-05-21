@@ -34,6 +34,13 @@ for (const [file, seo] of Object.entries(MARKETING_PAGE_SEO)) {
     );
   }
 
+  if (!html.includes("marketing-mobile.css")) {
+    html = html.replace(
+      /<\/head>/,
+      `  <link href="assets/css/marketing-mobile.css" rel="stylesheet" />\n</head>`
+    );
+  }
+
   fs.writeFileSync(fp, html, "utf8");
   console.log(`SEO applied: ${file}`);
 }

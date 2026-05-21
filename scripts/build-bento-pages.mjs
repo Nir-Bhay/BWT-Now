@@ -80,6 +80,7 @@ function renderShell(page) {
   <link href="assets/css/landing-responsive.css" rel="stylesheet" />
   <link href="assets/css/marketing-images.css" rel="stylesheet" />
   ${extraHead}
+  <link href="assets/css/marketing-mobile.css" rel="stylesheet" />
 </head>
 <body class="${bClass}">
 ${chrome}
