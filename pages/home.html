@@ -22,8 +22,79 @@
   <meta name="twitter:description" content="Learn how Reddy Book Club works: agent-based cricket ID access, login steps, registration, sports markets, bonuses, UPI payments, withdrawals, and responsible gaming tips for India." />
   <meta name="twitter:image" content="https://bwt-now.vercel.app/assets/images/pages/home/Homepage%20Banner.webp" />
   <link rel="icon" href="/assets/favicon.ico" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Reddy Book Club",
+    "url": "https://bwt-now.vercel.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://bwt-now.vercel.app/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Reddy Book Club",
+    "url": "https://bwt-now.vercel.app/",
+    "logo": "https://speedcdn.io/assets/logos/reddybook.live.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is ReddyBook?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ReddyBook is a web-based platform providing sports betting, casino games, and live market betting services through an agent-network system."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get a ReddyBook ID?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You get your ReddyBook ID by first finding a verified agent whom you can contact via WhatsApp, Telegram, or a referral. The agent will then help you register your account and provide you with your login information."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I register on ReddyBook directly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unfortunately, there is no way to sign up for ReddyBook really on your own, as ReddyBook accounts are only made through agents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I log in to ReddyBook?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Once you have received your username and password from the agent, just click on the official login page or use the app to get to the login screen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment methods are used on ReddyBook?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In most cases, payment methods include UPI, bank transfers, net banking, and digital wallets like Paytm (depending on the agent)."
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     body, button, input, select, textarea {
       font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
@@ -63,8 +134,8 @@
       </nav>
       <div class="landing-header-actions">
         <a href="/bet" class="rules-btn">Bet Now</a>
-        <a href="javascript:void(0)" class="btn-login btn-accent" data-auth-open="signup">Signup</a>
-        <a href="javascript:void(0)" class="btn-login" data-auth-open="login">Login</a>
+        <a href="/register" class="btn-login btn-accent">Signup</a>
+        <a href="/login" class="btn-login">Login</a>
       </div>
     </div>
   </header>
@@ -349,23 +420,23 @@
             user-friendliness, variety, and trustworthiness. Aiming at these very aspects, Reddy Book Club has managed
             to create a decent platform that is attracting a lot of bettors from India.</p>
           <div class="bento-tiles" style="grid-template-columns:repeat(auto-fill,minmax(160px,1fr));">
-            <div class="bento-tile"><i class="bi bi-stopwatch-fill"></i><span>Quick sign-up</span>
+            <div class="bento-tile"><i class="bi bi-stopwatch-fill" aria-hidden="true"></i><span>Quick sign-up</span>
               <p>Get your ReddyBook new ID from the agent and start playing right away — Reddy Book 247 ID &amp; 365 ID
                 options available</p>
             </div>
-            <div class="bento-tile"><i class="bi bi-grid-3x3-gap-fill"></i><span>Large range of betting</span>
+            <div class="bento-tile"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i><span>Large range of betting</span>
               <p>Cricket, football, tennis, esports — IPL, FIFA World Cup, EPL &amp; more</p>
             </div>
-            <div class="bento-tile"><i class="bi bi-tv-fill"></i><span>Live betting</span>
+            <div class="bento-tile"><i class="bi bi-tv-fill" aria-hidden="true"></i><span>Live betting</span>
               <p>Reddy Book Live lets you bet on games in progress with real-time odds</p>
             </div>
-            <div class="bento-tile"><i class="bi bi-phone-fill"></i><span>User-friendly interface</span>
+            <div class="bento-tile"><i class="bi bi-phone-fill" aria-hidden="true"></i><span>User-friendly interface</span>
               <p>Intuitive design — works well on lower-end smartphones too</p>
             </div>
-            <div class="bento-tile"><i class="bi bi-gift-fill"></i><span>Promotions &amp; rewards</span>
+            <div class="bento-tile"><i class="bi bi-gift-fill" aria-hidden="true"></i><span>Promotions &amp; rewards</span>
               <p>Reddy Book Win — cashback, referral rewards, and special bonuses</p>
             </div>
-            <div class="bento-tile"><i class="bi bi-telephone-fill"></i><span>Round-the-clock support</span>
+            <div class="bento-tile"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>Round-the-clock support</span>
               <p>24/7 support for login, transactions, and any questions via agents</p>
             </div>
           </div>
@@ -384,32 +455,32 @@
           <div class="home-sports-hero">
             <img src="/assets/images/pages/home/Homepage - Live Betting Experience.webp"
               alt="Live betting experience on ReddyBook" loading="lazy" width="280" height="350" />
-            <div class="home-sports-hero__badge"><i class="bi bi-pin-map-fill"></i> Live & pre-match odds</div>
+            <div class="home-sports-hero__badge"><i class="bi bi-pin-map-fill" aria-hidden="true"></i> Live & pre-match odds</div>
           </div>
           <div class="home-sports-content">
             <h2>Wide range of sports markets</h2>
             <p>The sports selection at ReddyBook may surprise you, as it includes different types of sports that allow
               you to check out new betting possibilities:</p>
             <div class="home-sports-grid">
-              <div class="home-sport-card"><i class="bi bi-trophy-fill"></i><strong>Cricket</strong>
+              <div class="home-sport-card"><i class="bi bi-trophy-fill" aria-hidden="true"></i><strong>Cricket</strong>
                 <p>IPL, international series, and domestic matches — one of the most lively sections</p>
               </div>
-              <div class="home-sport-card"><i class="bi bi-flag-fill"></i><strong>Football</strong>
+              <div class="home-sport-card"><i class="bi bi-flag-fill" aria-hidden="true"></i><strong>Football</strong>
                 <p>EPL, La Liga, UEFA Champions League, and other global competitions</p>
               </div>
-              <div class="home-sport-card"><i class="bi bi-circle-fill"></i><strong>Tennis</strong>
+              <div class="home-sport-card"><i class="bi bi-circle-fill" aria-hidden="true"></i><strong>Tennis</strong>
                 <p>Grand Slam events — bet on your favourite ATP or WTA players</p>
               </div>
-              <div class="home-sport-card"><i class="bi bi-app-fill"></i><strong>Basketball</strong>
+              <div class="home-sport-card"><i class="bi bi-app-fill" aria-hidden="true"></i><strong>Basketball</strong>
                 <p>NBA and international games with several market options</p>
               </div>
-              <div class="home-sport-card"><i class="bi bi-cpu-fill"></i><strong>Esports</strong>
+              <div class="home-sport-card"><i class="bi bi-cpu-fill" aria-hidden="true"></i><strong>Esports</strong>
                 <p>Famous titles like Dota 2, CS:GO, and more</p>
               </div>
             </div>
             <div class="home-markets-row">
               <div class="home-markets-col">
-                <h3><i class="bi bi-bar-chart-fill"></i> Pre-match and live betting at ReddyBook explained</h3>
+                <h3><i class="bi bi-bar-chart-fill" aria-hidden="true"></i> Pre-match and live betting at ReddyBook explained</h3>
                 <ul>
                   <li><strong>Pre-match betting</strong> — put your money down before the game starts as you do your
                     homework on teams, forms, and statistics</li>
@@ -420,7 +491,7 @@
                   bettors get to decide quickly as the game progresses.</p>
               </div>
               <div class="home-markets-col">
-                <h3><i class="bi bi-kanban-fill"></i> Multiple betting markets</h3>
+                <h3><i class="bi bi-kanban-fill" aria-hidden="true"></i> Multiple betting markets</h3>
                 <p style="font-size:13px;margin:0 0 8px;">To ensure that all bettors stay attentive even when the match
                   is in progress, ReddyBook keeps throwing various betting options:</p>
                 <ul>
@@ -448,13 +519,13 @@
             including some of the world's most famous cricket tournaments. Since cricket is one of the feature-rich
             sections on the website, this specific ID is of great significance for cricket lovers.</p>
           <div class="bento-tiles bento-tiles--3">
-            <div class="bento-tile"><i class="bi bi-calendar-event-fill"></i><span>Tournaments</span>
+            <div class="bento-tile"><i class="bi bi-calendar-event-fill" aria-hidden="true"></i><span>Tournaments</span>
               <p>IPL, ICC T20 World Cup, ODI World Cup, international tours &amp; local matches</p>
             </div>
-            <div class="bento-tile"><i class="bi bi-pin-map-fill"></i><span>Live features</span>
+            <div class="bento-tile"><i class="bi bi-pin-map-fill" aria-hidden="true"></i><span>Live features</span>
               <p>Live betting, session markets, and player-oriented betting options</p>
             </div>
-            <div class="bento-tile"><i class="bi bi-person-check-fill"></i><span>How to get it</span>
+            <div class="bento-tile"><i class="bi bi-person-check-fill" aria-hidden="true"></i><span>How to get it</span>
               <p>Contact a trusted agent via WhatsApp, Telegram, or referral — the only method of getting access</p>
             </div>
           </div>
@@ -749,23 +820,10 @@
     </div>
   </footer>
   <script src="/assets/js/landing-ui.js" defer></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/site-logic.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/js/site-logic.js" defer></script>
 
-  <div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="dialog-login-name"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body">
-          <button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">
-            <span aria-hidden="true">×</span>
-          </button>
-          <app-login></app-login>
-        </div>
-      </div>
-    </div>
-  </div>
-  <bs-modal-backdrop class="modal-backdrop fade"></bs-modal-backdrop>
+<!-- removed login popup modal -->
 </body>
 
 </html>

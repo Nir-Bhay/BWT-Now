@@ -21,8 +21,26 @@
   <meta name="twitter:description" content="Browse Reddy Book Club guides on cricket IDs, login routes, registration steps, sports betting basics, mobile access, and platform updates for users in India." />
   <meta name="twitter:image" content="https://bwt-now.vercel.app/assets/images/pages/home/Homepage%20-%20What%20is%20ReddyBook_%20Complete%20Guide%20to%20Betting%2C%20Login%20%26%20Registration.webp" />
   <link rel="icon" href="/assets/favicon.ico" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Reddy Book Club Blog",
+    "url": "https://bwt-now.vercel.app/blogs",
+    "description": "Browse Reddy Book Club guides on cricket IDs, login routes, registration steps, sports betting basics, mobile access, and platform updates for users in India.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Reddy Book Club",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://speedcdn.io/assets/logos/reddybook.live.png"
+      }
+    }
+  }
+  </script>
   <style>
     body, button, input, select, textarea {
       font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
@@ -136,7 +154,7 @@
           <span class="resource-card__tag">Guide</span>
           <h3>How to Get a ReddyBook Cricket ID</h3>
           <p>Step-by-step agent registration and account setup for new users.</p>
-          <a href="/register" class="resource-card__link">Read guide <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i></a>
+          <a href="pages.html/register.html" class="resource-card__link">Read guide <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i></a>
         </article>
 
         <article class="bento-card bento-span-6 resource-card">
@@ -221,7 +239,7 @@
           <div class="landing-footer__col">
             <h4 class="landing-footer__heading"><i class="bi bi-person-badge-fill" aria-hidden="true"></i> Account</h4>
             <ul>
-              <li><a href="/login">Login</a></li>
+              <li><a href="logi.htmln">Login</a></li>
               <li><a href="/register">Register</a></li>
               <li><a href="/bet">Betting Dashboard</a></li>
             </ul>
@@ -240,21 +258,9 @@
     </div>
   </footer>
   <script src="/assets/js/landing-ui.js" defer></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/site-logic.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/js/site-logic.js" defer></script>
 
-  <div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="dialog-login-name" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body">
-          <button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">
-            <span aria-hidden="true">×</span>
-          </button>
-          <app-login></app-login>
-        </div>
-      </div>
-    </div>
-  </div>
-  <bs-modal-backdrop class="modal-backdrop fade"></bs-modal-backdrop>
+  <!-- removed login popup modal -->
 </body>
 </html>

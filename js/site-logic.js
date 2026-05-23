@@ -366,67 +366,15 @@
   }
 
   function ensureAuthModalOnPage() {
-    if (qs(".login-popup")) return;
-    if (!isLandingPage()) return;
-
-    var modal = document.createElement("motion");
-    modal.className = "modal fade login-popup";
-    modal.setAttribute("tabindex", "-1");
-    modal.setAttribute("role", "dialog");
-    modal.setAttribute("aria-hidden", "true");
-    modal.innerHTML =
-      '<motion class="modal-dialog modal-lg modal-dialog-centered">' +
-      '<motion class="modal-content"><motion class="modal-body">' +
-      '<button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">' +
-      '<span aria-hidden="true">×</span></button>' +
-      "<app-login></app-login>" +
-      "</motion></motion></motion>";
-    modal.innerHTML = modal.innerHTML.replace(/<motion/g, "<div").replace(/<\/motion>/g, "</div>");
-    document.body.appendChild(modal);
-
-    if (!qs("bs-modal-backdrop")) {
-      var backdrop = document.createElement("bs-modal-backdrop");
-      backdrop.className = "modal-backdrop fade";
-      document.body.appendChild(backdrop);
-    }
+    // Removed aggressive modal injection to keep static flow
   }
 
   function upgradeLandingAuthLinks() {
-    if (!isLandingPage()) return;
-
-    qsa('.landing-header-actions a[href="/register"], .landing-header-actions a[href="register.html"]').forEach(function (a) {
-      a.setAttribute("href", "javascript:void(0)");
-      a.setAttribute("data-auth-open", "signup");
-    });
-    qsa('.landing-header-actions a[href="/login"], .landing-header-actions a[href="login.html"]').forEach(function (a) {
-      a.setAttribute("href", "javascript:void(0)");
-      a.setAttribute("data-auth-open", "login");
-    });
-
-    qsa('a.btn-cta[href="/register"], a.btn-cta[href="register.html"]').forEach(function (a) {
-      if (a.closest("footer")) return;
-      a.setAttribute("href", "javascript:void(0)");
-      a.setAttribute("data-auth-open", "signup");
-    });
-    qsa('a.btn-cta[href="/login"], a.btn-cta[href="login.html"]').forEach(function (a) {
-      if (a.closest("footer")) return;
-      var label = (a.textContent || "").trim().toLowerCase();
-      if (label.indexOf("login") === -1 && label.indexOf("log in") === -1) return;
-      a.setAttribute("href", "javascript:void(0)");
-      a.setAttribute("data-auth-open", "login");
-    });
+    // Removed link hijacking to keep static flow
   }
 
   function bindAuthTrigger(el) {
-    if (!el || el.dataset.authBound === "1") return;
-    if (el.classList.contains("rb-auth-dashboard-link")) return;
-    var tab = el.getAttribute("data-auth-open");
-    if (tab !== "login" && tab !== "signup") return;
-    el.dataset.authBound = "1";
-    el.addEventListener("click", function (e) {
-      e.preventDefault();
-      openAuthModal(tab);
-    });
+    // Removed auth trigger binding to prevent popup
   }
 
   function completeAuth(session) {

@@ -21,8 +21,23 @@
   <meta name="twitter:description" content="Get Reddy Book Club customer care help for cricket ID issues, login problems, registration, deposits, withdrawals, APK questions, and account support in India." />
   <meta name="twitter:image" content="https://bwt-now.vercel.app/assets/images/pages/customer-care/Customer%20Care%20Main%20Banner%20-%201.webp" />
   <link rel="icon" href="/assets/favicon.ico" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Reddy Book Customer Care",
+    "description": "Get Reddy Book Club customer care help for cricket ID issues, login problems, registration, deposits, withdrawals, APK questions, and account support in India.",
+    "url": "https://bwt-now.vercel.app/customer-care",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Reddy Book Club",
+      "logo": "https://speedcdn.io/assets/logos/reddybook.live.png"
+    }
+  }
+  </script>
   <link href="/assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
   <link href="/assets/css/common_style.css" rel="stylesheet" />
   <link href="/assets/css/landing.css" rel="stylesheet" />
@@ -282,8 +297,8 @@
       </nav>
       <div class="landing-header-actions">
         <a href="/bet" class="rules-btn">Bet Now</a>
-        <a href="javascript:void(0)" class="btn-login btn-accent" data-auth-open="signup">Signup</a>
-        <a href="javascript:void(0)" class="btn-login" data-auth-open="login">Login</a>
+        <a href="/register" class="btn-login btn-accent">Signup</a>
+        <a href="/login" class="btn-login">Login</a>
       </div>
     </div>
   </header>
@@ -733,7 +748,7 @@
             <ul>
               <li><a href="/customer-care">Customer care</a></li>
               <li><a href="/login">Login help</a></li>
-              <li><a href="/register">Registration guide</a></li>
+              <li><a href="registe.htmlr">Registration guide</a></li>
             </ul>
             <a href="/register" class="landing-footer__help-cta"><i class="bi bi-headset" aria-hidden="true"></i> Get Cricket ID</a>
           </div>
@@ -751,21 +766,9 @@
     </div>
   </footer>
   <script src="/assets/js/landing-ui.js" defer></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/site-logic.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/js/site-logic.js" defer></script>
 
-<div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="dialog-login-name" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">
-          <span aria-hidden="true">×</span>
-        </button>
-        <app-login></app-login>
-      </div>
-    </div>
-  </div>
-</div>
-<bs-modal-backdrop class="modal-backdrop fade"></bs-modal-backdrop>
+<!-- removed login popup modal -->
 </body>
 </html>

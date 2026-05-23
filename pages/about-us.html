@@ -22,8 +22,23 @@
   <meta name="twitter:description" content="Discover what Reddy Book Club offers: cricket ID onboarding, sports and casino markets, payments, customer support, and safer account practices for users in India." />
   <meta name="twitter:image" content="https://bwt-now.vercel.app/assets/images/pages/about-us/About%20Us%20Main%20Banner%20-%201.webp" />
   <link rel="icon" href="/assets/favicon.ico" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Reddy Book Club",
+    "description": "Discover what Reddy Book Club offers: cricket ID onboarding, sports and casino markets, payments, customer support, and safer account practices for users in India.",
+    "url": "https://bwt-now.vercel.app/about-us",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Reddy Book Club",
+      "logo": "https://speedcdn.io/assets/logos/reddybook.live.png"
+    }
+  }
+  </script>
   <style>
     body, button, input, select, textarea {
       font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
@@ -62,8 +77,8 @@
       </nav>
       <div class="landing-header-actions">
         <a href="/bet" class="rules-btn">Bet Now</a>
-        <a href="javascript:void(0)" class="btn-login btn-accent" data-auth-open="signup">Signup</a>
-        <a href="javascript:void(0)" class="btn-login" data-auth-open="login">Login</a>
+        <a href="/register" class="btn-login btn-accent">Signup</a>
+        <a href="/login" class="btn-login">Login</a>
       </div>
     </div>
   </header>
@@ -204,14 +219,14 @@
       <h2 class="landing-section-title">How Cricket ID Works &amp; Why Users Choose Us</h2>
       <div class="landing-dual-cards">
         <article class="landing-glass-card">
-          <h3><i class="bi bi-record-circle-fill"></i> How the Cricket ID System Works</h3>
+          <h3><i class="bi bi-record-circle-fill" aria-hidden="true"></i> How the Cricket ID System Works</h3>
           <p>A cricket ID is the account access detail that allows a user to enter the platform. For many users, the cricket ID is the most important part of the Reddy Book experience because it connects them to the login page, account dashboard, sports sections, casino areas, payments, and support.</p>
           <p>New users can request a cricket ID by clicking Register or Get Cricket ID on the website. In some cases, users may also fill out a short form with basic details so the account team can process the request.</p>
           <p>After the account is created, the user receives login details. These details should be kept private. Your cricket ID and password should never be shared with friends, unknown agents, public groups, or anyone claiming they can manage the account for you.</p>
           <p>A cricket ID gives access. It does not promise winning results, special outcomes, or better chances. Sports betting and casino gaming always carry risk.</p>
         </article>
         <article class="landing-glass-card">
-          <h3><i class="bi bi-eye-fill"></i> Why Users Choose Reddy Book Club</h3>
+          <h3><i class="bi bi-eye-fill" aria-hidden="true"></i> Why Users Choose Reddy Book Club</h3>
           <p>Users usually come to Reddy Book Club for three reasons: simple access, cricket-focused account support, and a single place for sports and casino-style features.</p>
           <p><strong>Easy Account Journey:</strong> New users click Register or Get Cricket ID. Existing users click Login. Users who need help contact customer care.</p>
           <p><strong>Mobile-Friendly Experience:</strong> Many users prefer mobile access for live scores and account checks. Mobile browser access can often be the simpler option. Any APK should only be used if it comes from a verified source.</p>
@@ -470,22 +485,10 @@
   </footer>
 
   <script src="/assets/js/landing-ui.js" defer></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/site-logic.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/js/site-logic.js" defer></script>
 
-<div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="dialog-login-name" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">
-          <span aria-hidden="true">×</span>
-        </button>
-        <app-login></app-login>
-      </div>
-    </div>
-  </div>
-</div>
-<bs-modal-backdrop class="modal-backdrop fade"></bs-modal-backdrop>
+<!-- removed login popup modal -->
 </body>
 
 </html>

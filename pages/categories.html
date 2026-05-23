@@ -21,8 +21,32 @@
   <meta name="twitter:description" content="Explore Reddy Book Club categories including cricket, football, live betting, casino games, account tools, and support topics to find the right section faster." />
   <meta name="twitter:image" content="https://bwt-now.vercel.app/assets/images/pages/home/Homepage%20-%20Live%20Betting%20Experience.webp" />
   <link rel="icon" href="/assets/favicon.ico" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Betting Categories | Reddy Book Club",
+    "description": "Explore Reddy Book Club categories including cricket, football, live betting, casino games, account tools, and support topics to find the right section faster.",
+    "url": "https://bwt-now.vercel.app/categories",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bwt-now.vercel.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Categories",
+        "item": "https://bwt-now.vercel.app/categories"
+      }]
+    }
+  }
+  </script>
   <style>
     body, button, input, select, textarea {
       font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
@@ -240,21 +264,9 @@
     </div>
   </footer>
   <script src="/assets/js/landing-ui.js" defer></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/site-logic.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/js/site-logic.js" defer></script>
 
-  <div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="dialog-login-name" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body">
-          <button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">
-            <span aria-hidden="true">×</span>
-          </button>
-          <app-login></app-login>
-        </div>
-      </div>
-    </div>
-  </div>
-  <bs-modal-backdrop class="modal-backdrop fade"></bs-modal-backdrop>
+  <!-- removed login popup modal -->
 </body>
 </html>

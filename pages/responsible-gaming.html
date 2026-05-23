@@ -21,8 +21,43 @@
   <meta name="twitter:description" content="Reddy Book Club responsible gaming guide: set limits, recognize warning signs, avoid chasing losses, protect your budget, and get help if betting affects your life." />
   <meta name="twitter:image" content="https://bwt-now.vercel.app/assets/images/pages/responsible-gaming/Responsible%20Gaming%20Main%20Banner%20-%201.webp" />
   <link rel="icon" href="/assets/favicon.ico" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Responsible Gaming | Play Safely on Reddy Book Club",
+    "description": "Reddy Book Club responsible gaming guide: set limits, recognize warning signs, avoid chasing losses, protect your budget, and get help if betting affects your life.",
+    "url": "https://bwt-now.vercel.app/responsible-gaming",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://bwt-now.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Responsible Gaming",
+          "item": "https://bwt-now.vercel.app/responsible-gaming"
+        }
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Reddy Book Club",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://speedcdn.io/assets/logos/reddybook.live.png"
+      }
+    }
+  }
+  </script>
   <style>
     body, button, input, select, textarea {
       font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
@@ -60,8 +95,8 @@
       </nav>
       <div class="landing-header-actions">
         <a href="/bet" class="rules-btn">Bet Now</a>
-        <a href="javascript:void(0)" class="btn-login btn-accent" data-auth-open="signup">Signup</a>
-        <a href="javascript:void(0)" class="btn-login" data-auth-open="login">Login</a>
+        <a href="/register" class="btn-login btn-accent">Signup</a>
+        <a href="/login" class="btn-login">Login</a>
       </div>
     </div>
   </header>
@@ -526,21 +561,9 @@
     </div>
   </footer>
   <script src="/assets/js/landing-ui.js" defer></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/site-logic.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/js/site-logic.js" defer></script>
 
-<div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="dialog-login-name" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" aria-label="Close" class="btn-close close pull-right" data-bs-dismiss="modal">
-          <span aria-hidden="true">×</span>
-        </button>
-        <app-login></app-login>
-      </div>
-    </div>
-  </div>
-</div>
-<bs-modal-backdrop class="modal-backdrop fade"></bs-modal-backdrop>
+<!-- removed login popup modal -->
 </body>
 </html>
