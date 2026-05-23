@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <!-- Preload critical LCP images -->
-  <link rel="preload" as="image" href="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532419/reddybook_assets/ls_01.png" fetchpriority="high">
-  <link rel="preload" as="image" href="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532384/reddybook_assets/reddybook.live.png">
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto,w_480,h_800,c_fill/v1779532419/reddybook_assets/ls_01.png" fetchpriority="high">
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_203,h_51,c_fill,f_auto,q_auto/v1779532384/reddybook_assets/reddybook.live.png">
 
   <!-- Resource Hints â€” DNS prefetch & preconnect for external origins -->
   <link rel="preconnect" href="https://speedcdn.io" crossorigin>
@@ -42,7 +42,6 @@
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="dns-prefetch" href="https://connect.facebook.net">
   <link rel="dns-prefetch" href="https://wchat.freshchat.com">
-  <link rel="dns-prefetch" href="https://efesclubcdn.com">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <!-- Security Headers (meta-based) -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -82,7 +81,7 @@
       "name": "Reddy Book Club",
       "alternateName": "ReddyBook",
       "url": "https://bwt-now.vercel.app/",
-      "logo": "https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532384/reddybook_assets/reddybook.live.png",
+      "logo": "https://res.cloudinary.com/dbkcmdx7g/image/upload/w_203,h_51,c_fill,f_auto,q_auto/v1779532384/reddybook_assets/reddybook.live.png",
       "sameAs": [
         "https://twitter.com/reddybookclub",
         "https://www.instagram.com/reddybookclub"
@@ -166,7 +165,7 @@
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="ReddyBook | India's Most Trusted Online Cricket Betting Id Provider">
   <meta property="og:description" content="Get your Cricket Betting ID in one click. Sports, casino, and live markets in one account.">
-  <meta property="og:image" content="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532384/reddybook_assets/reddybook.live.png">
+  <meta property="og:image" content="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_203,h_51,c_fill,f_auto,q_auto/v1779532384/reddybook_assets/reddybook.live.png">
   <meta property="og:url" content="https://reddybookclubs.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ReddyBook Club">
@@ -175,7 +174,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ReddyBook | India's Most Trusted Online Cricket Betting Id Provider">
   <meta name="twitter:description" content="Get your Cricket Betting ID in one click. Sports, casino, and live markets.">
-  <meta name="twitter:image" content="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532384/reddybook_assets/reddybook.live.png">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_203,h_51,c_fill,f_auto,q_auto/v1779532384/reddybook_assets/reddybook.live.png">
 
   <!-- Favicons -->
   <link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico" />
@@ -183,14 +182,19 @@
   <!-- assets CSS Files -->
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- google fonts self-hosted -->
+  <!-- CDN preconnects: cuts 70-150ms DNS + TCP setup for icon fonts and images -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+  <link rel="dns-prefetch" href="https://res.cloudinary.com">
   <style type="text/css">
     @font-face {
       font-family: "Titillium Web";
       font-style: normal;
       font-weight: 200;
       font-display: swap;
-      src: url(https://fonts.gstatic.com/s/titilliumweb/v19/NaPDcZTIAOhVxoMyOr9n_E7ffAzHGIVzY5abuWIGxA.woff2) format("woff2");
+      src: url(./assets/fonts/NaPDcZTIAOhVxoMyOr9n_E7ffAzHGIVzY5abuWIGxA.woff2) format("woff2");
       unicode-range:
         U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
         U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
@@ -202,7 +206,7 @@
       font-style: normal;
       font-weight: 200;
       font-display: swap;
-      src: url(https://fonts.gstatic.com/s/titilliumweb/v19/NaPDcZTIAOhVxoMyOr9n_E7ffAzHGItzY5abuWI.woff2) format("woff2");
+      src: url(./assets/fonts/NaPDcZTIAOhVxoMyOr9n_E7ffAzHGItzY5abuWI.woff2) format("woff2");
       unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
         U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
@@ -214,7 +218,7 @@
       font-style: normal;
       font-weight: 400;
       font-display: swap;
-      src: url(https://fonts.gstatic.com/s/titilliumweb/v19/NaPecZTIAOhVxoMyOr9n_E7fdM3mDaZRbryhsA.woff2) format("woff2");
+      src: url(./assets/fonts/NaPecZTIAOhVxoMyOr9n_E7fdM3mDaZRbryhsA.woff2) format("woff2");
       unicode-range:
         U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
         U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
@@ -226,7 +230,7 @@
       font-style: normal;
       font-weight: 400;
       font-display: swap;
-      src: url(https://fonts.gstatic.com/s/titilliumweb/v19/NaPecZTIAOhVxoMyOr9n_E7fdMPmDaZRbrw.woff2) format("woff2");
+      src: url(./assets/fonts/NaPecZTIAOhVxoMyOr9n_E7fdMPmDaZRbrw.woff2) format("woff2");
       unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
         U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
@@ -238,7 +242,7 @@
       font-style: normal;
       font-weight: 600;
       font-display: swap;
-      src: url(https://fonts.gstatic.com/s/titilliumweb/v19/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGIVzY5abuWIGxA.woff2) format("woff2");
+      src: url(./assets/fonts/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGIVzY5abuWIGxA.woff2) format("woff2");
       unicode-range:
         U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
         U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
@@ -250,7 +254,7 @@
       font-style: normal;
       font-weight: 600;
       font-display: swap;
-      src: url(https://fonts.gstatic.com/s/titilliumweb/v19/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGItzY5abuWI.woff2) format("woff2");
+      src: url(./assets/fonts/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGItzY5abuWI.woff2) format("woff2");
       unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
         U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
@@ -262,7 +266,7 @@
       font-style: normal;
       font-weight: 700;
       font-display: swap;
-      src: url(https://fonts.gstatic.com/s/titilliumweb/v19/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGIVzY5abuWIGxA.woff2) format("woff2");
+      src: url(./assets/fonts/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGIVzY5abuWIGxA.woff2) format("woff2");
       unicode-range:
         U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
         U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
@@ -274,7 +278,7 @@
       font-style: normal;
       font-weight: 700;
       font-display: swap;
-      src: url(https://fonts.gstatic.com/s/titilliumweb/v19/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGItzY5abuWI.woff2) format("woff2");
+      src: url(./assets/fonts/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGItzY5abuWI.woff2) format("woff2");
       unicode-range:
         U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
         U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
@@ -388,7 +392,7 @@
       -webkit-tap-highlight-color: transparent;
     }
   </style>
-  <link href="assets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
   <style>
     :root {
       --swiper-theme-color: #007aff;
@@ -421,7 +425,7 @@
 
     @media (max-width: 320px) {}
   </style>
-  <link href="assets/css/common_style.css" rel="stylesheet">
+  <link href="assets/css/common_style.css" rel="stylesheet" media="print" onload="this.media='all'">
   <style>
     /* RULES — match live site devtools (a.rules) */
     .header a.rules {
@@ -558,19 +562,19 @@
   <!-- <script src='//fw-cdn.com/7178970/3255547.js' chat='true' widgetId='de9fe569-6c64-4f6c-a093-d895da1d2515'> </script> -->
   <script src="https://wchat.freshchat.com/js/widget.js" defer=""></script>
 
-  <link rel="stylesheet" href="styles.93fcb30fe890d8844e0e.css" media="all" onload="this.media = 'all'" />
+  <link rel="stylesheet" href="styles.93fcb30fe890d8844e0e.css" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="styles.93fcb30fe890d8844e0e.css" />
   </noscript>
   <style></style>
-  <link rel="stylesheet" href="assets/css/theme_master.css" />
-  <link href="assets/css/home-sections.css" rel="stylesheet" />
-  <link href="assets/css/landing-home-light.css" rel="stylesheet" />
-  <link href="assets/css/dashboard-home-embed.css" rel="stylesheet" />
-  <link href="assets/css/home-bento.css" rel="stylesheet" />
-  <link href="assets/css/landing-footer.css" rel="stylesheet" />
-  <link href="assets/css/landing-dark.css" rel="stylesheet" />
-  <link href="assets/css/landing.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme_master.css" media="print" onload="this.media='all'" />
+  <link href="assets/css/home-sections.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="assets/css/landing-home-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="assets/css/dashboard-home-embed.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="assets/css/home-bento.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="assets/css/landing-footer.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="assets/css/landing-dark.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="assets/css/landing.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <!-- bootstrap-icons already loaded above -->
   <style>
     .new-tag-menus[_ngcontent-fmi-c59] {
@@ -750,7 +754,7 @@
       display: flex;
       position: absolute;
       left: 0;
-      background-image: url(https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532474/reddybook_assets/popular-img.png);
+      background-image: url(https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto,w_100/v1779532474/reddybook_assets/popular-img.png);
       align-items: center;
       top: 55px;
       overflow-x: auto;
@@ -1312,7 +1316,7 @@
       }
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts removed: Titillium Web is already inlined as @font-face above, saving 320ms render-blocking -->
 </head>
 
 <body>
@@ -1325,9 +1329,9 @@
         <header _ngcontent-fmi-c59="" id="header" class="header fixed-top d-flex align-items-center">
           <div _ngcontent-fmi-c59="" class="container d-flex align-items-center">
             <div _ngcontent-fmi-c59="" class="d-flex align-items-center justify-content-between">
-              <a _ngcontent-fmi-c59="" href="/home" routerlink="/home" class="logo d-flex align-items-center"><img
+              <a _ngcontent-fmi-c59="" href="pages/home.html" routerlink="/home" class="logo d-flex align-items-center"><img
                   _ngcontent-fmi-c59="" alt="ReddyBook Logo" class="img-fluid" width="180" height="45" fetchpriority="high" decoding="sync"
-                  src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532384/reddybook_assets/reddybook.live.png" /></a><i _ngcontent-fmi-c59=""
+                  src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_203,h_51,c_fill,f_auto,q_auto/v1779532384/reddybook_assets/reddybook.live.png" /></a><i _ngcontent-fmi-c59=""
                 class="bi bi-list-nested toggle-sidebar-btn" aria-hidden="true"></i>
             </div>
             <app-featured-events _ngcontent-fmi-c59="" _nghost-fmi-c57="">
@@ -1389,9 +1393,9 @@
                     </li>
                     <!----><!---->
                     <li _ngcontent-fmi-c59="">
-                      <a _ngcontent-fmi-c59="" href="/home" routerlink="/home"
+                      <a _ngcontent-fmi-c59="" href="pages/home.html" routerlink="/home"
                         class="dropdown-item d-flex align-items-center deposit-withdraw-sidebar-title"><img
-                          _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532388/reddybook_assets/menu-home.png" alt="" width="24" height="24" loading="lazy" /><span
+                          _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532388/reddybook_assets/menu-home.png" alt="" width="24" height="24" loading="lazy" /><span
                           _ngcontent-fmi-c59="">home</span></a>
                     </li>
                     <!----><!----><!----><!---->
@@ -1441,126 +1445,126 @@
               </a>
             </li>
             <li _ngcontent-fmi-c59="">
-              <a _ngcontent-fmi-c59="" id="home001" href="/home" routerlinkactive="nmm-active" class="nmm-active"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532388/reddybook_assets/menu-home.png" alt="" width="24" height="24" loading="lazy" />
+              <a _ngcontent-fmi-c59="" id="home001" href="pages/home.html" routerlinkactive="nmm-active" class="nmm-active"><img
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532388/reddybook_assets/menu-home.png" alt="" width="24" height="24" loading="lazy" />
                 Home
               </a>
             </li>
             <li _ngcontent-fmi-c59="">
               <a _ngcontent-fmi-c59="" id="inplay001" href="/inplay" routerlinkactive="nmm-active"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532389/reddybook_assets/menu-inplay.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532389/reddybook_assets/menu-inplay.png" alt="" width="24" height="24" loading="lazy" />
                 in-play
               </a>
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/4" routerlinkactive="nmm-active" id="sport4"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532390/reddybook_assets/menu-4.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532390/reddybook_assets/menu-4.png" alt="" width="24" height="24" loading="lazy" />
                 Cricket </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/1" routerlinkactive="nmm-active" id="sport1"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532391/reddybook_assets/menu-1.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532391/reddybook_assets/menu-1.png" alt="" width="24" height="24" loading="lazy" />
                 Football </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/2" routerlinkactive="nmm-active" id="sport2"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532392/reddybook_assets/menu-2.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532392/reddybook_assets/menu-2.png" alt="" width="24" height="24" loading="lazy" />
                 Tennis </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <!----><!----><a _ngcontent-fmi-c59="" href="javascript:void(0)"
                 routerlinkactive="router-link-exact-active router-link-active" class="new-tag-menus"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532393/reddybook_assets/menu-979797.png" alt="" width="24" height="24" loading="lazy" /><b _ngcontent-fmi-c59="">Fantasy
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532393/reddybook_assets/menu-979797.png" alt="" width="24" height="24" loading="lazy" /><b _ngcontent-fmi-c59="">Fantasy
                   11</b></a><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <!----><!----><!----><a _ngcontent-fmi-c59="" href="javascript:void(0)"
                 routerlinkactive="router-link-exact-active router-link-active"><img _ngcontent-fmi-c59=""
-                  src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532394/reddybook_assets/menu-969696.png" alt="" width="24" height="24" loading="lazy" /><b _ngcontent-fmi-c59="">Cock Fight</b></a><!---->
+                  src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532394/reddybook_assets/menu-969696.png" alt="" width="24" height="24" loading="lazy" /><b _ngcontent-fmi-c59="">Cock Fight</b></a><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/2378961" routerlinkactive="nmm-active" id="sport2378961"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532395/reddybook_assets/menu-2378961.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532395/reddybook_assets/menu-2378961.png" alt="" width="24" height="24" loading="lazy" />
                 Politics </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/99998" routerlinkactive="nmm-active" id="sport99998"
-                class="hightlight-menu"><img _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532397/reddybook_assets/menu-99998.png" alt="" width="24" height="24" loading="lazy" />
+                class="hightlight-menu"><img _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532397/reddybook_assets/menu-99998.png" alt="" width="24" height="24" loading="lazy" />
                 Casino </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <!----><a _ngcontent-fmi-c59="" id="sportbook001" href="javascript:void(0)"
-                routerlinkactive="nmm-active"><img _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532398/reddybook_assets/menu-99991.png" alt="" width="24" height="24" loading="lazy" />
+                routerlinkactive="nmm-active"><img _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532398/reddybook_assets/menu-99991.png" alt="" width="24" height="24" loading="lazy" />
                 Sports book </a><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/7" routerlinkactive="nmm-active" id="sport7"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532399/reddybook_assets/menu-7.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532399/reddybook_assets/menu-7.png" alt="" width="24" height="24" loading="lazy" />
                 Horse Racing </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/4339" routerlinkactive="nmm-active" id="sport4339"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532401/reddybook_assets/menu-4339.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532401/reddybook_assets/menu-4339.png" alt="" width="24" height="24" loading="lazy" />
                 Greyhound Racing </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/99990" routerlinkactive="nmm-active" id="sport99990"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532402/reddybook_assets/menu-99990.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532402/reddybook_assets/menu-99990.png" alt="" width="24" height="24" loading="lazy" />
                 Binary </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/99994" routerlinkactive="nmm-active" id="sport99994"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532403/reddybook_assets/menu-99994.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532403/reddybook_assets/menu-99994.png" alt="" width="24" height="24" loading="lazy" />
                 Kabaddi </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/7522" routerlinkactive="nmm-active" id="sport7522"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532404/reddybook_assets/menu-7522.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532404/reddybook_assets/menu-7522.png" alt="" width="24" height="24" loading="lazy" />
                 Basketball </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/7511" routerlinkactive="nmm-active" id="sport7511"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532405/reddybook_assets/menu-7511.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532405/reddybook_assets/menu-7511.png" alt="" width="24" height="24" loading="lazy" />
                 Baseball </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/20" routerlinkactive="nmm-active" id="sport20"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532407/reddybook_assets/menu-20.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532407/reddybook_assets/menu-20.png" alt="" width="24" height="24" loading="lazy" />
                 Table Tennis </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/998917" routerlinkactive="nmm-active" id="sport998917"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532407/reddybook_assets/menu-998917.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532407/reddybook_assets/menu-998917.png" alt="" width="24" height="24" loading="lazy" />
                 Volleyball </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/7524" routerlinkactive="nmm-active" id="sport7524"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532409/reddybook_assets/menu-7524.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532409/reddybook_assets/menu-7524.png" alt="" width="24" height="24" loading="lazy" />
                 Ice Hockey </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/5" routerlinkactive="nmm-active" id="sport5"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532410/reddybook_assets/menu-5.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532410/reddybook_assets/menu-5.png" alt="" width="24" height="24" loading="lazy" />
                 Rugby </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/26420387" routerlinkactive="nmm-active" id="sport26420387"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532411/reddybook_assets/menu-26420387.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532411/reddybook_assets/menu-26420387.png" alt="" width="24" height="24" loading="lazy" />
                 Mixed Martial Arts </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/3503" routerlinkactive="nmm-active" id="sport3503"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532413/reddybook_assets/menu-3503.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532413/reddybook_assets/menu-3503.png" alt="" width="24" height="24" loading="lazy" />
                 Darts </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/29" routerlinkactive="nmm-active" id="sport29"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532415/reddybook_assets/menu-29.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532415/reddybook_assets/menu-29.png" alt="" width="24" height="24" loading="lazy" />
                 Futsal </a><!----><!----><!----><!---->
             </li>
             <li _ngcontent-fmi-c59="" class="nav-item">
               <a _ngcontent-fmi-c59="" href="/sports/99997" routerlinkactive="nmm-active" id="sport99997"><img
-                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532416/reddybook_assets/menu-99997.png" alt="" width="24" height="24" loading="lazy" />
+                  _ngcontent-fmi-c59="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532416/reddybook_assets/menu-99997.png" alt="" width="24" height="24" loading="lazy" />
                 Casino Vivo </a><!----><!----><!----><!---->
             </li>
             <!---->
@@ -1583,12 +1587,12 @@
         <aside _ngcontent-fmi-c60="" id="sidebar" class="sidebar" aria-label="Sports sidebar navigation">
           <ul _ngcontent-fmi-c60="" id="sidebar-nav" class="sidebar-nav">
             <img _ngcontent-fmi-c60="" class="mobile-logo" alt="ReddyBook Logo" width="180" height="45" loading="lazy" decoding="async"
-              src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532384/reddybook_assets/reddybook.live.png" /><i _ngcontent-fmi-c60=""
+              src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_203,h_51,c_fill,f_auto,q_auto/v1779532384/reddybook_assets/reddybook.live.png" /><i _ngcontent-fmi-c60=""
               class="bi bi-list-nested toggle-sidebar-btn" aria-hidden="true"></i><!----><!----><!----><!----><!----><!---->
             <li _ngcontent-fmi-c60="" class="nav-item"><!----></li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse0"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532390/reddybook_assets/menu-4.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse0"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532390/reddybook_assets/menu-4.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Cricket</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse0">
@@ -1941,7 +1945,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse1"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532391/reddybook_assets/menu-1.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse1"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532391/reddybook_assets/menu-1.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Football</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse1">
@@ -2966,7 +2970,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse2"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532392/reddybook_assets/menu-2.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse2"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532392/reddybook_assets/menu-2.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Tennis</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse2">
@@ -4250,7 +4254,7 @@
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><a _ngcontent-fmi-c60="" href="javascript:void(0)"
                 class="nav-link final-link new-tag-menus"><img _ngcontent-fmi-c60=""
-                  src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532393/reddybook_assets/menu-979797.png" alt="" width="24" height="24" loading="lazy" /><span _ngcontent-fmi-c60="">Fantasy
+                  src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532393/reddybook_assets/menu-979797.png" alt="" width="24" height="24" loading="lazy" /><span _ngcontent-fmi-c60="">Fantasy
                   11</span></a><!----><!----><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse3">
                 <!---->
@@ -4259,7 +4263,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><a _ngcontent-fmi-c60="" href="javascript:void(0)" class="nav-link final-link"><img
-                  _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532394/reddybook_assets/menu-969696.png" alt="" width="24" height="24" loading="lazy" /><span _ngcontent-fmi-c60="">Cock
+                  _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532394/reddybook_assets/menu-969696.png" alt="" width="24" height="24" loading="lazy" /><span _ngcontent-fmi-c60="">Cock
                   Fight</span></a><!----><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse4">
                 <!---->
@@ -4268,7 +4272,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse5"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532395/reddybook_assets/menu-2378961.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse5"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532395/reddybook_assets/menu-2378961.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Politics</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse5">
@@ -4278,7 +4282,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <a _ngcontent-fmi-c60="" href="javascript:void(0)" class="nav-link final-link hightlight-smenu"><img
-                  _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532397/reddybook_assets/menu-99998.png" alt="" width="24" height="24" loading="lazy" /><span
+                  _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532397/reddybook_assets/menu-99998.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Casino</span></a><!----><!----><!----><!----><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse6">
                 <!---->
@@ -4287,7 +4291,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><a _ngcontent-fmi-c60="" href="javascript:void(0)" class="nav-link final-link"><img
-                  _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532398/reddybook_assets/menu-99991.png" alt="" width="24" height="24" loading="lazy" /><span _ngcontent-fmi-c60="">Sports
+                  _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532398/reddybook_assets/menu-99991.png" alt="" width="24" height="24" loading="lazy" /><span _ngcontent-fmi-c60="">Sports
                   book</span></a><!----><!----><!----><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse7">
                 <!---->
@@ -4296,7 +4300,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse8"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532399/reddybook_assets/menu-7.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse8"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532399/reddybook_assets/menu-7.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Horse Racing</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!----><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse8">
@@ -4398,7 +4402,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse9"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532401/reddybook_assets/menu-4339.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse9"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532401/reddybook_assets/menu-4339.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Greyhound Racing</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!----><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse9">
@@ -4528,7 +4532,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse10"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532402/reddybook_assets/menu-99990.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse10"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532402/reddybook_assets/menu-99990.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Binary</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse10">
@@ -4552,7 +4556,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse11"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532403/reddybook_assets/menu-99994.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse11"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532403/reddybook_assets/menu-99994.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Kabaddi</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse11">
@@ -4562,7 +4566,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse12"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532404/reddybook_assets/menu-7522.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse12"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532404/reddybook_assets/menu-7522.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Basketball</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse12">
@@ -4827,7 +4831,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse13"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532405/reddybook_assets/menu-7511.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse13"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532405/reddybook_assets/menu-7511.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Baseball</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse13">
@@ -4956,7 +4960,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse14"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532407/reddybook_assets/menu-20.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse14"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532407/reddybook_assets/menu-20.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Table Tennis</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse14">
@@ -5486,7 +5490,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse15"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532407/reddybook_assets/menu-998917.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse15"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532407/reddybook_assets/menu-998917.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Volleyball</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse15">
@@ -5525,7 +5529,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse16"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532409/reddybook_assets/menu-7524.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse16"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532409/reddybook_assets/menu-7524.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Ice Hockey</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse16">
@@ -5614,7 +5618,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse17"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532410/reddybook_assets/menu-5.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse17"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532410/reddybook_assets/menu-5.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Rugby</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse17">
@@ -5638,7 +5642,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse18"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532411/reddybook_assets/menu-26420387.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse18"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532411/reddybook_assets/menu-26420387.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Mixed Martial Arts</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse18">
@@ -5648,7 +5652,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse19"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532413/reddybook_assets/menu-3503.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse19"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532413/reddybook_assets/menu-3503.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Darts</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse19">
@@ -5749,7 +5753,7 @@
             </li>
             <li _ngcontent-fmi-c60="" class="nav-item">
               <!----><!----><!----><!----><a _ngcontent-fmi-c60="" data-bs-toggle="collapse" class="nav-link"
-                href="#collapse20"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532415/reddybook_assets/menu-29.png" alt="" width="24" height="24" loading="lazy" /><span
+                href="#collapse20"><img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532415/reddybook_assets/menu-29.png" alt="" width="24" height="24" loading="lazy" /><span
                   _ngcontent-fmi-c60="">Futsal</span><i _ngcontent-fmi-c60=""
                   class="bi bi-caret-down ms-auto" aria-hidden="true"></i></a><!---->
               <ul _ngcontent-fmi-c60="" class="nav-content collapse" id="collapse20">
@@ -5797,25 +5801,25 @@
             <!---->
             <li _ngcontent-fmi-c60="" class="d-block d-sm-none nav-item">
               <a _ngcontent-fmi-c60="" href="javascript:void(0)" class="nav-link final-link"><img _ngcontent-fmi-c60=""
-                  src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532417/reddybook_assets/menu-rules.png" alt="" width="24" height="24" loading="lazy" /><span _ngcontent-fmi-c60="">rules</span></a>
+                  src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532417/reddybook_assets/menu-rules.png" alt="" width="24" height="24" loading="lazy" /><span _ngcontent-fmi-c60="">rules</span></a>
             </li>
             <!---->
           </ul>
           <div _ngcontent-fmi-c60="" id="carouselExampleIndicators" data-bs-ride="carousel" class="carousel slide">
             <div _ngcontent-fmi-c60="" class="carousel-inner" style="
-                  background: url(&quot;https://efesclubcdn.com/FTP/BETBABA/Home/sl-c-layer-one.png&quot;);
+                  background: url(&quot;https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto,w_480,h_800,c_fill/v1779560712/reddybook_assets/sl-c-layer-one.png&quot;);
                 ">
               <div _ngcontent-fmi-c60="" class="carousel-item active">
-                <img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532419/reddybook_assets/ls_01.png" class="d-block w-100" alt="ReddyBook promotional banner 1" width="1200" height="400" fetchpriority="high" />
+                <img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto,w_480,h_800,c_fill/v1779532419/reddybook_assets/ls_01.png" class="d-block w-100" alt="ReddyBook promotional banner 1" width="1200" height="400" fetchpriority="high" />
               </div>
               <div _ngcontent-fmi-c60="" class="carousel-item">
-                <img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532420/reddybook_assets/ls_02.png" class="d-block w-100" alt="ReddyBook promotional banner 2" width="1200" height="400" loading="lazy" />
+                <img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto,w_480,h_800,c_fill/v1779532420/reddybook_assets/ls_02.png" class="d-block w-100" alt="ReddyBook promotional banner 2" width="1200" height="400" loading="lazy" />
               </div>
               <div _ngcontent-fmi-c60="" class="carousel-item">
-                <img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532422/reddybook_assets/ls_03.png" class="d-block w-100" alt="ReddyBook promotional banner 3" width="1200" height="400" loading="lazy" />
+                <img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto,w_480,h_800,c_fill/v1779532422/reddybook_assets/ls_03.png" class="d-block w-100" alt="ReddyBook promotional banner 3" width="1200" height="400" loading="lazy" />
               </div>
               <div _ngcontent-fmi-c60="" class="carousel-item">
-                <img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532423/reddybook_assets/ls_04.png" class="d-block w-100" alt="ReddyBook promotional banner 4" width="1200" height="400" loading="lazy" />
+                <img _ngcontent-fmi-c60="" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto,w_480,h_800,c_fill/v1779532423/reddybook_assets/ls_04.png" class="d-block w-100" alt="ReddyBook promotional banner 4" width="1200" height="400" loading="lazy" />
               </div>
             </div>
             <button _ngcontent-fmi-c60="" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"
@@ -6004,7 +6008,7 @@
                                     <div _ngcontent-fmi-c75="" class="row align-items-center">
                                       <div _ngcontent-fmi-c75="" class="col-md-6">
                                         <span _ngcontent-fmi-c75="" class="list-sport-title"><img _ngcontent-fmi-c75=""
-                                            class="img-fluid game-icon-img" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532390/reddybook_assets/menu-4.png" alt="" width="24" height="24" loading="lazy" />
+                                            class="img-fluid game-icon-img" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532390/reddybook_assets/menu-4.png" alt="" width="24" height="24" loading="lazy" />
                                           Cricket</span>
                                         <ul _ngcontent-fmi-c75="" class="ks-cboxtags">
                                           <li _ngcontent-fmi-c75="">
@@ -7202,7 +7206,7 @@
                                     <div _ngcontent-fmi-c75="" class="row align-items-center">
                                       <div _ngcontent-fmi-c75="" class="col-md-6">
                                         <span _ngcontent-fmi-c75="" class="list-sport-title"><img _ngcontent-fmi-c75=""
-                                            class="img-fluid game-icon-img" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532391/reddybook_assets/menu-1.png" alt="" width="24" height="24" loading="lazy" />
+                                            class="img-fluid game-icon-img" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532391/reddybook_assets/menu-1.png" alt="" width="24" height="24" loading="lazy" />
                                           Football</span>
                                         <ul _ngcontent-fmi-c75="" class="ks-cboxtags">
                                           <li _ngcontent-fmi-c75="">
@@ -12809,7 +12813,7 @@
                                     <div _ngcontent-fmi-c75="" class="row align-items-center">
                                       <div _ngcontent-fmi-c75="" class="col-md-6">
                                         <span _ngcontent-fmi-c75="" class="list-sport-title"><img _ngcontent-fmi-c75=""
-                                            class="img-fluid game-icon-img" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532392/reddybook_assets/menu-2.png" alt="" width="24" height="24" loading="lazy" />
+                                            class="img-fluid game-icon-img" src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532392/reddybook_assets/menu-2.png" alt="" width="24" height="24" loading="lazy" />
                                           Tennis</span>
                                         <ul _ngcontent-fmi-c75="" class="ks-cboxtags">
                                           <li _ngcontent-fmi-c75="">
@@ -15843,7 +15847,7 @@
                         <!---->
                       </div>
                       <span _ngcontent-fmi-c78="" class="list-sport-title"><img _ngcontent-fmi-c78=""
-                          src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532397/reddybook_assets/menu-99998.png" class="img-fluid game-icon-img" loading="lazy" decoding="async" />
+                          src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_24,h_24,c_fill,f_auto,q_auto/v1779532397/reddybook_assets/menu-99998.png" class="img-fluid game-icon-img" loading="lazy" decoding="async" />
                         Casino Provider</span><!---->
                       <div _ngcontent-fmi-c78="" class="casinoprovider-thumb-section">
                         <div _ngcontent-fmi-c78="" class="cts-img popularDiv">
@@ -15940,8 +15944,8 @@
                                 support</div>
                             </div>
                             <div class="home-hero__actions">
-                                <a href="/register" class="btn-cta btn-cta-primary">Get Cricket ID</a>
-                              <a href="/login" class="btn-cta btn-cta-neon">Login</a>
+                                <a href="pages/register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
+                              <a href="pages/login.html" class="btn-cta btn-cta-neon">Login</a>
                               <a href="/bet" class="btn-ghost">Open dashboard →</a>
                             </div>
                           </div>
@@ -15986,7 +15990,7 @@
                                       same business model.</p>
                                   </div>
                                   <figure class="home-intro-grid__figure">
-                                    <img src="/assets/images/pages/home/Homepage - What is ReddyBook_ Complete Guide to Betting, Login &amp; Registration.webp"
+                                    <img src="https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560679/reddybook_assets/Homepage_-_What_is_ReddyBook__Complete_Guide_to_Betting_Login_Registration.webp"
                                       alt="What is ReddyBook — complete guide to betting, login and registration" loading="lazy" width="280"
                                       height="350" />
                                   </figure>
@@ -16002,7 +16006,7 @@
                                   <li>Cricket, football, tennis, basketball &amp; esports</li>
                                   <li>UPI, net banking, bank transfer &amp; wallets</li>
                                 </ul>
-                                <a href="/about-us" class="btn-ghost" style="margin-top:8px;display:inline-block;">About Reddy Book Club
+                                <a href="pages/about-us.html" class="btn-ghost" style="margin-top:8px;display:inline-block;">About Reddy Book Club
                                   →</a>
                               </article>
 
@@ -16414,7 +16418,7 @@
                                         <p>Receive funds within a few hours to one day after approval</p>
                                       </div>
                                     </div>
-                                    <a href="/customer-care" class="btn-ghost" style="display:inline-block;margin-top:12px;">Payment help →</a>
+                                    <a href="pages/customer-care.html" class="btn-ghost" style="display:inline-block;margin-top:12px;">Payment help →</a>
                                   </div>
                                   <figure class="home-withdrawal-grid__figure">
                                     <img src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532472/reddybook_assets/Homepage_-_Withdrawal_Process_Step-by-Step__Login_to_Your_Account.webp"
@@ -16443,8 +16447,8 @@
                                     <p class="bento-card__tag">Ready?</p>
                                     <h3>Get your Reddy Book Club ID today</h3>
                                     <p>Sports, casino, and live markets in one account — with agent support when you need it.</p>
-                                    <a href="/register" class="btn-cta btn-cta-primary">Register now</a>
-                                    <a href="/customer-care" class="btn-cta btn-cta-secondary" style="margin-top:8px;">Contact support</a>
+                                    <a href="pages/register.html" class="btn-cta btn-cta-primary">Register now</a>
+                                    <a href="pages/customer-care.html" class="btn-cta btn-cta-secondary" style="margin-top:8px;">Contact support</a>
                                   </aside>
                                 </div>
                               </article>
@@ -16515,8 +16519,8 @@
                             <h2>Ready to get started?</h2>
                             <p>Register for your Reddy Book Club cricket ID or log in to access sports, casino, and live betting.</p>
                             <div class="landing-hero-cta" style="justify-content:center;">
-                              <a href="/register" class="btn-cta btn-cta-secondary">Register Now</a>
-                              <a href="/customer-care" class="btn-cta btn-cta-secondary">Contact Support</a>
+                              <a href="pages/register.html" class="btn-cta btn-cta-secondary">Register Now</a>
+                              <a href="pages/customer-care.html" class="btn-cta btn-cta-secondary">Contact Support</a>
                             </div>
                           </section>
                         </main>
@@ -16527,7 +16531,7 @@
                             <div class="landing-footer__main">
                               <div class="landing-footer__brand">
                                 <a href="/" class="landing-footer__logo">
-                                  <img src="https://res.cloudinary.com/dbkcmdx7g/image/upload/v1779532384/reddybook_assets/reddybook.live.png" alt="Reddy Book Club" width="168" height="42" loading="lazy" />
+                                  <img src="https://res.cloudinary.com/dbkcmdx7g/image/upload/w_203,h_51,c_fill,f_auto,q_auto/v1779532384/reddybook_assets/reddybook.live.png" alt="Reddy Book Club" width="168" height="42" loading="lazy" />
                                 </a>
                                 <p class="landing-footer__tagline">Cricket IDs, live sports markets, and casino play — onboarded through verified agents with fast login and round-the-clock support.</p>
                                 <div class="landing-footer__badges">
@@ -16537,7 +16541,7 @@
                                   <span class="landing-footer__badge"><i class="bi bi-telephone-fill" aria-hidden="true"></i> 24/7 care</span>
                                 </div>
                                 <div class="landing-footer__actions">
-                                  <a href="/register" class="btn-cta btn-cta-primary">Get Cricket ID</a>
+                                  <a href="pages/register.html" class="btn-cta btn-cta-primary">Get Cricket ID</a>
                                   <a href="/bet" class="btn-ghost">Open dashboard →</a>
                                 </div>
                               </div>
@@ -16546,28 +16550,28 @@
                                   <h4 class="landing-footer__heading"><i class="bi bi-compass-fill" aria-hidden="true"></i> Explore</h4>
                                   <ul>
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/login">Login</a></li>
-                                    <li><a href="/register">Register</a></li>
-                                    <li><a href="/about-us">About</a></li>
-                                    <li><a href="/blogs">Blogs</a></li>
-                                    <li><a href="/categories">Categories</a></li>
+                                    <li><a href="pages/login.html">Login</a></li>
+                                    <li><a href="pages/register.html">Register</a></li>
+                                    <li><a href="pages/about-us.html">About</a></li>
+                                    <li><a href="pages/blogs.html">Blogs</a></li>
+                                    <li><a href="pages/categories.html">Categories</a></li>
                                   </ul>
                                 </div>
                                 <div class="landing-footer__col">
                                   <h4 class="landing-footer__heading"><i class="bi bi-file-text-fill" aria-hidden="true"></i> Legal</h4>
                                   <ul>
-                                    <li><a href="/privacy-policy">Privacy Policy</a></li>
-                                    <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
-                                    <li><a href="/responsible-gaming">Responsible Gaming</a></li>
-                                    <li><a href="/about-us">About Us</a></li>
-                                    <li><a href="/customer-care">Customer Care</a></li>
+                                    <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="pages/terms-and-conditions.html">Terms & Conditions</a></li>
+                                    <li><a href="pages/responsible-gaming.html">Responsible Gaming</a></li>
+                                    <li><a href="pages/about-us.html">About Us</a></li>
+                                    <li><a href="pages/customer-care.html">Customer Care</a></li>
                                   </ul>
                                 </div>
                                 <div class="landing-footer__col">
                                   <h4 class="landing-footer__heading"><i class="bi bi-person-badge-fill" aria-hidden="true"></i> Account</h4>
                                   <ul>
-                                    <li><a href="/login">Login</a></li>
-                                    <li><a href="/register">Register</a></li>
+                                    <li><a href="pages/login.html">Login</a></li>
+                                    <li><a href="pages/register.html">Register</a></li>
                                     <li><a href="/bet">Betting Dashboard</a></li>
                                   </ul>
                                 </div>
@@ -16576,9 +16580,9 @@
                             <div class="landing-footer-bottom">
                               <p class="landing-footer__copy">&copy; 2026 Reddy Book Club. All rights reserved.</p>
                               <nav class="landing-footer__legal-nav" aria-label="Footer legal">
-                                <a href="/privacy-policy">Privacy</a>
-                                <a href="/terms-and-conditions">Terms</a>
-                                <a href="/responsible-gaming">Responsible gaming</a>
+                                <a href="pages/privacy-policy.html">Privacy</a>
+                                <a href="pages/terms-and-conditions.html">Terms</a>
+                                <a href="pages/responsible-gaming.html">Responsible gaming</a>
                               </nav>
                               <p class="landing-footer__disclaimer">Play responsibly · Entertainment only where legally permitted</p>
                             </div>

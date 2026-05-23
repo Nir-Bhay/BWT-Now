@@ -9,7 +9,7 @@
   var APK_DISMISSED_KEY = "reddybook_apk_dismissed";
   /** Fixed banner for login + signup (Login - Deposits, Withdrawals, and Verification (3)) */
   var AUTH_BANNER_SRC =
-    "assets/images/pages/login/Login - Deposits, Withdrawals, and Verification (3).webp";
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532485/reddybook_assets/Login_-_Deposits_Withdrawals_and_Verification_3.webp";
 
   function ready(fn) {
     if (document.readyState === "loading") {
@@ -1071,40 +1071,40 @@
   /* ── Promo / ad images from Reddybookclubs asset pack ── */
 
   var PROMO_BANNERS = [
-    "assets/images/pages/about-us/About Us Banner - 2.webp",
-    "assets/images/pages/about-us/About Us Main Banner - 1.webp",
-    "assets/images/pages/customer-care/Customer Care Banner - 2.webp",
-    "assets/images/pages/customer-care/Customer Care Main Banner - 1.webp",
-    "assets/images/pages/home/Homepage - How Do ReddyBook Bonuses and Promotions Work.webp",
-    "assets/images/pages/home/Homepage - How ReddyBook Club Operates.webp",
-    "assets/images/pages/home/Homepage - Important Points to Remember.webp",
-    "assets/images/pages/home/Homepage - Live Betting Experience.webp",
-    "assets/images/pages/home/Homepage - ReddyBook Login Process_ Enter Your ID and Start Betting.webp",
-    "assets/images/pages/home/Homepage - Things to Keep in Mind Before You Get a Reddy Book new  ID.webp",
-    "assets/images/pages/home/Homepage - What is ReddyBook_ Complete Guide to Betting, Login & Registration.webp",
-    "assets/images/pages/home/Homepage - Withdrawal Process Step-by-Step_ Login to Your Account.webp",
-    "assets/images/pages/home/Homepage Banner.webp",
-    "assets/images/pages/login/Login - Deposits, Withdrawals, and Verification (2).webp",
-    "assets/images/pages/login/Login - Deposits, Withdrawals, and Verification (3).webp",
-    "assets/images/pages/login/Login - Deposits, Withdrawals, and Verification.webp",
-    "assets/images/pages/login/Login - How to Login to Your Reddy Book Club Account.webp",
-    "assets/images/pages/login/Login - Reddy Book Club Login on Mobile.webp",
-    "assets/images/pages/login/Login - Reddy Book Login_ Access Your Reddy Book Club Cricket ID Safely.webp",
-    "assets/images/pages/login/Login Page Banner.webp",
-    "assets/images/pages/privacy-policy/Privacy Policy Banner - 2.webp",
-    "assets/images/pages/privacy-policy/Privacy Policy Main Banner - 1.webp",
-    "assets/images/pages/register/Register - Common Registration Problems and Simple Fixes.webp",
-    "assets/images/pages/register/Register - How to Register on Reddy Book Club.webp",
-    "assets/images/pages/register/Register - Reddy Book Registration_ Get Your Reddy Book Club Cricket ID.webp",
-    "assets/images/pages/register/Register - What About the Reddy Book Club APK (2).webp",
-    "assets/images/pages/register/Register - What About the Reddy Book Club APK.webp",
-    "assets/images/pages/register/Register - What Details May Be Needed During Registration.webp",
-    "assets/images/pages/register/Register - Why Register with Reddy Book Club.webp",
-    "assets/images/pages/register/Register Page banner.webp",
-    "assets/images/pages/responsible-gaming/Responsible Gaming Banner - 2.webp",
-    "assets/images/pages/responsible-gaming/Responsible Gaming Main Banner - 1.webp",
-    "assets/images/pages/terms/T&C Banner - 2.webp",
-    "assets/images/pages/terms/T&C Main Banner - 1.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560681/reddybook_assets/About_Us_Banner_-_2.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560680/reddybook_assets/About_Us_Main_Banner_-_1.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532477/reddybook_assets/Customer_Care_Banner_-_2.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560787/reddybook_assets/Customer_Care_Main_Banner_-_1.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532470/reddybook_assets/Homepage_-_How_Do_ReddyBook_Bonuses_and_Promotions_Work.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532463/reddybook_assets/Homepage_-_How_ReddyBook_Club_Operates.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532466/reddybook_assets/Homepage_-_Important_Points_to_Remember.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532468/reddybook_assets/Homepage_-_Live_Betting_Experience.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532464/reddybook_assets/Homepage_-_ReddyBook_Login_Process__Enter_Your_ID_and_Start_Betting.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532467/reddybook_assets/Homepage_-_Things_to_Keep_in_Mind_Before_You_Get_a_Reddy_Book_new_ID.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560679/reddybook_assets/Homepage_-_What_is_ReddyBook__Complete_Guide_to_Betting_Login_Registration.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532472/reddybook_assets/Homepage_-_Withdrawal_Process_Step-by-Step__Login_to_Your_Account.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560794/reddybook_assets/Homepage_Banner.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532484/reddybook_assets/Login_-_Deposits_Withdrawals_and_Verification_2.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532485/reddybook_assets/Login_-_Deposits_Withdrawals_and_Verification_3.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532482/reddybook_assets/Login_-_Deposits_Withdrawals_and_Verification.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532480/reddybook_assets/Login_-_How_to_Login_to_Your_Reddy_Book_Club_Account.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532481/reddybook_assets/Login_-_Reddy_Book_Club_Login_on_Mobile.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532478/reddybook_assets/Login_-_Reddy_Book_Login__Access_Your_Reddy_Book_Club_Cricket_ID_Safely.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560800/reddybook_assets/Login_Page_Banner.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560801/reddybook_assets/Privacy_Policy_Banner_-_2.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560802/reddybook_assets/Privacy_Policy_Main_Banner_-_1.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532492/reddybook_assets/Register_-_Common_Registration_Problems_and_Simple_Fixes.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532488/reddybook_assets/Register_-_How_to_Register_on_Reddy_Book_Club.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532487/reddybook_assets/Register_-_Reddy_Book_Registration__Get_Your_Reddy_Book_Club_Cricket_ID.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532491/reddybook_assets/Register_-_What_About_the_Reddy_Book_Club_APK_2.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532490/reddybook_assets/Register_-_What_About_the_Reddy_Book_Club_APK.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532489/reddybook_assets/Register_-_What_Details_May_Be_Needed_During_Registration.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532494/reddybook_assets/Register_-_Why_Register_with_Reddy_Book_Club.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560810/reddybook_assets/Register_Page_banner.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532677/reddybook_assets/Responsible_Gaming_Banner_-_2.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560811/reddybook_assets/Responsible_Gaming_Main_Banner_-_1.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532678/reddybook_assets/T_C_Banner_-_2.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779560813/reddybook_assets/T_C_Main_Banner_-_1.webp",
   ];
 
   function shuffleArray(arr) {
@@ -1124,24 +1124,24 @@
 
   /* Original casino-provider ad tiles (MAC88, GAMZIX, etc.) — not landing-page banners */
   var CASINO_PROVIDER_IMAGES = [
-    "assets/images/casino-providers/17627666895880894.webp",
-    "assets/images/casino-providers/17627666966773371.webp",
-    "assets/images/casino-providers/17627667037947034.webp",
-    "assets/images/casino-providers/17627667094382181.webp",
-    "assets/images/casino-providers/17627667207446881.webp",
-    "assets/images/casino-providers/17627667265483610.webp",
-    "assets/images/casino-providers/17627667335828371.webp",
-    "assets/images/casino-providers/17627667396466553.webp",
-    "assets/images/casino-providers/17627667473323418.webp",
-    "assets/images/casino-providers/17627667559465232.webp",
-    "assets/images/casino-providers/17627667617577382.webp",
-    "assets/images/casino-providers/17627667697736998.webp",
-    "assets/images/casino-providers/17627667768757066.webp",
-    "assets/images/casino-providers/17627667832075489.webp",
-    "assets/images/casino-providers/17627667896330903.webp",
-    "assets/images/casino-providers/17627667959015593.webp",
-    "assets/images/casino-providers/17627668019132332.webp",
-    "assets/images/casino-providers/17627668338456002.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532449/reddybook_assets/17627666895880894.webp",
+    "https://speedcdn.io/frontend_config/tiger/images/17627666966773371.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532450/reddybook_assets/17627667037947034.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532450/reddybook_assets/17627667094382181.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532452/reddybook_assets/17627667207446881.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532452/reddybook_assets/17627667265483610.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532453/reddybook_assets/17627667335828371.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532454/reddybook_assets/17627667396466553.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532454/reddybook_assets/17627667473323418.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532455/reddybook_assets/17627667559465232.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532456/reddybook_assets/17627667617577382.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532457/reddybook_assets/17627667697736998.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532457/reddybook_assets/17627667768757066.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532459/reddybook_assets/17627667832075489.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532459/reddybook_assets/17627667896330903.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532460/reddybook_assets/17627667959015593.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532461/reddybook_assets/17627668019132332.webp",
+    "https://res.cloudinary.com/dbkcmdx7g/image/upload/f_auto,q_auto/v1779532462/reddybook_assets/17627668338456002.webp",
   ];
 
   function initCasinoProviderImages() {
@@ -1196,8 +1196,29 @@
     var idx = 0;
 
     imgs.forEach(function (img) {
+      var isCarousel = img.closest('#carouselExampleIndicators');
+      var isActiveSlide = img.closest('.carousel-item.active') || idx === 0;
+
+      // Skip dynamic replacement for the first active slide so it remains as the preloaded static image.
+      if (isCarousel && isActiveSlide) {
+        idx += 1;
+        img.loading = "eager";
+        img.setAttribute("fetchpriority", "high");
+        return;
+      }
+
       var src = pool[idx % pool.length];
       idx += 1;
+
+      // Dynamically optimize and scale Cloudinary URLs
+      if (src.includes('res.cloudinary.com')) {
+        if (isCarousel) {
+          src = src.replace('/upload/', '/upload/f_auto,q_auto,w_480,h_800,c_fill/');
+        } else {
+          src = src.replace('/upload/', '/upload/f_auto,q_auto,w_800,c_limit/');
+        }
+      }
+
       img.src = src;
       img.removeAttribute("srcset");
       if (img.loading !== "lazy") img.loading = "lazy";
